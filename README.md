@@ -1,6 +1,6 @@
 #Portfolio
 
-Personal portfolip project.
+Personal portfolio project.
 
 Starting with a basic HTML document with 90% of the copy.
 
