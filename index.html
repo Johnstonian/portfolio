@@ -231,7 +231,14 @@
 
 	<section class="section contact">
 		<h2 class="sectionTitle">Contact</h2>
-		<p>contact form will go here
+		<form name="contactForm">
+			<fieldset>
+				<input type="text" id="fullname" placeholder="Full name" required />
+				<input type="email" id="email" placeholder="Email" required />
+				<textarea id="message" placeholer="Your message..." required></textarea>
+				<input type="submit" name="Send" id="sendBtn" />
+			</fieldset>
+		</form>
 	</section>
 
 	<footer class="footer">
