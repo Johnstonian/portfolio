@@ -1,0 +1,15 @@
+/* TEAM */
+	Front-end Development: Ryan Johnston
+	URL: http://johnstonianera.com
+	Twitter: @johnstonian
+
+/* THANKS */
+	Design: Jason Kirchgessner
+	URL: southernreflectionsstudio.com
+	Twitter: none
+
+/* SITE */
+	Last Update: 12/23/2013
+	Langauge: English
+	Doctype: HTML5
+	Software: Submime Text 2, Photoshop
