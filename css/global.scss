@@ -1,8 +1,32 @@
-body { margin: 0; }
+@import 'normalize';
 
+@import 'variables';
+@import 'mixins';
+
+@import 'typography';
+
+body { margin: 0; font-family: 'Roboto', sans-serif;}
+
+/* apply a natural box layout model to all elements */
 *, *:before, *:after {
-	border-sizing: border-box;
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+.section { 
+	padding: 2em 1em; 
+	margin: 0 auto; width: 100%; 
+
+	@media screen and (min-width: 34em) {
+	    padding: 4em 1em;
+	}
+
+	@media (min-width: 85em) {
+		padding: 4em calc(50% - 35em);
+	}
+	 
+
 }
 
 .articles { background-color: white; }
-.about { background-color: #205e7e; }
+.about { background-color: #205e7e; color: white; }
+.hobbies { background-color: #f08b65; color: white; }

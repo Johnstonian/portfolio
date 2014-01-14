@@ -59,26 +59,41 @@ module.exports = function(grunt) {
         tasks: ['sass'],
         options: {
           spawn: false,
+
+        }
+      },
+      images: {
+        files: ['images/**/*.{png,jpg,gif}', 'images/*.{png,jpg,gif}'],
+        tasks: ['imagemin'],
+        options: {
+          spawn: false,
         }
       }
-    }
+    },
+
+    connect: {
+      server: {
+        options: {
+          port: 8000,
+          base: './'
+        }
+      }
+    },
+
 
   });
 
   // 3. Where we tell Grunt we plan to use this plug-in.
   grunt.loadNpmTasks('grunt-contrib-concat');
-
   grunt.loadNpmTasks('grunt-contrib-uglify');
-
   grunt.loadNpmTasks('grunt-contrib-imagemin');
-
   grunt.loadNpmTasks('grunt-contrib-watch');
-
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-connect');
 
   // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
   grunt.registerTask('default', ['concat', 'uglify', 'sass', 'imagemin']);
 
-  grunt.registerTask('dev', ['watch']);
+  grunt.registerTask('dev', ['connect', 'watch']);
 
 };
