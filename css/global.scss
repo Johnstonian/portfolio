@@ -5,7 +5,15 @@
 
 @import 'typography';
 
-body { margin: 0; font-family: 'Roboto', sans-serif;}
+@import 'fontawesome';
+
+body { margin: 0; 
+	//font: 120%/1.4 'Roboto', sans-serif;
+	font-family: 'Roboto', sans-serif;
+	//font: 120%/1.4 "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+  padding: 0;
+  -webkit-text-size-adjust: 100%;
+}
 
 /* apply a natural box layout model to all elements */
 *, *:before, *:after {
@@ -13,20 +21,32 @@ body { margin: 0; font-family: 'Roboto', sans-serif;}
  }
 
 .section { 
-	padding: 2em 1em; 
-	margin: 0 auto; width: 100%; 
+	padding: 4.375em 1em; 
+	margin: 0 auto; 
+	width: 100%; 
+}
 
-	@media screen and (min-width: 34em) {
-	    padding: 4em 1em;
-	}
-
-	@media (min-width: 85em) {
-		padding: 4em calc(50% - 35em);
-	}
-	 
-
+.container {
+	max-width: 75em;
+	margin: 0 auto;
 }
 
 .articles { background-color: white; }
 .about { background-color: #205e7e; color: white; }
 .hobbies { background-color: #f08b65; color: white; }
+
+.sectionBorder {
+	border-bottom: 1px solid $gray;
+	margin: 0 auto;
+	width: 30rem;
+	position: relative;
+	color: $gray;
+}
+
+i.iconWrapper {
+	position: absolute;
+	margin: -16px -25px;
+	padding: 0 10px;
+	background-color: white;
+}
+

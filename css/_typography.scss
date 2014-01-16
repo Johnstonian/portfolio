@@ -1,3 +1,13 @@
+h2.sectionTitle { 
+	font-weight: 100;
+	font-size: 1.875em;
+	line-height: 3em;
+	margin: 0;	
+	width: 100%;
+	text-align: center;
+	color: $gray;
+}
+
 p { font-size: 1.125em; color: black; }
 p.start { font-size: 1.875em; }
 p.date { font-size: 0.875em; }
