@@ -1,5 +1,5 @@
 h2.sectionTitle { 
-	font-weight: 100;
+	font-weight: $thin;
 	font-size: 1.875em;
 	line-height: 3em;
 	margin: 0;	
@@ -9,29 +9,66 @@ h2.sectionTitle {
 }
 
 h3 {
-	font-weight: 900;
-	font-size: 2.5em;
-	//line-height: 3em;
-	padding: 0 1em 0 0;
+	font-weight: $ultra-bold;
+	font-size: 2em;
+	padding: 0;
 	margin: 0;
+
+	-webkit-transition: font-size 0.3s ease-out;
+	-moz-transition: font-size 0.3s ease-out;
+	-ms-transition: font-size 0.3s ease-out;
+	-o-transition: font-size 0.3s ease-out;
+	transition: font-size 0.3s ease-out;
+
+	@media screen and (min-width: $brkpt-medium) {
+	    padding: 0 1em 0 0;
+	}
+	 
+	@media screen and (min-width: $brkpt-large) {
+	    font-size: 2.5em;
+	}
+	 
 }
 
 p { 
-	font-weight: 300;
-	font-size: 1.125em; 
+	font-weight: $light;
+	font-size: 1em; 
 	line-height: 24px;
+
+	@media screen and (min-width: $brkpt-large) {
+	    font-size: 1.125em;
+	}
 }
 p.more { 
-	font-weight: 700;
-	font-size: 1.25em;
+	font-weight: $bold;
+	font-size: 1.125em;
 	line-height: 24px;
 	color: $link-color;
+
+	@media screen and (min-width: $brkpt-large) {
+	    font-size: 1.25em;
+	}
+	 
 }
 p.start { font-size: 1.875em; }
 p.date {
-	font-weight: 100;
+	font-weight: $thin;
 	font-size: 0.875em;
-	height: 14px;
+	max-height: 14px;
 	padding-left: 0.875em;
 	border-left: 3px solid $orange;
+	display: table-cell;
+	vertical-align: middle;
+	line-height: 14px;
+}
+
+p.viewAll { 
+	font-weight: $normal;
+	font-size: 1.125em;
+	line-height: 1.25em;
+	text-transform: uppercase;
+	color: white;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
 }

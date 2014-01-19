@@ -35,12 +35,20 @@ module.exports = function(grunt) {
     sass: {
       dist: {
         options: {
-          style: 'compressed'
+          style: 'expanded'
         },
         files: {
           'css/build/global.css': 'css/global.scss'
         }
       } 
+    },
+
+    autoprefixer: {
+      dist: {
+        files: {
+          'css/build/global.css': 'css/build/global.css'
+        }
+      }
     },
 
     watch: {
@@ -56,7 +64,7 @@ module.exports = function(grunt) {
       },
       css: {
         files: ['css/*.scss'],
-        tasks: ['sass'],
+        tasks: ['sass', 'autoprefixer'],
         options: {
           spawn: false,
 
@@ -68,7 +76,11 @@ module.exports = function(grunt) {
         options: {
           spawn: false,
         }
-      }
+      },
+      // styles: {
+      //   files: ['css/build/global.css'],
+      //   tasks: ['autoprefixer']
+      // }
     },
 
     connect: {
@@ -89,6 +101,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-connect');
 
   // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.

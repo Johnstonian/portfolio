@@ -7,12 +7,10 @@
 
 @import 'fontawesome';
 
-body { margin: 0; 
-	//font: 120%/1.4 'Roboto', sans-serif;
+body { 
+	margin: 0;
 	font-family: 'Roboto', sans-serif;
-	//font: 120%/1.4 "HelveticaNeue", "Helvetica", "Arial", sans-serif;
   padding: 0;
-  -webkit-text-size-adjust: 100%;
 }
 
 /* apply a natural box layout model to all elements */
@@ -23,28 +21,48 @@ body { margin: 0;
 a { color: $link-color; text-decoration: none; }
 
 .section { 
-	padding: 4.375em 1em; 
+	padding: 4.375em 0; 
 	margin: 0 auto; 
 	width: 100%; 
 	clear: both;
+	position: relative;
 }
 
 .container {
 	max-width: 75em;
 	margin: 0 auto;
+	padding: 0 1em;
+	@media screen and (min-width: $brkpt-xtra-large) {
+	    padding-left: 0;
+	    padding-right: 0;
+	}
+	 
 }
 
 .articles { background-color: white; }
-.about { background-color: #205e7e; color: white; }
+.about {
+	background: url('../../images/mountains.png') no-repeat bottom $about-blue;
+	color: white; 
+}
 .hobbies { background-color: #f08b65; color: white; }
 
 .sectionBorder {
 	border-bottom: 1px solid $gray;
 	margin: 0 auto;
-	width: 30rem;
 	position: relative;
 	color: $gray;
+
+	@media screen and (min-width: 320px) {
+	    margin: 0 10%;
+	}
+	
+	@media screen and (min-width: 500px) {
+	    width: 30rem;
+	    margin: 0 auto;
+	}
 }
+
+.dateContainer { display: table; padding-top: 1em; }
 
 i.iconWrapper {
 	position: absolute;
@@ -53,12 +71,73 @@ i.iconWrapper {
 	background-color: white;
 }
 
-.grid { padding-top: 3em; padding-bottom: 1em; position: relative; }
-.col { 
-	max-width: 22.5em; 
-	float: left;
-	margin-left: 3.75em;
+.grid { 
+	padding-top: 3em; 
+	padding-bottom: 1em; 
+	position: relative;
 
-	&:first-child { margin-left: 0; }
+	&:before, &:after {
+		clear: both;
+		content: "";
+		display: table;
+	}
+}
+.col { 
+	
+	float: left;
+	margin-bottom: 2em;
+
+	@media screen and (min-width: $brkpt-medium) {
+	    &:nth-child(n) {
+		    width: 47.777777777778%;
+		    margin-right: 4.444444444444%;
+	  	}
+	    &:nth-child(2n+1) {
+	    	clear: left;
+	    }
+	    &:nth-child(2n) {
+	    	margin-right: 0;
+	    }
+	}
+	 
+	
+
+	@media screen and (min-width: $brkpt-xtra-large) {
+	    &:nth-child(n) {
+		    width: 30%; 
+				margin-right: 5%;
+			}
+			&:nth-child(2n+1) {
+	    	clear: none;
+	    }
+
+	    &:nth-child(3n+1) {
+	    	clear:left;
+	    }
+	    &:nth-child(3n) {
+	    	margin-right: 0;
+	    }
+	    &:nth-child(4n) { 
+	    	width: 100%; 
+	    	margin-right: 0;
+	    }
+	}
+}
+
+.viewAllCircle { 
+	margin: 0 auto;
+	width: 75px;
+	height: 75px;
+	background-color: $link-color;
+	border-radius: 40px;
+	display: table;
+}
+
+.groundBlue {
+	height: 89px;
+	background-color: $blue-ground;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
 }
 
