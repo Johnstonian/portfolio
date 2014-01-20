@@ -7,17 +7,17 @@ module.exports = function(grunt) {
     concat: {   
       dist: {
         src: [
-          'js/libs/*.js', // All JS in the libs folder
-          'js/global.js'  // This specific file
+          'js/dev/libs/*.js', // All JS in the libs folder
+          'js/dev/main.js'  // This specific file
         ],
-        dest: 'js/build/production.js',
+        dest: 'js/main.js',
       }
     },
 
     uglify: {
       build: {
-          src: 'js/build/production.js',
-          dest: 'js/build/production.min.js'
+          src: 'js/main.js',
+          dest: 'js/main.min.js'
       }
     },
 
@@ -38,7 +38,7 @@ module.exports = function(grunt) {
           style: 'expanded'
         },
         files: {
-          'css/build/global.css': 'css/global.scss'
+          'css/style.css': 'css/dev/style.scss'
         }
       } 
     },
@@ -46,7 +46,7 @@ module.exports = function(grunt) {
     autoprefixer: {
       dist: {
         files: {
-          'css/build/global.css': 'css/build/global.css'
+          'css/style.css': 'css/style.css'
         }
       }
     },
@@ -63,7 +63,7 @@ module.exports = function(grunt) {
         },
       },
       css: {
-        files: ['css/*.scss'],
+        files: ['css/dev/*.scss'],
         tasks: ['sass', 'autoprefixer'],
         options: {
           spawn: false,
@@ -77,10 +77,6 @@ module.exports = function(grunt) {
           spawn: false,
         }
       },
-      // styles: {
-      //   files: ['css/build/global.css'],
-      //   tasks: ['autoprefixer']
-      // }
     },
 
     connect: {

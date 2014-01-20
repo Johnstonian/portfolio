@@ -32,10 +32,11 @@ a { color: $link-color; text-decoration: none; }
 	max-width: 75em;
 	margin: 0 auto;
 	padding: 0 1em;
-	@media screen and (min-width: $brkpt-xtra-large) {
+	@media only screen and (min-width: 77.5em) {
 	    padding-left: 0;
 	    padding-right: 0;
 	}
+	 
 	 
 }
 
