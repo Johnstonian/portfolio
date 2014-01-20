@@ -1,6 +1,6 @@
 h2.sectionTitle { 
 	font-weight: $thin;
-	font-size: 1.875em;
+	@include font-size(30);
 	line-height: 3em;
 	margin: 0;	
 	width: 100%;
@@ -10,7 +10,7 @@ h2.sectionTitle {
 
 h3 {
 	font-weight: $ultra-bold;
-	font-size: 2em;
+	@include font-size(32);
 	padding: 0;
 	margin: 0;
 
@@ -25,35 +25,36 @@ h3 {
 	}
 	 
 	@media screen and (min-width: $brkpt-large) {
-	    font-size: 2.5em;
+	    @include font-size(40);
 	}
 	 
 }
 
 p { 
 	font-weight: $light;
-	font-size: 1em; 
+	@include font-size($base-font-size); 
+
 	line-height: 24px;
 
 	@media screen and (min-width: $brkpt-large) {
-	    font-size: 1.125em;
+	    @include font-size(18);
 	}
 }
 p.more { 
 	font-weight: $bold;
-	font-size: 1.125em;
+	@include font-size(18);
 	line-height: 24px;
 	color: $link-color;
 
 	@media screen and (min-width: $brkpt-large) {
-	    font-size: 1.25em;
+	    @include font-size(20);
 	}
 	 
 }
-p.start { font-size: 1.875em; }
+p.start { @include font-size(30); }
 p.date {
 	font-weight: $thin;
-	font-size: 0.875em;
+	@include font-size(14);
 	max-height: 14px;
 	padding-left: 0.875em;
 	border-left: 3px solid $orange;
@@ -64,7 +65,7 @@ p.date {
 
 p.viewAll { 
 	font-weight: $normal;
-	font-size: 1.125em;
+	@include font-size(18);
 	line-height: 1.25em;
 	text-transform: uppercase;
 	color: white;

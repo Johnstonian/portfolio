@@ -383,7 +383,8 @@ table {
 /* 768px */
 h2.sectionTitle {
   font-weight: 100;
-  font-size: 1.875em;
+  font-size: 30px;
+  font-size: 1.875rem;
   line-height: 3em;
   margin: 0;
   width: 100%;
@@ -393,7 +394,8 @@ h2.sectionTitle {
 
 h3 {
   font-weight: 900;
-  font-size: 2em;
+  font-size: 32px;
+  font-size: 2rem;
   padding: 0;
   margin: 0;
   -webkit-transition: font-size 0.3s ease-out;
@@ -406,40 +408,47 @@ h3 {
 }
 @media screen and (min-width: 48em) {
   h3 {
-    font-size: 2.5em;
+    font-size: 40px;
+    font-size: 2.5rem;
   }
 }
 
 p {
   font-weight: 300;
-  font-size: 1em;
+  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
 }
 @media screen and (min-width: 48em) {
   p {
-    font-size: 1.125em;
+    font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 
 p.more {
   font-weight: 700;
-  font-size: 1.125em;
+  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 24px;
   color: #5b9bbc;
 }
 @media screen and (min-width: 48em) {
   p.more {
-    font-size: 1.25em;
+    font-size: 20px;
+    font-size: 1.25rem;
   }
 }
 
 p.start {
-  font-size: 1.875em;
+  font-size: 30px;
+  font-size: 1.875rem;
 }
 
 p.date {
   font-weight: 100;
-  font-size: 0.875em;
+  font-size: 14px;
+  font-size: 0.875rem;
   max-height: 14px;
   padding-left: 0.875em;
   border-left: 3px solid #f08b65;
@@ -450,7 +459,8 @@ p.date {
 
 p.viewAll {
   font-weight: 400;
-  font-size: 1.125em;
+  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.25em;
   text-transform: uppercase;
   color: white;
