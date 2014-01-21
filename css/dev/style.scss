@@ -83,7 +83,7 @@ i.iconWrapper {
 		display: table;
 	}
 }
-.column { 
+.column-articles { 
 	
 	float: left;
 	margin-bottom: 2em;
@@ -101,8 +101,6 @@ i.iconWrapper {
 	    }
 	}
 	 
-	
-
 	@media screen and (min-width: $brkpt-xtra-large) {
 	    &:nth-child(n) {
 		    width: 30%; 
@@ -123,6 +121,24 @@ i.iconWrapper {
 	    	margin-right: 0;
 	    }
 	}
+}
+
+.column-about {
+
+	float:left;
+	margin-bottom: 2em;
+
+	/*@media only screen and (min-width: $brkpt-xtra-large) {*/
+	    &:nth-child(n) {
+	    	width: 45%;
+	    	margin-right: 5%;
+	    }
+	    &:nth-child(2n) {
+	    	margin-right: 0;
+	    	float: right;
+	    }
+	/*}*/
+	 
 }
 
 .viewAllCircle { 

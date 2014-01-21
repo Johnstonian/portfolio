@@ -2233,40 +2233,55 @@ i.iconWrapper {
   display: table;
 }
 
-.column {
+.column-articles {
   float: left;
   margin-bottom: 2em;
 }
 @media screen and (min-width: 40em) {
-  .column:nth-child(n) {
+  .column-articles:nth-child(n) {
     width: 47.777777777778%;
     margin-right: 4.444444444444%;
   }
-  .column:nth-child(2n+1) {
+  .column-articles:nth-child(2n+1) {
     clear: left;
   }
-  .column:nth-child(2n) {
+  .column-articles:nth-child(2n) {
     margin-right: 0;
   }
 }
 @media screen and (min-width: 75em) {
-  .column:nth-child(n) {
+  .column-articles:nth-child(n) {
     width: 30%;
     margin-right: 5%;
   }
-  .column:nth-child(2n+1) {
+  .column-articles:nth-child(2n+1) {
     clear: none;
   }
-  .column:nth-child(3n+1) {
+  .column-articles:nth-child(3n+1) {
     clear: left;
   }
-  .column:nth-child(3n) {
+  .column-articles:nth-child(3n) {
     margin-right: 0;
   }
-  .column:nth-child(4n) {
+  .column-articles:nth-child(4n) {
     width: 100%;
     margin-right: 0;
   }
+}
+
+.column-about {
+  float: left;
+  margin-bottom: 2em;
+  /*@media only screen and (min-width: $brkpt-xtra-large) {*/
+  /*}*/
+}
+.column-about:nth-child(n) {
+  width: 45%;
+  margin-right: 5%;
+}
+.column-about:nth-child(2n) {
+  margin-right: 0;
+  float: right;
 }
 
 .viewAllCircle {
