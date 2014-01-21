@@ -381,7 +381,7 @@ table {
 
 /* 1200px */
 /* 768px */
-h2.sectionTitle {
+h2.section-title {
   font-weight: 100;
   font-size: 30px;
   font-size: 1.875rem;
@@ -457,7 +457,7 @@ p.date {
   line-height: 14px;
 }
 
-p.viewAll {
+p.view-all {
   font-weight: 400;
   font-size: 18px;
   font-size: 1.125rem;
@@ -467,6 +467,13 @@ p.viewAll {
   text-align: center;
   display: table-cell;
   vertical-align: middle;
+}
+
+.about-copy {
+  font-weight: 300;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 26px;
 }
 
 /*!
@@ -2153,6 +2160,10 @@ body {
   box-sizing: border-box;
 }
 
+.center {
+  text-align: center;
+}
+
 a {
   color: #5b9bbc;
   text-decoration: none;
@@ -2192,30 +2203,30 @@ a {
   color: white;
 }
 
-.sectionBorder {
+.section-border {
   border-bottom: 1px solid #b2b2b2;
   margin: 0 auto;
   position: relative;
   color: #b2b2b2;
 }
 @media screen and (min-width: 320px) {
-  .sectionBorder {
+  .section-border {
     margin: 0 10%;
   }
 }
 @media screen and (min-width: 500px) {
-  .sectionBorder {
+  .section-border {
     width: 30rem;
     margin: 0 auto;
   }
 }
 
-.dateContainer {
+.date-container {
   display: table;
   padding-top: 1em;
 }
 
-i.iconWrapper {
+i.icon-wrapper {
   position: absolute;
   margin: -16px -25px;
   padding: 0 10px;
@@ -2284,7 +2295,7 @@ i.iconWrapper {
   float: right;
 }
 
-.viewAllCircle {
+.view-all-circle {
   margin: 0 auto;
   width: 75px;
   height: 75px;
@@ -2293,7 +2304,7 @@ i.iconWrapper {
   display: table;
 }
 
-.groundBlue {
+.ground-blue {
   height: 89px;
   background-color: #195777;
   position: absolute;

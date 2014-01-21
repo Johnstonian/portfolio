@@ -1,4 +1,4 @@
-h2.sectionTitle { 
+h2.section-title { 
 	font-weight: $thin;
 	@include font-size(30);
 	line-height: 3em;
@@ -63,7 +63,7 @@ p.date {
 	line-height: 14px;
 }
 
-p.viewAll { 
+p.view-all { 
 	font-weight: $normal;
 	@include font-size(18);
 	line-height: 1.25em;
@@ -72,4 +72,10 @@ p.viewAll {
 	text-align: center;
 	display: table-cell;
 	vertical-align: middle;
+}
+
+.about-copy {
+	font-weight: $light;
+	@include font-size(18);
+	line-height: 26px;
 }

@@ -18,6 +18,8 @@ body {
   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
  }
 
+ .center { text-align: center; }
+
 a { color: $link-color; text-decoration: none; }
 
 .section { 
@@ -47,7 +49,7 @@ a { color: $link-color; text-decoration: none; }
 }
 .hobbies { background-color: #f08b65; color: white; }
 
-.sectionBorder {
+.section-border {
 	border-bottom: 1px solid $gray;
 	margin: 0 auto;
 	position: relative;
@@ -63,9 +65,9 @@ a { color: $link-color; text-decoration: none; }
 	}
 }
 
-.dateContainer { display: table; padding-top: 1em; }
+.date-container { display: table; padding-top: 1em; }
 
-i.iconWrapper {
+i.icon-wrapper {
 	position: absolute;
 	margin: -16px -25px;
 	padding: 0 10px;
@@ -141,7 +143,7 @@ i.iconWrapper {
 	 
 }
 
-.viewAllCircle { 
+.view-all-circle { 
 	margin: 0 auto;
 	width: 75px;
 	height: 75px;
@@ -150,7 +152,7 @@ i.iconWrapper {
 	display: table;
 }
 
-.groundBlue {
+.ground-blue {
 	height: 89px;
 	background-color: $blue-ground;
 	position: absolute;
