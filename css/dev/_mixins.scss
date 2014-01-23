@@ -1,5 +1,9 @@
-// mixins go here
-
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/* Sets font-size to rem with a pixel fallback
+* https://github.com/csswizardry/CSS-Guidelines#sizing-uis
+*/
 @mixin font-size($font-size){
 	font-size:$font-size +px;
 	font-size:$font-size / $base-font-size +rem;

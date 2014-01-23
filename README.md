@@ -1,7 +1,16 @@
-#Portfolio
+# Portfolio
 
 Personal portfolio project.
 
-Starting with a basic HTML document with 90% of the copy.
-
-Will continue to update this repository as I add more styling to the site.
+## Todos
+* Restructure typography.scss to be more specific
+* Rework the font setup
+* Build out styles for secitons:
+** About
+** Skillset
+** Hobbies
+** Projects/Recent Work
+** Testimonials
+** Contact Form
+** Footer
+* Build out nav

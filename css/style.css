@@ -1,3 +1,35 @@
+/* Author: Ryan Johnston
+/*------------------------------------*\
+    $TABLE OF CONTENTS https://github.com/csswizardry/CSS-Guidelines
+\*------------------------------------*/
+/**
+ * VARIABLES............Define Sass Variables
+ * MIXINS...............Define Sass Mixins
+ * NORMALIZE............Normalize all elements consistently across browsers
+ * GLOBAL STYLES........Global Element Styles
+ * CLASSES..............Generic Classes
+ * TYPE.................Type Classes
+ * FONT AWESOME.........Font Awesome Icon Fonts - http://fontawesome.io/
+ * LAYOUT...............Layout Specific Styles
+ * STRUCTURE............Site structure (header, nav, etc.)
+ */
+/*------------------------------------*\
+    $VARIABLES
+\*------------------------------------*/
+/* font weights */
+/* Colors */
+/* Breakpoints */
+/* 1200px */
+/* 768px */
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/* Sets font-size to rem with a pixel fallback
+* https://github.com/csswizardry/CSS-Guidelines#sizing-uis
+*/
+/*------------------------------------*\
+    $NORMALIZE
+\*------------------------------------*/
 /*! normalize.css v2.1.3 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -379,8 +411,9 @@ table {
   border-spacing: 0;
 }
 
-/* 1200px */
-/* 768px */
+/*------------------------------------*\
+    $TYPE
+\*------------------------------------*/
 h2.section-title {
   font-weight: 100;
   font-size: 30px;
@@ -476,6 +509,9 @@ p.view-all {
   line-height: 26px;
 }
 
+/*------------------------------------*\
+    $FONT AWESOME
+\*------------------------------------*/
 /*!
  *  Font Awesome 4.0.3 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -2147,21 +2183,22 @@ p.view-all {
   content: "\f196";
 }
 
-body {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  padding: 0;
-}
-
-/* apply a natural box layout model to all elements */
+/*------------------------------------*\
+    $GLOBAL STYLES
+\*------------------------------------*/
+/* apply a natural box layout model to all elements
+* http:/paulirish.com/2012/box-sizing-border-box-ftw/
+*/
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-.center {
-  text-align: center;
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -2169,11 +2206,24 @@ a {
   text-decoration: none;
 }
 
+/*------------------------------------*\
+    $CLASSES
+\*------------------------------------*/
+.center {
+  text-align: center;
+}
+
+.clear, .section, .grid:before, .grid:after {
+  clear: both;
+}
+
+/*------------------------------------*\
+    $LAYOUT
+\*------------------------------------*/
 .section {
   padding: 4.375em 0;
   margin: 0 auto;
   width: 100%;
-  clear: both;
   position: relative;
 }
 
@@ -2187,6 +2237,21 @@ a {
     padding-left: 0;
     padding-right: 0;
   }
+}
+
+.intro {
+  background: #000000;
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, black), color-stop(100%, #034060));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, black 0%, #034060 100%);
+  /* IE10+ */
+  background: -webkit-gradient(linear, left top, left bottom, from(black), to(#034060));
+  /* IE10+ */
+  background: linear-gradient(to bottom, black 0%, #034060 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#034060',GradientType=0 );
+  /* IE6-9 */
 }
 
 .articles {
@@ -2239,7 +2304,6 @@ i.icon-wrapper {
   position: relative;
 }
 .grid:before, .grid:after {
-  clear: both;
   content: "";
   display: table;
 }
@@ -2311,3 +2375,7 @@ i.icon-wrapper {
   bottom: 0;
   width: 100%;
 }
+
+/*------------------------------------*\
+    $STRUCTURE
+\*------------------------------------*/
