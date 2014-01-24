@@ -10,13 +10,13 @@ module.exports = function(grunt) {
           'js/dev/libs/*.js', // All JS in the libs folder
           'js/dev/main.js'  // This specific file
         ],
-        dest: 'js/main.js',
+        dest: 'js/dev/main.js',
       }
     },
 
     uglify: {
       build: {
-          src: 'js/main.js',
+          src: 'js/dev/main.js',
           dest: 'js/main.min.js'
       }
     },
@@ -25,9 +25,9 @@ module.exports = function(grunt) {
       dynamic: {
         files: [{
           expand: true,
-          cwd: 'images/',
+          cwd: 'images/dev',
           src: ['**/*.{png,jpg,gif}'],
-          dest: 'images/build/'
+          dest: 'images/'
         }]
       }
     },
@@ -56,7 +56,7 @@ module.exports = function(grunt) {
         livereload: true,
       },
       scripts: {
-        files: ['js/*.js'],
+        files: ['js/*/*.js'],
         tasks: ['concat', 'uglify'],
         options: {
           spawn: false,

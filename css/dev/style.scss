@@ -86,6 +86,13 @@ body {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#034060',GradientType=0 ); /* IE6-9 */
 
 }
+//.stars { position: absolute; top: 0; }
+#bg { top: 0; left: 0; }
+.bgwidth { width: 100%; }
+.bgheight { height: 100%; }
+
+.logo-holder { width: 490px; margin: 0 auto; text-align: center; }
+
 .articles { background-color: white; }
 .about {
 	background: url('../../images/mountains.png') no-repeat bottom $about-blue;
