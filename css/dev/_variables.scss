@@ -2,6 +2,8 @@
     $VARIABLES
 \*------------------------------------*/
 $base-font-size: 16;
+$roboto: 'Roboto', sans-serif;
+$roboto-condensed: 'Roboto Condensed', sans-serif;
 
 /* font weights */
 $thin: 100;
@@ -29,4 +31,5 @@ $gray: #b2b2b2;
 /* Breakpoints */
 $brkpt-xtra-large: 75em; /* 1200px */
 $brkpt-large: 48em; /* 768px */
-$brkpt-medium: 40em /* 640px */
+$brkpt-medium: 40em; /* 640px */
+$brkpt-small: 33.125em ;/* 530px */

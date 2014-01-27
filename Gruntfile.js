@@ -10,13 +10,13 @@ module.exports = function(grunt) {
           'js/dev/libs/*.js', // All JS in the libs folder
           'js/dev/main.js'  // This specific file
         ],
-        dest: 'js/dev/main.js',
+        dest: 'js/dev/allthejs.js',
       }
     },
 
     uglify: {
       build: {
-          src: 'js/dev/main.js',
+          src: 'js/dev/allthejs.js',
           dest: 'js/main.min.js'
       }
     },

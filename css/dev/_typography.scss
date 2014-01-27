@@ -1,7 +1,7 @@
 /*------------------------------------*\
     $TYPE
 \*------------------------------------*/
-h2.section-title { 
+.section-title { 
 	font-weight: $thin;
 	@include font-size(30);
 	line-height: 3em;
@@ -43,7 +43,7 @@ p {
 	    @include font-size(18);
 	}
 }
-p.more { 
+.more { 
 	font-weight: $bold;
 	@include font-size(18);
 	line-height: 24px;
@@ -54,8 +54,17 @@ p.more {
 	}
 	 
 }
-p.start { @include font-size(30); }
-p.date {
+.start { 
+	font-family: $roboto-condensed;
+	font-weight: 300;
+	@include font-size(30); 
+	text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.4);
+	color: white;
+	text-align: center;
+	margin: 0;
+}
+
+.date {
 	font-weight: $thin;
 	@include font-size(14);
 	max-height: 14px;
@@ -66,7 +75,7 @@ p.date {
 	line-height: 14px;
 }
 
-p.view-all { 
+.view-all { 
 	font-weight: $normal;
 	@include font-size(18);
 	line-height: 1.25em;
@@ -78,7 +87,24 @@ p.view-all {
 }
 
 .about-copy {
+	@include font-size(16);
 	font-weight: $light;
-	@include font-size(18);
 	line-height: 26px;
+
+	@media only screen and (min-width: $brkpt-large) {
+	    @include font-size (18);
+	}
+}
+
+.freelance-copy { 
+	@include font-size(18);
+	font-weight: $thin;
+	font-style: italic;
+	line-height: 32px;
+	text-align: center;
+	margin: 0;
+
+	@media only screen and (min-width: $brkpt-medium) {
+		@include font-size(24);
+	}
 }

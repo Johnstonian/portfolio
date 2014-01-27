@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Author: Ryan Johnston
 /*------------------------------------*\
     $TABLE OF CONTENTS https://github.com/csswizardry/CSS-Guidelines
@@ -6,10 +7,11 @@
  * VARIABLES............Define Sass Variables
  * MIXINS...............Define Sass Mixins
  * NORMALIZE............Normalize all elements consistently across browsers
- * GLOBAL STYLES........Global Element Styles
- * CLASSES..............Generic Classes
  * TYPE.................Type Classes
  * FONT AWESOME.........Font Awesome Icon Fonts - http://fontawesome.io/
+ * GLOBAL STYLES........Global Element Styles
+ * CLASSES..............Generic Classes
+ * GRIDS................Grid Specific Styles
  * LAYOUT...............Layout Specific Styles
  * STRUCTURE............Site structure (header, nav, etc.)
  */
@@ -21,6 +23,8 @@
 /* Breakpoints */
 /* 1200px */
 /* 768px */
+/* 640px */
+/* 530px */
 /*------------------------------------*\
     $MIXINS
 \*------------------------------------*/
@@ -167,6 +171,7 @@ dfn {
  */
 hr {
   -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -348,6 +353,8 @@ html input[disabled] {
  */
 input[type="checkbox"],
 input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -411,7 +418,7 @@ table {
 /*------------------------------------*\
     $TYPE
 \*------------------------------------*/
-h2.section-title {
+.section-title {
   font-weight: 100;
   font-size: 30px;
   font-size: 1.875rem;
@@ -429,9 +436,6 @@ h3 {
   padding: 0;
   margin: 0;
   -webkit-transition: font-size 0.3s ease-out;
-  -moz-transition: font-size 0.3s ease-out;
-  -ms-transition: font-size 0.3s ease-out;
-  -o-transition: font-size 0.3s ease-out;
   transition: font-size 0.3s ease-out;
 }
 @media screen and (min-width: 40em) {
@@ -459,7 +463,7 @@ p {
   }
 }
 
-p.more {
+.more {
   font-weight: 700;
   font-size: 18px;
   font-size: 1.125rem;
@@ -467,18 +471,24 @@ p.more {
   color: #5b9bbc;
 }
 @media screen and (min-width: 48em) {
-  p.more {
+  .more {
     font-size: 20px;
     font-size: 1.25rem;
   }
 }
 
-p.start {
+.start {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 300;
   font-size: 30px;
   font-size: 1.875rem;
+  text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.4);
+  color: white;
+  text-align: center;
+  margin: 0;
 }
 
-p.date {
+.date {
   font-weight: 100;
   font-size: 14px;
   font-size: 0.875rem;
@@ -490,7 +500,7 @@ p.date {
   line-height: 14px;
 }
 
-p.view-all {
+.view-all {
   font-weight: 400;
   font-size: 18px;
   font-size: 1.125rem;
@@ -503,10 +513,32 @@ p.view-all {
 }
 
 .about-copy {
+  font-size: 16px;
+  font-size: 1rem;
   font-weight: 300;
+  line-height: 26px;
+}
+@media only screen and (min-width: 48em) {
+  .about-copy {
+    font-size: 18px;
+    font-size: 1.125rem;
+  }
+}
+
+.freelance-copy {
   font-size: 18px;
   font-size: 1.125rem;
-  line-height: 26px;
+  font-weight: 100;
+  font-style: italic;
+  line-height: 32px;
+  text-align: center;
+  margin: 0;
+}
+@media only screen and (min-width: 40em) {
+  .freelance-copy {
+    font-size: 24px;
+    font-size: 1.5rem;
+  }
 }
 
 /*------------------------------------*\
@@ -607,19 +639,7 @@ p.view-all {
 
 .fa-spin {
   -webkit-animation: spin 2s infinite linear;
-  -moz-animation: spin 2s infinite linear;
-  -o-animation: spin 2s infinite linear;
   animation: spin 2s infinite linear;
-}
-
-@-moz-keyframes spin {
-  0% {
-    -moz-transform: rotate(0deg);
-  }
-
-  100% {
-    -moz-transform: rotate(359deg);
-  }
 }
 
 @-webkit-keyframes spin {
@@ -629,16 +649,6 @@ p.view-all {
 
   100% {
     -webkit-transform: rotate(359deg);
-  }
-}
-
-@-o-keyframes spin {
-  0% {
-    -o-transform: rotate(0deg);
-  }
-
-  100% {
-    -o-transform: rotate(359deg);
   }
 }
 
@@ -654,10 +664,14 @@ p.view-all {
 
 @keyframes spin {
   0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   100% {
+    -webkit-transform: rotate(359deg);
+    -ms-transform: rotate(359deg);
     transform: rotate(359deg);
   }
 }
@@ -665,45 +679,35 @@ p.view-all {
 .fa-rotate-90 {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
   -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
 .fa-rotate-180 {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
   -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
 .fa-rotate-270 {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   -webkit-transform: rotate(270deg);
-  -moz-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
-  -o-transform: rotate(270deg);
   transform: rotate(270deg);
 }
 
 .fa-flip-horizontal {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0,mirror=1);
   -webkit-transform: scale(-1, 1);
-  -moz-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
-  -o-transform: scale(-1, 1);
   transform: scale(-1, 1);
 }
 
 .fa-flip-vertical {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2,mirror=1);
   -webkit-transform: scale(1, -1);
-  -moz-transform: scale(1, -1);
   -ms-transform: scale(1, -1);
-  -o-transform: scale(1, -1);
   transform: scale(1, -1);
 }
 
@@ -2224,7 +2228,7 @@ p.view-all {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -2232,6 +2236,24 @@ body {
 a {
   color: #5b9bbc;
   text-decoration: none;
+}
+a.alternate {
+  color: inherit;
+}
+a.dark-blue {
+  color: #012030;
+}
+
+img {
+  max-width: 100%;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.dark-blue {
+  color: #012030;
 }
 
 /*------------------------------------*\
@@ -2241,114 +2263,22 @@ a {
   text-align: center;
 }
 
-.clear, .section, .grid:before, .grid:after {
+.clear, .grid:before, .grid:after, .section {
   clear: both;
 }
 
-/*------------------------------------*\
-    $LAYOUT
-\*------------------------------------*/
-.section {
-  padding: 4.375em 0;
+.view-all-circle {
   margin: 0 auto;
-  width: 100%;
-  position: relative;
-}
-
-.container {
-  max-width: 75em;
-  margin: 0 auto;
-  padding: 0 1em;
-}
-@media only screen and (min-width: 77.5em) {
-  .container {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
-.intro {
-  background: #000000;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, black 0%, #034060 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, black), color-stop(100%, #034060));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, black 0%, #034060 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, black 0%, #034060 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, black 0%, #034060 100%);
-  /* IE10+ */
-  background: linear-gradient(to bottom, black 0%, #034060 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#034060',GradientType=0 );
-  /* IE6-9 */
-}
-
-#bg {
-  top: 0;
-  left: 0;
-}
-
-.bgwidth {
-  width: 100%;
-}
-
-.bgheight {
-  height: 100%;
-}
-
-.logo-holder {
-  width: 490px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.articles {
-  background-color: white;
-}
-
-.about {
-  background: url("../../images/mountains.png") no-repeat bottom #034060;
-  color: white;
-}
-
-.hobbies {
-  background-color: #f08b65;
-  color: white;
-}
-
-.section-border {
-  border-bottom: 1px solid #b2b2b2;
-  margin: 0 auto;
-  position: relative;
-  color: #b2b2b2;
-}
-@media screen and (min-width: 320px) {
-  .section-border {
-    margin: 0 10%;
-  }
-}
-@media screen and (min-width: 500px) {
-  .section-border {
-    width: 30rem;
-    margin: 0 auto;
-  }
-}
-
-.date-container {
+  width: 75px;
+  height: 75px;
+  background-color: #5b9bbc;
+  border-radius: 40px;
   display: table;
-  padding-top: 1em;
 }
 
-i.icon-wrapper {
-  position: absolute;
-  margin: -16px -25px;
-  padding: 0 10px;
-  background-color: white;
-}
-
+/*------------------------------------*\
+    $GRIDS
+\*------------------------------------*/
 .grid {
   padding-top: 3em;
   padding-bottom: 1em;
@@ -2395,36 +2325,161 @@ i.icon-wrapper {
   }
 }
 
-.column-about {
-  float: left;
-  margin-bottom: 2em;
-  /*@media only screen and (min-width: $brkpt-xtra-large) {*/
-  /*}*/
-}
-.column-about:nth-child(n) {
-  width: 45%;
-  margin-right: 5%;
-}
-.column-about:nth-child(2n) {
-  margin-right: 0;
-  float: right;
+@media only screen and (min-width: 40em) {
+  .column-about {
+    float: left;
+    margin-bottom: 2em;
+  }
+  .column-about:nth-child(n) {
+    width: 45%;
+    margin-right: 5%;
+  }
+  .column-about:nth-child(2n) {
+    margin-right: 0;
+    float: right;
+  }
 }
 
-.view-all-circle {
+/*------------------------------------*\
+    $LAYOUT
+\*------------------------------------*/
+.section {
+  padding: 4.375em 0;
   margin: 0 auto;
-  width: 75px;
-  height: 75px;
-  background-color: #5b9bbc;
-  border-radius: 40px;
+  width: 100%;
+  position: relative;
+}
+
+.section-border {
+  border-bottom: 1px solid #b2b2b2;
+  margin: 0 auto;
+  position: relative;
+  color: #b2b2b2;
+}
+@media screen and (min-width: 320px) {
+  .section-border {
+    margin: 0 10%;
+  }
+}
+@media screen and (min-width: 500px) {
+  .section-border {
+    width: 30rem;
+    margin: 0 auto;
+  }
+}
+
+.container {
+  max-width: 75em;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+@media only screen and (min-width: 77.5em) {
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.intro {
+  background: #000000;
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, black), color-stop(100%, #034060));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, black 0%, #034060 100%);
+  /* IE10+ */
+  background: -webkit-gradient(linear, left top, left bottom, from(black), to(#034060));
+  /* IE10+ */
+  background: linear-gradient(to bottom, black 0%, #034060 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#034060',GradientType=0 );
+  /* IE6-9 */
+  padding-bottom: 5.475em;
+}
+
+.stars {
+  position: absolute;
+  top: 0;
+}
+
+#bg {
+  top: 0;
+  left: 0;
+}
+
+.bgwidth {
+  width: 100%;
+}
+
+.bgheight {
+  height: 100%;
+}
+
+.logo-holder {
+  max-width: 490px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 1em 36px 1em;
+}
+@media only screen and (min-width: 33.125em) {
+  .logo-holder {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.logo {
+  padding-bottom: 42px;
+}
+
+.articles {
+  background-color: white;
+}
+
+.about {
+  background: url("../../images/mountains.png") no-repeat bottom #034060;
+  color: white;
+}
+
+.freelance {
+  background-color: #012030;
+  border-radius: 5px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.hobbies {
+  background-color: #f08b65;
+  color: white;
+}
+
+.date-container {
   display: table;
+  padding-top: 1em;
+}
+
+i.icon-wrapper {
+  position: absolute;
+  margin: -16px -25px;
+  padding: 0 10px;
+  background-color: white;
 }
 
 .ground-blue {
-  height: 89px;
+  /*	height: 89px;*/
   background-color: #195777;
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+
+/* this section needs some work */
+.pilot-landed {
+  background: url("../images/pilot-landed.png") no-repeat bottom right;
+  height: 113px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 }
 
 /*------------------------------------*\
