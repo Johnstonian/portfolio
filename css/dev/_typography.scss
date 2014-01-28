@@ -43,6 +43,14 @@ p {
 	    @include font-size(18);
 	}
 }
+
+.pill p {
+	font-weight: $bold;
+	@include font-size(20);
+	line-height: 1.5;
+	margin: 0;
+	float: left;
+}
 .more { 
 	font-weight: $bold;
 	@include font-size(18);

@@ -22,9 +22,12 @@
 /* Colors */
 /* Breakpoints */
 /* 1200px */
+/* 840px */
 /* 768px */
 /* 640px */
+/* 580px */
 /* 530px */
+/* 420px */
 /*------------------------------------*\
     $MIXINS
 \*------------------------------------*/
@@ -461,6 +464,15 @@ p {
     font-size: 18px;
     font-size: 1.125rem;
   }
+}
+
+.pill p {
+  font-weight: 700;
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin: 0;
+  float: left;
 }
 
 .more {
@@ -2248,14 +2260,6 @@ img {
   max-width: 100%;
 }
 
-.medium {
-  font-weight: 500;
-}
-
-.dark-blue {
-  color: #012030;
-}
-
 /*------------------------------------*\
     $CLASSES
 \*------------------------------------*/
@@ -2265,6 +2269,14 @@ img {
 
 .clear, .grid:before, .grid:after, .section {
   clear: both;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.dark-blue {
+  color: #012030;
 }
 
 .view-all-circle {
@@ -2289,6 +2301,23 @@ img {
   display: table;
 }
 
+/**
+* Article Columns
+* Example:
+
+	<div class="grid">
+		<div class="column-articles">
+
+			<h3>Blog Post: The Long Title</h3>
+			<div class="date-container">
+				<p class="date">December 10, 2013</p>
+			</div>
+			<p>Bacon ipsum dolor sit amet biltong prosciutto tongue corned beef strip steak brisket pork belly landjaeger drumstick sausage pastrami. Tail landjaeger sausage frankfurter leberkas, kielbasa ball tip bacon. Tri-tip kielbasa jerky tongue, bresaola meatball short loin beef ground round pork loin meatloaf sausage. Andouille turkey jerky biltong, bacon tri-tip beef shankle sirloin fatback brisket strip steak leberkas pastrami.</p>
+
+			<p class="more"><a href="#">Keep Reading <i class="fa fa-long-arrow-right"></i></a></p>
+		</div>
+	</div>
+*/
 .column-articles {
   float: left;
   margin-bottom: 2em;
@@ -2325,6 +2354,23 @@ img {
   }
 }
 
+/**
+* About Columns
+* Example:
+	<div class="grid">
+		<div class="column-about">
+			<p class="about-copy">I'm a front-end developer who loves the web. I'm passionate about semantic and standards based development. Efficient code, creative user experiences, robust typography, CSS3, and the semantic web are just a few of my interests. I'm excited about the future of the web and strive to make it a better experience every day.</p>
+
+			<p class="about-copy">Like many, I got started with web development in the world of Geocities and Angelfire. My latest work has expanded into the modern web landscape of robustly featured internet applications.</p>
+		</div>
+
+		<div class="column-about">
+			<p class="about-copy">In addition to my passion for the web, I also enjoy reading fiction, training for adventure runs, listening to music, playing soccer, and doing my best to keep the 80’s alive through my son and daughter by forcing pop culture references of the era upon them.</p>
+
+			<p class="about-copy">I currently work at COUNTRY Financial where I develop dynamic applications for the web using PHP, MySQL, JavaScript, CSS3, and HTML5.</p>
+		</div>
+	</div>
+*/
 @media only screen and (min-width: 40em) {
   .column-about {
     float: left;
@@ -2337,6 +2383,55 @@ img {
   .column-about:nth-child(2n) {
     margin-right: 0;
     float: right;
+  }
+}
+
+/* skillset section columns */
+/*div*/
+.pill {
+  background-color: #034060;
+  border-radius: 5px;
+  color: white;
+  margin-bottom: 0.04166666666667%;
+  padding: 10px 20px 10px 10px;
+  display: inline-block;
+  width: 100%;
+  /* handle pills based on breakpoints */
+}
+.pill:first-child {
+  background-color: #012030;
+}
+@media only screen and (min-width: 26.25em) {
+  .pill {
+    width: 49.1379310344828%;
+  }
+  .pill:nth-child(n) {
+    margin-right: 0.08620689655172;
+  }
+  .pill:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+@media only screen and (min-width: 36.25em) {
+  .pill {
+    width: 32.7651515151515%;
+  }
+  .pill:nth-child(n), .pill:nth-child(2n) {
+    margin-right: 0.04166666666667%;
+  }
+  .pill:nth-child(3n), .pill:nth-child(20) {
+    margin-right: 0;
+  }
+}
+@media only screen and (min-width: 55em) {
+  .pill {
+    width: 21.3333333333333%;
+  }
+  .pill:nth-child(3n) {
+    margin-right: 0.04166666666667%;
+  }
+  .pill:nth-child(4n) {
+    margin-right: 0;
   }
 }
 
@@ -2486,44 +2581,24 @@ i.icon-wrapper {
   bottom: 0;
 }
 
-/*ul*/
-.skills {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-}
-.skills p {
-  font-weight: 700;
-  font-size: 20px;
-  font-size: 1.25rem;
-  line-height: 1.5;
-  margin: 0;
-  float: left;
-}
-@media only screen and (min-width: 75em) {
-  .skills {
-    width: 87.5833333333333%;
-  }
-}
+/**
+ * Skillset Pills
+ * - each skill is wrapped in a 'pill' div
+ * - inside each pill div is a skill wrapper to hold the font aweseom icon
+ *   and the specific skill copy
+ *
+ * Example: 
 
-/*li*/
-.pill {
-  background-color: #034060;
-  width: 256px;
-  height: 50px;
-  border-radius: 5px;
-  color: white;
-  margin: 0 5px 5px 0;
-  padding: 10px;
-  display: inline-block;
-}
-.pill:nth-child(4n) {
-  margin-right: 0;
-}
-.pill:first-child {
-  background-color: #012030;
-}
+	<div class="pill">
+		<div class="skill-wrapper">
+		<div class="check-holder">
+			<i class="check  orange  fa  fa-check"></i>
+		</div>
+		<p>html</p>
+		</div>
+	</div>
 
+ */
 .skill-wrapper {
   display: table-cell;
   vertical-align: middle;

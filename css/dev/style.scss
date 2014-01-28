@@ -50,9 +50,6 @@ a {
 
 img { max-width: 100%; }
 
-.medium { font-weight: $medium; }
-.dark-blue { color: $dark-blue; }
-
 
 
 
@@ -62,6 +59,8 @@ img { max-width: 100%; }
 \*------------------------------------*/
  .center { text-align: center; }
  .clear, %clear { clear: both; }
+ .medium { font-weight: $medium; }
+ .dark-blue { color: $dark-blue; }
  .view-all-circle { 
 	margin: 0 auto;
 	width: 75px;
@@ -89,6 +88,24 @@ img { max-width: 100%; }
 		display: table;
 	}
 }
+
+/**
+* Article Columns
+* Example:
+
+	<div class="grid">
+		<div class="column-articles">
+
+			<h3>Blog Post: The Long Title</h3>
+			<div class="date-container">
+				<p class="date">December 10, 2013</p>
+			</div>
+			<p>Bacon ipsum dolor sit amet biltong prosciutto tongue corned beef strip steak brisket pork belly landjaeger drumstick sausage pastrami. Tail landjaeger sausage frankfurter leberkas, kielbasa ball tip bacon. Tri-tip kielbasa jerky tongue, bresaola meatball short loin beef ground round pork loin meatloaf sausage. Andouille turkey jerky biltong, bacon tri-tip beef shankle sirloin fatback brisket strip steak leberkas pastrami.</p>
+
+			<p class="more"><a href="#">Keep Reading <i class="fa fa-long-arrow-right"></i></a></p>
+		</div>
+	</div>
+*/
 .column-articles { 
 	
 	float: left;
@@ -129,6 +146,23 @@ img { max-width: 100%; }
 	}
 }
 
+/**
+* About Columns
+* Example:
+	<div class="grid">
+		<div class="column-about">
+			<p class="about-copy">I'm a front-end developer who loves the web. I'm passionate about semantic and standards based development. Efficient code, creative user experiences, robust typography, CSS3, and the semantic web are just a few of my interests. I'm excited about the future of the web and strive to make it a better experience every day.</p>
+
+			<p class="about-copy">Like many, I got started with web development in the world of Geocities and Angelfire. My latest work has expanded into the modern web landscape of robustly featured internet applications.</p>
+		</div>
+
+		<div class="column-about">
+			<p class="about-copy">In addition to my passion for the web, I also enjoy reading fiction, training for adventure runs, listening to music, playing soccer, and doing my best to keep the 80’s alive through my son and daughter by forcing pop culture references of the era upon them.</p>
+
+			<p class="about-copy">I currently work at COUNTRY Financial where I develop dynamic applications for the web using PHP, MySQL, JavaScript, CSS3, and HTML5.</p>
+		</div>
+	</div>
+*/
 .column-about {
 
 	@media only screen and (min-width: $brkpt-medium) {
@@ -142,6 +176,55 @@ img { max-width: 100%; }
 	    	margin-right: 0;
 	    	float: right;
 	    }
+	}
+	 
+}
+
+/* skillset section columns */
+/*div*/.pill {
+	background-color: $about-blue;
+	border-radius: 5px;
+	color: white;
+	margin-bottom: 0.04166666666667%;
+	padding: 10px 20px 10px 10px;
+	display: inline-block;
+	width: 100%;
+
+	&:first-child { background-color: $dark-blue; }
+
+	/* handle pills based on breakpoints */
+	@media only screen and (min-width: $brkpt-420) {
+		width: 49.1379310344828%;
+		&:nth-child(n) {
+			margin-right: 0.08620689655172;
+		}
+		&:nth-child(2n) {
+			margin-right: 0;
+		}
+	}
+
+	@media only screen and (min-width: $brkpt-580) {
+		width: 32.7651515151515%;
+	
+		&:nth-child(n), &:nth-child(2n) {
+			margin-right: 0.04166666666667%;
+		}
+		&:nth-child(3n), &:nth-child(20) {
+			margin-right: 0;
+		}
+	}
+
+
+	@media only screen and (min-width: $brkpt-880) {
+		width: 21.3333333333333%;
+
+		&:nth-child(3n) {
+			margin-right: 0.04166666666667%;
+		}
+
+    &:nth-child(4n) {
+			margin-right: 0;
+		}
 	}
 	 
 }
@@ -265,42 +348,24 @@ i.icon-wrapper {
 	bottom: 0;
 }
 
-/*ul*/.skills {
-	list-style: none; 
-	padding: 0;
-	margin: 0 auto;
-	//max-width: 1051px;
+/**
+ * Skillset Pills
+ * - each skill is wrapped in a 'pill' div
+ * - inside each pill div is a skill wrapper to hold the font aweseom icon
+ *   and the specific skill copy
+ *
+ * Example: 
 
-	p {
-		font-weight: $bold;
-		@include font-size(20);
-		line-height: 1.5;
-		margin: 0;
-		float: left;
-	}
+	<div class="pill">
+		<div class="skill-wrapper">
+		<div class="check-holder">
+			<i class="check  orange  fa  fa-check"></i>
+		</div>
+		<p>html</p>
+		</div>
+	</div>
 
-	@media only screen and (min-width: $brkpt-xtra-large) {
-	    width: 87.5833333333333%;
-	}
-	 
-}
-
-/*li*/.pill {
-	background-color: $about-blue;
-	width: 256px;
-	height: 50px;
-	border-radius: 5px;
-	color: white;
-	margin: 0 5px 5px 0;
-	padding: 10px;
-	display: inline-block;
-
-	&:nth-child(4n) {
-		margin-right: 0;
-	}
-
-	&:first-child { background-color: $dark-blue; }
-}
+ */
 
 .skill-wrapper {
 	display: table-cell;
