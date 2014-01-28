@@ -200,6 +200,16 @@ img { max-width: 100%; }
 
 	padding-bottom: 5.475em;
 }
+
+.articles { background-color: white; }
+.about {
+	background: url('../../images/mountains.png') no-repeat bottom $about-blue;
+	color: white; 
+}
+
+.skillset {
+	background-color: $skillset-blue;
+}
 .stars { position: absolute; top: 0; }
 #bg { top: 0; left: 0; }
 .bgwidth { width: 100%; }
@@ -217,11 +227,7 @@ img { max-width: 100%; }
 .logo { padding-bottom: 42px; }
 
 
-.articles { background-color: white; }
-.about {
-	background: url('../../images/mountains.png') no-repeat bottom $about-blue;
-	color: white; 
-}
+
 
 .freelance {
 	background-color: $dark-blue;
@@ -258,6 +264,75 @@ i.icon-wrapper {
 	position: absolute;
 	bottom: 0;
 }
+
+/*ul*/.skills {
+	list-style: none; 
+	padding: 0;
+	margin: 0 auto;
+	//max-width: 1051px;
+
+	p {
+		font-weight: $bold;
+		@include font-size(20);
+		line-height: 1.5;
+		margin: 0;
+		float: left;
+	}
+
+	@media only screen and (min-width: $brkpt-xtra-large) {
+	    width: 87.5833333333333%;
+	}
+	 
+}
+
+/*li*/.pill {
+	background-color: $about-blue;
+	width: 256px;
+	height: 50px;
+	border-radius: 5px;
+	color: white;
+	margin: 0 5px 5px 0;
+	padding: 10px;
+	display: inline-block;
+
+	&:nth-child(4n) {
+		margin-right: 0;
+	}
+
+	&:first-child { background-color: $dark-blue; }
+}
+
+.skill-wrapper {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.bolt-holder, .check-holder {
+	width: 30px;
+	height: 30px;
+	display: table;
+	margin-right: 20px;
+	float: left;
+}
+
+.bolt-holder {
+	background-color: $about-blue; 
+	border-radius: 75%;
+}
+
+.check-holder { 
+	background-color: $dark-blue;
+	border-radius: 5px;
+}
+
+.bolt, .check {
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.bolt { color: white; }
+.check { color: $orange; }
 
 /*------------------------------------*\
     $STRUCTURE

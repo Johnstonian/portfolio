@@ -2396,6 +2396,19 @@ img {
   padding-bottom: 5.475em;
 }
 
+.articles {
+  background-color: white;
+}
+
+.about {
+  background: url("../../images/mountains.png") no-repeat bottom #034060;
+  color: white;
+}
+
+.skillset {
+  background-color: #205e7e;
+}
+
 .stars {
   position: absolute;
   top: 0;
@@ -2429,15 +2442,6 @@ img {
 
 .logo {
   padding-bottom: 42px;
-}
-
-.articles {
-  background-color: white;
-}
-
-.about {
-  background: url("../../images/mountains.png") no-repeat bottom #034060;
-  color: white;
 }
 
 .freelance {
@@ -2480,6 +2484,81 @@ i.icon-wrapper {
   width: 100%;
   position: absolute;
   bottom: 0;
+}
+
+/*ul*/
+.skills {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+}
+.skills p {
+  font-weight: 700;
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin: 0;
+  float: left;
+}
+@media only screen and (min-width: 75em) {
+  .skills {
+    width: 87.5833333333333%;
+  }
+}
+
+/*li*/
+.pill {
+  background-color: #034060;
+  width: 256px;
+  height: 50px;
+  border-radius: 5px;
+  color: white;
+  margin: 0 5px 5px 0;
+  padding: 10px;
+  display: inline-block;
+}
+.pill:nth-child(4n) {
+  margin-right: 0;
+}
+.pill:first-child {
+  background-color: #012030;
+}
+
+.skill-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.bolt-holder, .check-holder {
+  width: 30px;
+  height: 30px;
+  display: table;
+  margin-right: 20px;
+  float: left;
+}
+
+.bolt-holder {
+  background-color: #034060;
+  border-radius: 75%;
+}
+
+.check-holder {
+  background-color: #012030;
+  border-radius: 5px;
+}
+
+.bolt, .check {
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.bolt {
+  color: white;
+}
+
+.check {
+  color: #f08b65;
 }
 
 /*------------------------------------*\
