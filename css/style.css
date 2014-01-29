@@ -430,6 +430,7 @@ table {
   width: 100%;
   text-align: center;
   color: #b2b2b2;
+  padding-bottom: 2em;
 }
 
 h3 {
@@ -451,6 +452,14 @@ h3 {
     font-size: 40px;
     font-size: 2.5rem;
   }
+}
+
+h4 {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 3em;
+  padding: 0;
+  margin: 0;
 }
 
 p {
@@ -2255,6 +2264,9 @@ a.alternate {
 a.dark-blue {
   color: #012030;
 }
+a:hover, a:focus {
+  text-decoration: underline;
+}
 
 img {
   max-width: 100%;
@@ -2279,6 +2291,14 @@ img {
   color: #012030;
 }
 
+.dark-orange {
+  color: #924224;
+}
+
+.white {
+  color: white;
+}
+
 .view-all-circle {
   margin: 0 auto;
   width: 75px;
@@ -2292,8 +2312,7 @@ img {
     $GRIDS
 \*------------------------------------*/
 .grid {
-  padding-top: 3em;
-  padding-bottom: 1em;
+  padding-bottom: 3em;
   position: relative;
 }
 .grid:before, .grid:after {
@@ -2374,7 +2393,6 @@ img {
 @media only screen and (min-width: 40em) {
   .column-about {
     float: left;
-    margin-bottom: 2em;
   }
   .column-about:nth-child(n) {
     width: 45%;
@@ -2499,9 +2517,13 @@ img {
   background: url("../../images/mountains.png") no-repeat bottom #034060;
   color: white;
 }
+.about i.icon-wrapper {
+  background-color: #034060;
+  margin: -3%;
+}
 
 .skillset {
-  background-color: #205e7e;
+  background: url("../images/skillset-background.png") repeat-x bottom #205e7e;
 }
 
 .stars {
@@ -2548,8 +2570,23 @@ img {
 }
 
 .hobbies {
-  background-color: #f08b65;
-  color: white;
+  background: url("../images/hobbies-background.png") repeat-x top #f08b65;
+  color: #924224;
+}
+.hobbies p {
+  margin: 0;
+}
+
+.hobby-icon {
+  float: left;
+  margin-right: 1em;
+  width: 19.4444444444444%;
+  margin-top: 13%;
+}
+
+.hobby-content {
+  float: left;
+  width: 76.1111111111111%;
 }
 
 .date-container {

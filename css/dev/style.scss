@@ -46,6 +46,8 @@ a {
 		color: inherit;
 	}
 	&.dark-blue { color: $dark-blue; }
+
+	&:hover, &:focus { text-decoration: underline; }
 }
 
 img { max-width: 100%; }
@@ -61,6 +63,8 @@ img { max-width: 100%; }
  .clear, %clear { clear: both; }
  .medium { font-weight: $medium; }
  .dark-blue { color: $dark-blue; }
+ .dark-orange { color: $dark-orange; }
+ .white { color: white; }
  .view-all-circle { 
 	margin: 0 auto;
 	width: 75px;
@@ -77,9 +81,8 @@ img { max-width: 100%; }
 /*------------------------------------*\
     $GRIDS
 \*------------------------------------*/
-.grid { 
-	padding-top: 3em; 
-	padding-bottom: 1em; 
+.grid {  
+	padding-bottom: 3em; 
 	position: relative;
 
 	&:before, &:after {
@@ -167,7 +170,6 @@ img { max-width: 100%; }
 
 	@media only screen and (min-width: $brkpt-medium) {
 		float:left;
-		margin-bottom: 2em;
 	    &:nth-child(n) {
 	    	width: 45%;
 	    	margin-right: 5%;
@@ -287,11 +289,37 @@ img { max-width: 100%; }
 .articles { background-color: white; }
 .about {
 	background: url('../../images/mountains.png') no-repeat bottom $about-blue;
-	color: white; 
+	color: white;
+
+	i.icon-wrapper {
+		background-color: $about-blue;
+		margin: -3%;
+	} 
 }
 
 .skillset {
-	background-color: $skillset-blue;
+	//background-color: $skillset-blue;
+
+	//background: #205e7e; /* Old browsers */
+	//background: -moz-linear-gradient(top, #205e7e 65%, #2a6888 66%, #2a6888 80%, #9a9497 80%, #9a9497 100%); /* FF3.6+ */
+	//background: -webkit-gradient(linear, left top, left bottom, color-stop(65%,#205e7e), color-stop(66%,#2a6888), color-stop(80%,#2a6888), color-stop(80%,#9a9497), color-stop(100%,#9a9497)); /* Chrome,Safari4+ */
+	//background: -webkit-linear-gradient(top, #205e7e 65%,#2a6888 66%,#2a6888 80%,#9a9497 80%,#9a9497 100%); /* Chrome10+,Safari5.1+ */
+	//background: -o-linear-gradient(top, #205e7e 65%,#2a6888 66%,#2a6888 80%,#9a9497 80%,#9a9497 100%); /* Opera 11.10+ */
+	//background: -ms-linear-gradient(top, #205e7e 65%,#2a6888 66%,#2a6888 80%,#9a9497 80%,#9a9497 100%); /* IE10+ */
+	//background: linear-gradient(to bottom, #205e7e 65%,#2a6888 66%,#2a6888 80%,#9a9497 80%,#9a9497 100%); /* W3C */
+	//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#205e7e', endColorstr='#9a9497',GradientType=0 ); /* IE6-9 */
+
+	//background: #205e7e; /* Old browsers */
+	//background: -moz-linear-gradient(top, #205e7e 83%, #2a6888 83%, #2a6888 90%, #9a9497 90%, #9a9497 100%); /* FF3.6+ */
+	//background: -webkit-gradient(linear, left top, left bottom, color-stop(83%,#205e7e), color-stop(83%,#2a6888), color-stop(90%,#2a6888), color-stop(90%,#9a9497), color-stop(100%,#9a9497)); /* Chrome,Safari4+ */
+	//background: -webkit-linear-gradient(top, #205e7e 83%,#2a6888 83%,#2a6888 90%,#9a9497 90%,#9a9497 100%); /* Chrome10+,Safari5.1+ */
+	//background: -o-linear-gradient(top, #205e7e 83%,#2a6888 83%,#2a6888 90%,#9a9497 90%,#9a9497 100%); /* Opera 11.10+ */
+	//background: -ms-linear-gradient(top, #205e7e 83%,#2a6888 83%,#2a6888 90%,#9a9497 90%,#9a9497 100%); /* IE10+ */
+	//background: linear-gradient(to bottom, #205e7e 83%,#2a6888 83%,#2a6888 90%,#9a9497 90%,#9a9497 100%); /* W3C */
+	//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#205e7e', endColorstr='#9a9497',GradientType=0 ); /* IE6-9 */
+
+	background: url('../images/skillset-background.png') repeat-x bottom $skillset-blue;
+
 }
 .stars { position: absolute; top: 0; }
 #bg { top: 0; left: 0; }
@@ -310,8 +338,6 @@ img { max-width: 100%; }
 .logo { padding-bottom: 42px; }
 
 
-
-
 .freelance {
 	background-color: $dark-blue;
 	border-radius: 5px;
@@ -319,7 +345,26 @@ img { max-width: 100%; }
 	margin: 0 auto;
 	padding: 1em;
 }
-.hobbies { background-color: #f08b65; color: white; }
+.hobbies { 
+
+	background: url('../images/hobbies-background.png') repeat-x top $orange;
+
+	color: $dark-orange;
+
+	p { margin: 0; }
+}
+
+.hobby-icon {
+	float: left;
+	margin-right: 1em;
+	width: 19.4444444444444%;
+	margin-top: 13%;
+}
+
+.hobby-content {
+	float: left;
+	width: 76.1111111111111%;
+}
 
 
 .date-container { display: table; padding-top: 1em; }
