@@ -555,6 +555,14 @@ p {
   }
 }
 
+.technologies {
+  font-weight: 400;
+}
+
+.url {
+  font-weight: 700;
+}
+
 /*------------------------------------*\
     $FONT AWESOME
 \*------------------------------------*/
@@ -564,8 +572,8 @@ p {
  */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("../../fonts/fontawesome-webfont.eot?v=4.0.3");
-  src: url("../../fonts/fontawesome-webfont.eot?#iefix&v=4.0.3") format("embedded-opentype"), url("../../fonts/fontawesome-webfont.woff?v=4.0.3") format("woff"), url("../../fonts/fontawesome-webfont.ttf?v=4.0.3") format("truetype"), url("../../fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular") format("svg");
+  src: url("../fonts/fontawesome-webfont.eot?v=4.0.3");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.0.3") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff?v=4.0.3") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.0.3") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -2257,6 +2265,9 @@ a.alternate {
 a.dark-blue {
   color: #012030;
 }
+a.light-link {
+  color: #9bcde6;
+}
 a:hover, a:focus {
   text-decoration: underline;
 }
@@ -2286,6 +2297,10 @@ img {
 
 .dark-orange {
   color: #924224;
+}
+
+.link-color {
+  color: #5b9bbc;
 }
 
 .white {
@@ -2318,7 +2333,7 @@ img {
 * Example:
 
 	<div class="grid">
-		<div class="column-articles">
+		<div class="column-article">
 
 			<h3>Blog Post: The Long Title</h3>
 			<div class="date-container">
@@ -2330,37 +2345,37 @@ img {
 		</div>
 	</div>
 */
-.column-articles {
+.column-article {
   float: left;
   margin-bottom: 2em;
 }
 @media screen and (min-width: 40em) {
-  .column-articles:nth-child(n) {
+  .column-article:nth-child(n) {
     width: 47.777777777778%;
     margin-right: 4.444444444444%;
   }
-  .column-articles:nth-child(2n+1) {
+  .column-article:nth-child(2n+1) {
     clear: left;
   }
-  .column-articles:nth-child(2n) {
+  .column-article:nth-child(2n) {
     margin-right: 0;
   }
 }
 @media screen and (min-width: 75em) {
-  .column-articles:nth-child(n) {
+  .column-article:nth-child(n) {
     width: 30%;
     margin-right: 5%;
   }
-  .column-articles:nth-child(2n+1) {
+  .column-article:nth-child(2n+1) {
     clear: none;
   }
-  .column-articles:nth-child(3n+1) {
+  .column-article:nth-child(3n+1) {
     clear: left;
   }
-  .column-articles:nth-child(3n) {
+  .column-article:nth-child(3n) {
     margin-right: 0;
   }
-  .column-articles:nth-child(4n) {
+  .column-article:nth-child(4n) {
     width: 100%;
     margin-right: 0;
   }
@@ -2442,6 +2457,37 @@ img {
     margin-right: 0.04166666666667%;
   }
   .pill:nth-child(4n) {
+    margin-right: 0;
+  }
+}
+
+/**
+ * Recent Work Columns
+ * Example:
+	<div class="grid">
+
+		<div class="project">
+  		<h3>Business Retirement Solutions</h3>
+  		<p>url: <a href="//countryretirementplans.com" target="_blank">countryretirementplans.com</a></p>
+			<p>type: website, responsive</p>
+			<p>technologies: html, css, sass, php, javascript, wordpress, modernizr, jquery, polyfills</p>
+
+			<p>description: Lead developer on COUNTRY's first responsive web design project. I worked with designers and usability folks to develop a responsive website tailored to educating potential clients on the retirement services that COUNTRY Financial has to offer. This website was built with WordPress and responsive design methodologies.</p>
+
+			<p>see link for a detailed use case of the project</p>
+		</div>
+	</div>
+*/
+.project {
+  padding-bottom: 3.75em;
+}
+@media only screen and (min-width: 48em) {
+  .project {
+    float: left;
+    width: 47.5%;
+    margin-right: 5%;
+  }
+  .project:nth-child(2n) {
     margin-right: 0;
   }
 }
@@ -2664,6 +2710,14 @@ i.icon-wrapper {
 
 .check {
   color: #f08b65;
+}
+
+.screenshot-container {
+  width: 100%;
+  height: 360px;
+  background-color: #746d70;
+  border-radius: 5px;
+  margin-bottom: 2.5em;
 }
 
 /*------------------------------------*\

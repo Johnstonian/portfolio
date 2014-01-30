@@ -124,3 +124,6 @@ p {
 		@include font-size(24);
 	}
 }
+
+.technologies { font-weight: $normal; }
+.url { font-weight: $bold; }

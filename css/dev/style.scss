@@ -42,10 +42,9 @@ a {
 	color: $link-color;
 	text-decoration: none;
 
-	&.alternate {
-		color: inherit;
-	}
+	&.alternate { color: inherit; }
 	&.dark-blue { color: $dark-blue; }
+	&.light-link { color: $link-color-light; }
 
 	&:hover, &:focus { text-decoration: underline; }
 }
@@ -64,6 +63,7 @@ img { max-width: 100%; }
  .medium { font-weight: $medium; }
  .dark-blue { color: $dark-blue; }
  .dark-orange { color: $dark-orange; }
+ .link-color { color: $link-color; }
  .white { color: white; }
  .view-all-circle { 
 	margin: 0 auto;
@@ -97,7 +97,7 @@ img { max-width: 100%; }
 * Example:
 
 	<div class="grid">
-		<div class="column-articles">
+		<div class="column-article">
 
 			<h3>Blog Post: The Long Title</h3>
 			<div class="date-container">
@@ -109,7 +109,7 @@ img { max-width: 100%; }
 		</div>
 	</div>
 */
-.column-articles { 
+.column-article { 
 	
 	float: left;
 	margin-bottom: 2em;
@@ -227,8 +227,39 @@ img { max-width: 100%; }
     &:nth-child(4n) {
 			margin-right: 0;
 		}
+	}	 
+}
+
+/**
+ * Recent Work Columns
+ * Example:
+	<div class="grid">
+
+		<div class="project">
+  		<h3>Business Retirement Solutions</h3>
+  		<p>url: <a href="//countryretirementplans.com" target="_blank">countryretirementplans.com</a></p>
+			<p>type: website, responsive</p>
+			<p>technologies: html, css, sass, php, javascript, wordpress, modernizr, jquery, polyfills</p>
+
+			<p>description: Lead developer on COUNTRY's first responsive web design project. I worked with designers and usability folks to develop a responsive website tailored to educating potential clients on the retirement services that COUNTRY Financial has to offer. This website was built with WordPress and responsive design methodologies.</p>
+
+			<p>see link for a detailed use case of the project</p>
+		</div>
+	</div>
+*/
+.project {
+
+	padding-bottom: 3.75em;
+
+	@media only screen and (min-width: $brkpt-large) {
+		float: left;
+	  width: 47.5%;
+		margin-right: 5%;
+
+		&:nth-child(2n) {
+			margin-right: 0;
+		}
 	}
-	 
 }
 
 
@@ -439,6 +470,14 @@ i.icon-wrapper {
 
 .bolt { color: white; }
 .check { color: $orange; }
+
+.screenshot-container {
+	width: 100%;
+	height: 360px;
+	background-color: #746d70;
+	border-radius: 5px;
+	margin-bottom: 2.5em;
+}
 
 /*------------------------------------*\
     $STRUCTURE
