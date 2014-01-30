@@ -21,13 +21,6 @@
 /* font weights */
 /* Colors */
 /* Breakpoints */
-/* 1200px */
-/* 840px */
-/* 768px */
-/* 640px */
-/* 580px */
-/* 530px */
-/* 420px */
 /*------------------------------------*\
     $MIXINS
 \*------------------------------------*/
@@ -2514,32 +2507,28 @@ img {
 }
 
 .about {
-  background-color: #034060;
+  background: url("../images/mountains.png") no-repeat center bottom #034060;
   color: white;
 }
 .about i.icon-wrapper {
   background-color: #034060;
   margin: -3%;
 }
+.about .container {
+  position: relative;
+  z-index: 2;
+  background: url("../images/pilot_landing.png") no-repeat 90% 99.7%;
+  padding-bottom: 15em;
+  margin-bottom: -56px;
+}
 
-.mountain-scene {
+.ground-blue {
+  height: 90px;
+  background-color: #195777;
   position: absolute;
-  bottom: 0;
   z-index: 1;
-  height: 305px;
-  max-width: 75em;
+  bottom: 0;
   width: 100%;
-  background: url("../images/mountain_top.png") repeat-x bottom;
-}
-
-.mountain {
-  float: left;
-}
-
-.pilot-landed {
-  position: absolute;
-  bottom: 14px;
-  right: 0;
 }
 
 .skillset {

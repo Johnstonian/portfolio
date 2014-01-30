@@ -288,36 +288,46 @@ img { max-width: 100%; }
 
 .articles { background-color: white; }
 .about {
-	background-color: $about-blue;
+	background: url("../images/mountains.png") no-repeat center bottom $about-blue;
 	color: white;
 
 	i.icon-wrapper {
 		background-color: $about-blue;
 		margin: -3%;
-	} 
+	}
+
+	.container {
+		position: relative;
+		z-index: 2;
+		background: url("../images/pilot_landing.png") no-repeat 90% 99.7%;
+		padding-bottom: 15em;
+		margin-bottom: -56px;
+	}
 }
 
-.mountain-scene {
-	position: absolute;
-	bottom: 0;
-	z-index: 1;
-	height: 305px;
-	max-width: 75em;
-	width: 100%;
-	background: url('../images/mountain_top.png') repeat-x bottom;
-}
-	.mountain {
-		float: left;
-		//height: 215px;
-		//max-width: 718px;
-		//width: 100%;
-		//background: url('../images/mountains.png') no-repeat left;
-	}
-	.pilot-landed {
+	.ground-blue {
+		height: 90px;
+		background-color: #195777;
 		position: absolute;
-		bottom: 14px;
-		right: 0;
+		z-index: 1;
+		bottom: 0;
+		width: 100%;
 	}
+
+// .mountain-scene {
+// 	position: absolute;
+// 	bottom: 0;
+// 	z-index: 1;
+// 	height: 305px;
+// 	max-width: 75em;
+// 	width: 100%;
+// 	background: url('../images/mountain_top.png') repeat-x bottom;
+// }
+// 	.pilot-landed {
+// 		position: absolute;
+// 		bottom: 14px;
+// 		right: 0;
+// 	}
 
 .skillset {
 	background: url('../images/skillset-background.png') repeat-x bottom $skillset-blue;
