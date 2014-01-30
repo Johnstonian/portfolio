@@ -288,7 +288,7 @@ img { max-width: 100%; }
 
 .articles { background-color: white; }
 .about {
-	background: url('../../images/mountains.png') no-repeat bottom $about-blue;
+	background-color: $about-blue;
 	color: white;
 
 	i.icon-wrapper {
@@ -297,29 +297,30 @@ img { max-width: 100%; }
 	} 
 }
 
+.mountain-scene {
+	position: absolute;
+	bottom: 0;
+	z-index: 1;
+	height: 305px;
+	max-width: 75em;
+	width: 100%;
+	background: url('../images/mountain_top.png') repeat-x bottom;
+}
+	.mountain {
+		float: left;
+		//height: 215px;
+		//max-width: 718px;
+		//width: 100%;
+		//background: url('../images/mountains.png') no-repeat left;
+	}
+	.pilot-landed {
+		position: absolute;
+		bottom: 14px;
+		right: 0;
+	}
+
 .skillset {
-	//background-color: $skillset-blue;
-
-	//background: #205e7e; /* Old browsers */
-	//background: -moz-linear-gradient(top, #205e7e 65%, #2a6888 66%, #2a6888 80%, #9a9497 80%, #9a9497 100%); /* FF3.6+ */
-	//background: -webkit-gradient(linear, left top, left bottom, color-stop(65%,#205e7e), color-stop(66%,#2a6888), color-stop(80%,#2a6888), color-stop(80%,#9a9497), color-stop(100%,#9a9497)); /* Chrome,Safari4+ */
-	//background: -webkit-linear-gradient(top, #205e7e 65%,#2a6888 66%,#2a6888 80%,#9a9497 80%,#9a9497 100%); /* Chrome10+,Safari5.1+ */
-	//background: -o-linear-gradient(top, #205e7e 65%,#2a6888 66%,#2a6888 80%,#9a9497 80%,#9a9497 100%); /* Opera 11.10+ */
-	//background: -ms-linear-gradient(top, #205e7e 65%,#2a6888 66%,#2a6888 80%,#9a9497 80%,#9a9497 100%); /* IE10+ */
-	//background: linear-gradient(to bottom, #205e7e 65%,#2a6888 66%,#2a6888 80%,#9a9497 80%,#9a9497 100%); /* W3C */
-	//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#205e7e', endColorstr='#9a9497',GradientType=0 ); /* IE6-9 */
-
-	//background: #205e7e; /* Old browsers */
-	//background: -moz-linear-gradient(top, #205e7e 83%, #2a6888 83%, #2a6888 90%, #9a9497 90%, #9a9497 100%); /* FF3.6+ */
-	//background: -webkit-gradient(linear, left top, left bottom, color-stop(83%,#205e7e), color-stop(83%,#2a6888), color-stop(90%,#2a6888), color-stop(90%,#9a9497), color-stop(100%,#9a9497)); /* Chrome,Safari4+ */
-	//background: -webkit-linear-gradient(top, #205e7e 83%,#2a6888 83%,#2a6888 90%,#9a9497 90%,#9a9497 100%); /* Chrome10+,Safari5.1+ */
-	//background: -o-linear-gradient(top, #205e7e 83%,#2a6888 83%,#2a6888 90%,#9a9497 90%,#9a9497 100%); /* Opera 11.10+ */
-	//background: -ms-linear-gradient(top, #205e7e 83%,#2a6888 83%,#2a6888 90%,#9a9497 90%,#9a9497 100%); /* IE10+ */
-	//background: linear-gradient(to bottom, #205e7e 83%,#2a6888 83%,#2a6888 90%,#9a9497 90%,#9a9497 100%); /* W3C */
-	//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#205e7e', endColorstr='#9a9497',GradientType=0 ); /* IE6-9 */
-
 	background: url('../images/skillset-background.png') repeat-x bottom $skillset-blue;
-
 }
 .stars { position: absolute; top: 0; }
 #bg { top: 0; left: 0; }
@@ -344,6 +345,7 @@ img { max-width: 100%; }
 	max-width: 600px;
 	margin: 0 auto;
 	padding: 1em;
+	z-index: 2;
 }
 .hobbies { 
 
@@ -376,22 +378,6 @@ i.icon-wrapper {
 	background-color: white;
 }
 
-.ground-blue {
-/*	height: 89px;*/
-	background-color: $blue-ground;
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-}
-
-/* this section needs some work */
-.pilot-landed {
-	background: url('../images/pilot-landed.png') no-repeat bottom right;
-	height: 113px;
-	width: 100%;
-	position: absolute;
-	bottom: 0;
-}
 
 /**
  * Skillset Pills

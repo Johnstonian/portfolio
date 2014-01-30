@@ -2514,12 +2514,32 @@ img {
 }
 
 .about {
-  background: url("../../images/mountains.png") no-repeat bottom #034060;
+  background-color: #034060;
   color: white;
 }
 .about i.icon-wrapper {
   background-color: #034060;
   margin: -3%;
+}
+
+.mountain-scene {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  height: 305px;
+  max-width: 75em;
+  width: 100%;
+  background: url("../images/mountain_top.png") repeat-x bottom;
+}
+
+.mountain {
+  float: left;
+}
+
+.pilot-landed {
+  position: absolute;
+  bottom: 14px;
+  right: 0;
 }
 
 .skillset {
@@ -2567,6 +2587,7 @@ img {
   max-width: 600px;
   margin: 0 auto;
   padding: 1em;
+  z-index: 2;
 }
 
 .hobbies {
@@ -2599,23 +2620,6 @@ i.icon-wrapper {
   margin: -16px -25px;
   padding: 0 10px;
   background-color: white;
-}
-
-.ground-blue {
-  /*	height: 89px;*/
-  background-color: #195777;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-
-/* this section needs some work */
-.pilot-landed {
-  background: url("../images/pilot-landed.png") no-repeat bottom right;
-  height: 113px;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
 }
 
 /**
