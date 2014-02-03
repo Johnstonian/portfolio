@@ -2826,6 +2826,11 @@ i.icon-wrapper {
   color: white;
 }
 
+.testimonials {
+  background: url("../images/bottom_crack.png") no-repeat top right black;
+  color: white;
+}
+
 /*------------------------------------*\
     $STRUCTURE
 \*------------------------------------*/
