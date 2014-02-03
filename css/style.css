@@ -265,9 +265,9 @@ figure {
  * Define consistent border, margin, and padding.
  */
 fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 
 /**
@@ -414,6 +414,7 @@ table {
 /*------------------------------------*\
     $TYPE
 \*------------------------------------*/
+/*h2*/
 .section-title {
   font-weight: 100;
   font-size: 30px;
@@ -453,6 +454,29 @@ h4 {
   line-height: 3em;
   padding: 0;
   margin: 0;
+}
+
+input, textarea {
+  font-weight: 100;
+  line-height: 48px;
+  font-size: 16px;
+  font-size: 1rem;
+}
+@media only screen and (min-width: 33.125em) {
+  input, textarea {
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+}
+@media only screen and (min-width: 48em) {
+  input, textarea {
+    font-size: 24px;
+    font-size: 1.5rem;
+  }
+}
+
+input[type='submit'] {
+  font-weight: 500;
 }
 
 p {
@@ -2276,6 +2300,65 @@ img {
   max-width: 100%;
 }
 
+form {
+  max-width: 59em;
+  margin: 0 auto 5em;
+}
+
+fieldset > input, fieldset > textarea {
+  border-radius: 5px;
+  padding: 0 1em;
+  margin-bottom: 1em;
+  background-color: #ad715b;
+  color: white;
+  border: none;
+}
+
+label {
+  display: none;
+}
+
+/* from CSS-Tricks
+ * http://css-tricks.com/snippets/css/style-placeholder-text/
+*/
+::-webkit-input-placeholder {
+  color: white;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: white;
+}
+
+:-ms-input-placeholder {
+  color: white;
+}
+
+input[type='text'], input[type='email'] {
+  height: 50px;
+  float: none;
+  width: 100%;
+}
+@media only screen and (min-width: 26.25em) {
+  input[type='text'], input[type='email'] {
+    width: 48.6666666666667%;
+  }
+}
+
+input[type='submit'] {
+  width: 130px;
+  height: 50px;
+  background-color: #5b9bbc;
+  margin-bottom: 0;
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+
+textarea {
+  width: 100%;
+  height: 200px;
+}
+
 /*------------------------------------*\
     $CLASSES
 \*------------------------------------*/
@@ -2314,6 +2397,14 @@ img {
   background-color: #5b9bbc;
   border-radius: 40px;
   display: table;
+}
+
+.fullname {
+  margin-right: 1.3333333333333%;
+}
+
+.email {
+  float: right;
 }
 
 /*------------------------------------*\
@@ -2716,6 +2807,23 @@ i.icon-wrapper {
   width: 100%;
   height: auto;
   margin-bottom: 2.5em;
+}
+
+.contact {
+  background: url("../images/spikes.png"), url("../images/bottom_red_to_black.png");
+  background-repeat: repeat-x;
+  background-color: #924224;
+  background-position: top, bottom;
+}
+.contact .container {
+  background: url("../images/pilot_rope.png") no-repeat transparent;
+  min-height: 650px;
+}
+.contact .section-title {
+  padding-top: 3em;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  color: white;
 }
 
 /*------------------------------------*\

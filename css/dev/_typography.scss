@@ -1,7 +1,7 @@
 /*------------------------------------*\
     $TYPE
 \*------------------------------------*/
-.section-title { 
+/*h2*/.section-title { 
 	font-weight: $thin;
 	@include font-size(30);
 	line-height: 3em;
@@ -39,6 +39,25 @@ h4 {
 	line-height: 3em;
 	padding: 0;
 	margin: 0;
+}
+
+input, textarea { 
+	font-weight: $thin;
+	line-height: 48px;
+
+	@include font-size(16);
+
+	@media only screen and (min-width: $brkpt-small) {
+	   @include font-size(20) 
+	}
+
+	@media only screen and (min-width: $brkpt-large) {
+	    @include font-size(24);
+	}
+}
+
+input[type='submit'] {
+	font-weight: $medium;
 }
 
 p { 
