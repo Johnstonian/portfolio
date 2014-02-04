@@ -53,7 +53,7 @@ img { max-width: 100%; }
 
 form { 
 	max-width: 59em; 
-	margin: 0 auto 5em;
+	margin: 0 auto;
 }
 
 fieldset > input, fieldset > textarea { 
@@ -540,7 +540,7 @@ i.icon-wrapper {
 }
 
 .contact {
-	background: url('../images/spikes.png'), url('../images/bottom_red_to_black.png');
+	background: url('../images/spikes.png');
 		background-repeat: repeat-x;
 		background-color: $dark-orange;
 		background-position: top, bottom;
@@ -559,8 +559,21 @@ i.icon-wrapper {
 }
 
 .testimonials {
-	background: url('../images/bottom_crack.png') no-repeat top right #000;
+	background: url('../images/bottom_red_to_black.png');
+	background-repeat: repeat-x;
+	background-color: #000;
 	color: white;
+
+	padding-top: 0;
+
+	.container {
+		background: url('../images/bottom_crack.png') no-repeat top right;
+		padding-top: 4.475em;
+	}
+
+	.section-title { 
+		color: white; 
+	}
 }
 
 /*------------------------------------*\
