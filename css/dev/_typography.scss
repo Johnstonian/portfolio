@@ -148,7 +148,7 @@ p {
 .url { font-weight: $bold; }
 
 .endorsement p { margin-top: 4px; }
-.reference { @include font-size(14); }
+.reference { @include font-size(14); font-weight: $bold; }
 
 .footer { 
 	@include font-size(12);
