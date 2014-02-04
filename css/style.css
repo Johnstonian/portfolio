@@ -596,6 +596,13 @@ p {
   font-size: 0.875rem;
 }
 
+.footer {
+  font-size: 12px;
+  font-size: 0.75rem;
+  margin: 0;
+  padding: 0 1em;
+}
+
 /*------------------------------------*\
     $FONT AWESOME
 \*------------------------------------*/
@@ -2895,3 +2902,8 @@ i.icon-wrapper {
 /*------------------------------------*\
     $STRUCTURE
 \*------------------------------------*/
+footer {
+  min-height: 40px;
+  background-color: #1c1c1c;
+  color: #757575;
+}
