@@ -587,6 +587,15 @@ p {
   font-weight: 700;
 }
 
+.endorsement p {
+  margin-top: 4px;
+}
+
+.reference {
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
 /*------------------------------------*\
     $FONT AWESOME
 \*------------------------------------*/
@@ -2370,12 +2379,20 @@ textarea {
   clear: both;
 }
 
+.left {
+  float: left;
+}
+
 .medium {
   font-weight: 500;
 }
 
 .dark-blue {
   color: #012030;
+}
+
+.orange {
+  color: #f08b65;
 }
 
 .dark-orange {
@@ -2579,6 +2596,25 @@ textarea {
     margin-right: 5%;
   }
   .project:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+
+/**
+ * Testimonial Columns
+ * Example:
+
+*/
+.quote {
+  position: relative;
+}
+@media only screen and (min-width: 40em) {
+  .quote {
+    float: left;
+    width: 21.25%;
+    margin-right: 5%;
+  }
+  .quote:nth-child(4n) {
     margin-right: 0;
   }
 }
@@ -2810,7 +2846,7 @@ i.icon-wrapper {
 }
 
 .contact {
-  background: url("../images/spikes.png");
+  background: url("../images/spikes.png"), url("../images/bottom_contact.gif");
   background-repeat: repeat-x;
   background-color: #924224;
   background-position: top, bottom;
@@ -2827,18 +2863,33 @@ i.icon-wrapper {
 }
 
 .testimonials {
-  background: url("../images/bottom_red_to_black.png");
-  background-repeat: repeat-x;
+  background: url("../images/bottom_red_to_black.png"), url("../images/pilot_monster.png");
+  background-repeat: repeat-x, no-repeat;
+  background-position: top, 100% 94%;
   background-color: #000;
   color: white;
   padding-top: 0;
 }
 .testimonials .container {
-  background: url("../images/bottom_crack.png") no-repeat top right;
-  padding-top: 4.475em;
+  background: url("../images/bottom_crack.png") no-repeat;
+  background-position: 73% top;
+  padding-top: 5.475em;
 }
 .testimonials .section-title {
   color: white;
+}
+.testimonials i.icon-wrapper {
+  background-color: black;
+  color: white;
+}
+
+.left-quote {
+  float: left;
+  color: #6b2c15;
+}
+
+.endorsement {
+  margin-left: 12%;
 }
 
 /*------------------------------------*\

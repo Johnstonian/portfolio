@@ -146,3 +146,6 @@ p {
 
 .technologies { font-weight: $normal; }
 .url { font-weight: $bold; }
+
+.endorsement p { margin-top: 4px; }
+.reference { @include font-size(14); }

@@ -3,7 +3,7 @@
 	URL: johnstonianera.com
 	Twitter: @johnstonian
 
-/* THANKS */
+/* SPECIAL THANKS FOR DESIGN WORK AND FEEDBACK */
 	Design: Jason Kirchgessner
 	URL: southernreflectionsstudio.com/portfolio/
 

@@ -120,8 +120,10 @@ textarea {
 \*------------------------------------*/
  .center { text-align: center; }
  .clear, %clear { clear: both; }
+ .left { float: left; }
  .medium { font-weight: $medium; }
  .dark-blue { color: $dark-blue; }
+ .orange { color: $orange; }
  .dark-orange { color: $dark-orange; }
  .link-color { color: $link-color; }
  .white { color: white; }
@@ -321,6 +323,27 @@ textarea {
 		&:nth-child(2n) {
 			margin-right: 0;
 		}
+	}
+}
+
+/**
+ * Testimonial Columns
+ * Example:
+
+*/
+.quote {
+
+	position: relative;
+
+	@media only screen and (min-width: $brkpt-medium) {
+	    float: left;
+
+	    width: 21.25%;
+	    margin-right: 5%;
+
+	    &:nth-child(4n) {
+	    	margin-right: 0;
+	    }	
 	}
 }
 
@@ -540,7 +563,7 @@ i.icon-wrapper {
 }
 
 .contact {
-	background: url('../images/spikes.png');
+	background: url('../images/spikes.png'), url('../images/bottom_contact.gif');
 		background-repeat: repeat-x;
 		background-color: $dark-orange;
 		background-position: top, bottom;
@@ -559,21 +582,37 @@ i.icon-wrapper {
 }
 
 .testimonials {
-	background: url('../images/bottom_red_to_black.png');
-	background-repeat: repeat-x;
+	background: url('../images/bottom_red_to_black.png'), url('../images/pilot_monster.png');
+	background-repeat: repeat-x, no-repeat;
+	background-position: top, 100% 94%;
 	background-color: #000;
 	color: white;
 
 	padding-top: 0;
 
 	.container {
-		background: url('../images/bottom_crack.png') no-repeat top right;
-		padding-top: 4.475em;
+		background: url('../images/bottom_crack.png') no-repeat;
+		background-position: 73% top;
+		padding-top: 5.475em;
 	}
 
 	.section-title { 
 		color: white; 
 	}
+
+	i.icon-wrapper {
+		background-color: black;
+		color: white;
+	}
+}
+
+.left-quote {
+	float: left;
+	color: $dark-red;
+}
+
+.endorsement {
+	margin-left: 12%;
 }
 
 /*------------------------------------*\
