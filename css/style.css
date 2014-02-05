@@ -2374,7 +2374,7 @@ input[type='submit'] {
 textarea {
   width: 100%;
   height: 200px;
-  resize: vertica;
+  resize: vertical;
 }
 
 /*------------------------------------*\
@@ -2612,7 +2612,16 @@ textarea {
 /**
  * Testimonial Columns
  * Example:
+	<div class="grid">
 
+		<div class="quote">
+			<div class="left-quote"><img src="images/quote.png" align="left" width="22" height="22" /></div>
+			<div class="endorsement">
+				<p>Ryan is fantastic web developer. I have enjoyed working with him. He always meets impossible deadlines. He is my go to guy for mobile development questions. Glad to have him as a colleague.</p>
+				<p class="reference">Matt Christensen <span class="orange">| Web/Facebook Developer</span></p>
+			</div>
+		</div>
+	</div>
 */
 .quote {
   position: relative;
@@ -2620,7 +2629,22 @@ textarea {
 @media only screen and (min-width: 40em) {
   .quote {
     float: left;
+    width: 47.25%;
+    padding-bottom: 2em;
+  }
+  .quote:nth-child(n) {
+    margin-right: 5%;
+  }
+  .quote:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+@media only screen and (min-width: 62.5em) {
+  .quote {
     width: 21.25%;
+    padding-bottom: 0;
+  }
+  .quote:nth-child(2n) {
     margin-right: 5%;
   }
   .quote:nth-child(4n) {
@@ -2902,7 +2926,7 @@ i.icon-wrapper {
 }
 
 .endorsement {
-  margin-left: 12%;
+  margin-left: 32px;
 }
 
 /*------------------------------------*\
