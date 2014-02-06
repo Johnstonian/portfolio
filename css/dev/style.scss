@@ -427,7 +427,10 @@ textarea {
 	background: linear-gradient(to bottom,  #000000 0%,#034060 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#034060',GradientType=0 ); /* IE6-9 */
 
-	padding-bottom: 5.475em;
+	/*padding-bottom: 5.475em;*/
+
+	padding: 1em; 
+	margin: 0;
 }
 
 .articles { background-color: white; }
@@ -481,13 +484,51 @@ textarea {
 .skillset {
 	background: url('../images/skillset-background.png') repeat-x bottom $skillset-blue;
 }
-.stars { position: absolute; top: 0; }
-#bg { top: 0; left: 0; }
-.bgwidth { width: 100%; }
-.bgheight { height: 100%; }
+.stars { 
+	position: absolute; 
+	top: 0; 
+	left: 0;
+	z-index: 1;
+}
 
-.logo-holder { 
-	max-width: 490px; margin: 0 auto; text-align: center; padding: 0 1em 36px 1em;
+/*.starImg {
+
+	animation: glitter 4.5s linear 0s infinite normal;
+ -webkit-animation: glitter 4.5s linear 0s infinite normal;
+ -moz-animation: glitter 4.5s linear 0s infinite normal;
+ -ms-animation: glitter 4.5s linear 0s infinite normal;
+ -o-animation: glitter 4.5s linear 0s infinite normal;
+
+}*/
+
+/*CSS3 keyframes for glittering effect*/
+/*@-webkit-keyframes glitter {
+ 0%   { opacity: 1; }
+ 15% 	{ opacity: 0.2;}
+ 25%  { opacity: 1; }
+ 30%  { opacity: 0.2; }
+ 50%  { opacity: 1; }
+ 60%	{ opacity: 0.2;}
+ 75%  { opacity: 1; }
+ 85%	{ opacity: 0.2; }
+ 100% { opacity: 1; }
+}
+@-moz-keyframes glitter {
+ 0%   { opacity: 1; }
+ 25%  { opacity: 0; }
+ 50%  { opacity: 1; }
+ 75%  { opacity: 0; }
+ 100% { opacity: 1; }
+}*/
+
+.logo-holder {  
+	position: relative;
+	z-index: 2;
+	/*padding: 1em 1em;*/
+
+	text-align: center;
+	width: 100%;
+	min-height: 260px;
 
 	@media only screen and (min-width: $brkpt-small) {
 	    padding-left: 0;
@@ -495,7 +536,13 @@ textarea {
 	}
 	 
 }
-.logo { padding-bottom: 42px; }
+.logo { padding-bottom: 22px; }
+.lasers { 
+	background: url('../images/ship_with_lasers.png') no-repeat bottom center transparent;
+	min-height: 160px;
+	/*height: 30px;*/
+}
+.start { padding-top: 35px; }
 
 
 .freelance {
@@ -617,7 +664,7 @@ i.icon-wrapper {
 .testimonials {
 	background: url('../images/bottom_red_to_black.png'), url('../images/pilot_monster.png');
 	background-repeat: repeat-x, no-repeat;
-	background-position: top, 100% 94%;
+	background-position: top, 88% 94%;
 	background-color: #000;
 	color: white;
 
@@ -651,6 +698,18 @@ i.icon-wrapper {
 /*------------------------------------*\
     $STRUCTURE
 \*------------------------------------*/
+
+.nav {
+	list-style: none;
+	margin-left: 0;
+}
+
+	.nav > li,
+		.nav > li > a {
+			display: inline-block;
+			*display: inline;
+			zoom:1;
+		}
 
 footer {
 	min-height: 40px;
