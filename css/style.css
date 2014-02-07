@@ -597,11 +597,13 @@ p {
   font-weight: 700;
 }
 
-.footer {
+.footer-copy {
   font-size: 12px;
   font-size: 0.75rem;
   margin: 0;
   padding: 0 1em;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 /*------------------------------------*\
@@ -2979,4 +2981,6 @@ footer {
   min-height: 40px;
   background-color: #1c1c1c;
   color: #757575;
+  display: table;
+  width: 100%;
 }
