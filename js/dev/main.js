@@ -1,7 +1,11 @@
 $(function() {
   $('.startBtn').click( function (event) {
     event.preventDefault();
-    $(window).scrollTo("#article-section", 800);
+    $(window).scrollTo("#article-section", 800, {
+      onAfter:function() {
+        $('.header').fadeIn();
+      }
+    });
   });
 });
 
@@ -77,3 +81,55 @@ function throttle(func, wait, options) {
 };
 
 resizeBackground();
+
+// catch console.log if not acceptable by browser (example: IE8)
+// http://stackoverflow.com/questions/690251/what-happened-to-console-log-in-ie8/14246240#14246240
+(function (fallback) {    
+
+    fallback = fallback || function () { };
+
+    // function to trap most of the console functions from the FireBug Console API. 
+    var trap = function () {
+        // create an Array from the arguments Object           
+        var args = Array.prototype.slice.call(arguments);
+        // console.raw captures the raw args, without converting toString
+        console.raw.push(args);
+        var message = args.join(' ');
+        console.messages.push(message);
+        fallback(message);
+    };
+
+    // redefine console
+    if (typeof console === 'undefined') {
+        console = {
+            messages: [],
+            raw: [],
+            dump: function() { return console.messages.join('\n'); },
+            log: trap,
+            debug: trap,
+            info: trap,
+            warn: trap,
+            error: trap,
+            assert: trap,
+            clear: function() { 
+                  console.messages.length = 0; 
+                  console.row.length = 0 ;
+            },
+            dir: trap,
+            dirxml: trap,
+            trace: trap,
+            group: trap,
+            groupCollapsed: trap,
+            groupEnd: trap,
+            time: trap,
+            timeEnd: trap,
+            timeStamp: trap,
+            profile: trap,
+            profileEnd: trap,
+            count: trap,
+            exception: trap,
+            table: trap
+        };
+    }
+
+})(null);

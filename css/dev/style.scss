@@ -698,6 +698,19 @@ i.icon-wrapper {
 /*------------------------------------*\
     $STRUCTURE
 \*------------------------------------*/
+.header {
+	display: none;
+	position: fixed;
+	top:0;
+	height: 50px;
+	width: 100%;
+	z-index: 3;
+
+	background-color: white;
+	border-bottom: 1px solid black;
+
+	h4 { float: left; }
+}
 
 .nav {
 	list-style: none;
@@ -709,7 +722,10 @@ i.icon-wrapper {
 			display: inline-block;
 			*display: inline;
 			zoom:1;
+			margin-right: 1em;
 		}
+
+.mainNav { float: right; margin-right: 1em;  }
 
 footer {
 	min-height: 40px;
