@@ -111,6 +111,14 @@ textarea {
 	resize: vertical;
 }
 
+/* globaly style for font awesome icons */
+i.icon-wrapper {
+	position: absolute;
+	margin: -16px -25px;
+	padding: 0 10px;
+	background-color: white;
+}
+
 
 
 
@@ -382,6 +390,9 @@ textarea {
 /*------------------------------------*\
     $LAYOUT
 \*------------------------------------*/
+/* used for each section of portfolio, 
+ * used as semantic separation of content
+ */
 .section { 
 	padding: 4.375em 0; 
 	margin: 0 auto; 
@@ -390,6 +401,16 @@ textarea {
 	position: relative;
 }
 
+/* used for a section's title bottom border
+ * accompanied by a font awesome icon 
+ * Example:
+ <h2 class="section-title">
+		Articles
+		<div class="section-border">
+			<i class="icon-wrapper  fa  fa-pencil"></i>
+		</div>
+	</h2>
+ */
 .section-border {
 	border-bottom: 1px solid $gray;
 	margin: 0 auto;
@@ -406,6 +427,9 @@ textarea {
 	}
 }
 
+/* general container for each section which allows for 
+ * centering of content in browser 
+ */
 .container {
 	max-width: 75em;
 	margin: 0 auto;
@@ -417,6 +441,8 @@ textarea {
 	 
 	 
 }
+
+/* intro seciton styles */
 .intro {
 	background: #000000; /* Old browsers */
 	background: -moz-linear-gradient(top,  #000000 0%, #034060 100%); /* FF3.6+ */
@@ -426,14 +452,45 @@ textarea {
 	background: -ms-linear-gradient(top,  #000000 0%,#034060 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  #000000 0%,#034060 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#034060',GradientType=0 ); /* IE6-9 */
-
-	/*padding-bottom: 5.475em;*/
-
 	padding: 1em; 
 	margin: 0;
 }
 
+	.stars { 
+		position: absolute; 
+		top: 0; 
+		left: 0;
+		z-index: 1;
+	}
+
+	.logo-holder {  
+		position: relative;
+		z-index: 2;
+		/*padding: 1em 1em;*/
+
+		text-align: center;
+		width: 100%;
+		min-height: 260px;
+
+		@media only screen and (min-width: $brkpt-small) {
+		    padding-left: 0;
+		    padding-right: 0; 
+		}
+		 
+	}
+	.logo { padding-bottom: 22px; }
+	.ship-and-lasers { 
+		background: url('../images/ship_with_lasers.png') no-repeat bottom center transparent;
+		min-height: 160px;
+		/*height: 30px;*/
+	}
+	.start { padding-top: 35px; }
+/* */
+
+/* article section styles */
 .articles { background-color: white; }
+	.date-container { display: table; padding-top: 1em; }
+
 .about {
 	background: url("../images/mountains.png") no-repeat center bottom $about-blue;
 	color: white;
@@ -466,125 +523,22 @@ textarea {
 		width: 100%;
 	}
 
-// .mountain-scene {
-// 	position: absolute;
-// 	bottom: 0;
-// 	z-index: 1;
-// 	height: 305px;
-// 	max-width: 75em;
-// 	width: 100%;
-// 	background: url('../images/mountain_top.png') repeat-x bottom;
-// }
-// 	.pilot-landed {
-// 		position: absolute;
-// 		bottom: 14px;
-// 		right: 0;
-// 	}
-
-.skillset {
-	background: url('../images/skillset-background.png') repeat-x bottom $skillset-blue;
-}
-.stars { 
-	position: absolute; 
-	top: 0; 
-	left: 0;
-	z-index: 1;
-}
-
-/*.starImg {
-
-	animation: glitter 4.5s linear 0s infinite normal;
- -webkit-animation: glitter 4.5s linear 0s infinite normal;
- -moz-animation: glitter 4.5s linear 0s infinite normal;
- -ms-animation: glitter 4.5s linear 0s infinite normal;
- -o-animation: glitter 4.5s linear 0s infinite normal;
-
-}*/
-
-/*CSS3 keyframes for glittering effect*/
-/*@-webkit-keyframes glitter {
- 0%   { opacity: 1; }
- 15% 	{ opacity: 0.2;}
- 25%  { opacity: 1; }
- 30%  { opacity: 0.2; }
- 50%  { opacity: 1; }
- 60%	{ opacity: 0.2;}
- 75%  { opacity: 1; }
- 85%	{ opacity: 0.2; }
- 100% { opacity: 1; }
-}
-@-moz-keyframes glitter {
- 0%   { opacity: 1; }
- 25%  { opacity: 0; }
- 50%  { opacity: 1; }
- 75%  { opacity: 0; }
- 100% { opacity: 1; }
-}*/
-
-.logo-holder {  
-	position: relative;
-	z-index: 2;
-	/*padding: 1em 1em;*/
-
-	text-align: center;
-	width: 100%;
-	min-height: 260px;
-
-	@media only screen and (min-width: $brkpt-small) {
-	    padding-left: 0;
-	    padding-right: 0; 
+	.skillset {
+		background: url('../images/skillset-background.png') repeat-x bottom $skillset-blue;
 	}
-	 
-}
-.logo { padding-bottom: 22px; }
-.lasers { 
-	background: url('../images/ship_with_lasers.png') no-repeat bottom center transparent;
-	min-height: 160px;
-	/*height: 30px;*/
-}
-.start { padding-top: 35px; }
 
+	.freelance {
+		background-color: $dark-blue;
+		border-radius: 5px;
+		max-width: 600px;
+		margin: 0 auto;
+		padding: 1em;
+		z-index: 2;
+	}
 
-.freelance {
-	background-color: $dark-blue;
-	border-radius: 5px;
-	max-width: 600px;
-	margin: 0 auto;
-	padding: 1em;
-	z-index: 2;
-}
-.hobbies { 
+/* */
 
-	background: url('../images/hobbies-background.png') repeat-x top $orange;
-
-	color: $dark-orange;
-
-	p { margin: 0; }
-}
-
-.hobby-icon {
-	float: left;
-	margin-right: 1em;
-	width: 19.4444444444444%;
-	margin-top: 13%;
-}
-
-.hobby-content {
-	float: left;
-	width: 76.1111111111111%;
-}
-
-
-.date-container { display: table; padding-top: 1em; }
-
-i.icon-wrapper {
-	position: absolute;
-	margin: -16px -25px;
-	padding: 0 10px;
-	background-color: white;
-}
-
-
+/* skillset section styles */
 /**
  * Skillset Pills
  * - each skill is wrapped in a 'pill' div
@@ -635,6 +589,30 @@ i.icon-wrapper {
 
 .bolt { color: white; }
 .check { color: $orange; }
+/* */
+
+/* hobby styles */
+.hobbies { 
+
+	background: url('../images/hobbies-background.png') repeat-x top $orange;
+
+	color: $dark-orange;
+
+	p { margin: 0; }
+}
+
+.hobby-icon {
+	float: left;
+	margin-right: 1em;
+	width: 19.4444444444444%;
+	margin-top: 13%;
+}
+
+.hobby-content {
+	float: left;
+	width: 76.1111111111111%;
+}
+/* */
 
 .screenshot-container {
 	width: 100%;
@@ -642,6 +620,7 @@ i.icon-wrapper {
 	margin-bottom: 2.5em;
 }
 
+/* contact section styles */
 .contact {
 	background: url('../images/spikes.png'), url('../images/bottom_contact.gif');
 		background-repeat: repeat-x;
@@ -660,7 +639,9 @@ i.icon-wrapper {
 		color: white;
 	}
 }
+/* */
 
+/* testimonial seciton styles */
 .testimonials {
 	background: url('../images/bottom_red_to_black.png'), url('../images/pilot_monster.png');
 	background-repeat: repeat-x, no-repeat;
@@ -686,14 +667,15 @@ i.icon-wrapper {
 	}
 }
 
-.left-quote {
-	float: left;
-	color: $dark-red;
-}
+	.left-quote {
+		float: left;
+		color: $dark-red;
+	}
 
-.endorsement {
-	margin-left: 32px;
-}
+	.endorsement {
+		margin-left: 32px;
+	}
+/* */
 
 /*------------------------------------*\
     $STRUCTURE

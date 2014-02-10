@@ -48,7 +48,7 @@ function resizeBackground() {
 
   $('.intro').css( "height", viewportHeight+"px");
 
-  $('.lasers').css( "height", shipHeight+"px");
+  $('.ship-and-lasers').css( "height", shipHeight+"px");
 
 };
 
