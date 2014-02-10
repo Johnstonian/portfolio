@@ -1,11 +1,26 @@
 $(function() {
-  $('.startBtn').click( function (event) {
-    event.preventDefault();
+  // handle start button click
+  $('.startBtn').click( function(e) {
+    e.preventDefault();
     $(window).scrollTo("#article-section", 800, {
       onAfter:function() {
         $('.header').fadeIn();
       }
     });
+  });
+
+  // handle nav item clicks
+  $('.header a').click( function(e) {
+    e.preventDefault();
+
+    var $this = this.hash
+
+    $(window).scrollTo($this, 800, { offset: -50 } );
+
+    if( $this == '#intro-section' ) {
+      // hide header bar
+      $('.header').fadeOut();
+    }
   });
 });
 

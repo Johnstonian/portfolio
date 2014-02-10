@@ -512,6 +512,10 @@ i.icon-wrapper {
 		padding-bottom: 15em;
 		margin-bottom: -56px;
 	}
+
+	.section-border{
+		border-color: white;
+	}
 }
 
 	.ground-blue {
@@ -661,6 +665,10 @@ i.icon-wrapper {
 		color: white; 
 	}
 
+	.section-border{
+		border-color: white;
+	}
+
 	i.icon-wrapper {
 		background-color: black;
 		color: white;
@@ -681,33 +689,70 @@ i.icon-wrapper {
     $STRUCTURE
 \*------------------------------------*/
 .header {
-	display: none;
+	//display: none;
 	position: fixed;
 	top:0;
 	height: 50px;
 	width: 100%;
+	padding: 0 1em;
 	z-index: 3;
 
 	background-color: white;
-	border-bottom: 1px solid black;
+	box-shadow: 0 4px 10px rgba(0,0,0,0.07);
 
-	h4 { float: left; }
+	h4 { 
+		float: left; 
+		padding: 0;
+		margin: 0;
+		line-height: 50px;
+		font-weight: 300;
+
+		a:hover { color: inherit; }
+	}
+
+	a {
+		color: black;
+
+		-webkit-transition: all 0.3s ease;
+		transition: all 0.3s ease;
+
+		&:hover { color: $link-color; text-decoration: none; }
+	}
 }
+
+.mainNav { float: right; margin-right: 1em;  }
 
 .nav {
 	list-style: none;
 	margin-left: 0;
+	padding: 0;
+
+	&:target {
+		max-height: 25em;
+	}
 }
 
+	.nav > li { 
+		margin-right: 1em;
+		font-size: 0.875em;
+
+		&:nth-child(5) {
+			margin-right: 0;
+		}
+
+		@media only screen and (min-width: $brkpt-large) {
+		    font-size: 1em;
+		}
+		 
+	}
 	.nav > li,
 		.nav > li > a {
 			display: inline-block;
 			*display: inline;
 			zoom:1;
-			margin-right: 1em;
 		}
 
-.mainNav { float: right; margin-right: 1em;  }
+.nav-toggle { display: none; }
 
 footer {
 	min-height: 40px;

@@ -2802,6 +2802,9 @@ i.icon-wrapper {
   padding-bottom: 15em;
   margin-bottom: -56px;
 }
+.about .section-border {
+  border-color: white;
+}
 
 .ground-blue {
   height: 90px;
@@ -2947,6 +2950,9 @@ i.icon-wrapper {
 .testimonials .section-title {
   color: white;
 }
+.testimonials .section-border {
+  border-color: white;
+}
 .testimonials i.icon-wrapper {
   background-color: black;
   color: white;
@@ -2966,22 +2972,61 @@ i.icon-wrapper {
     $STRUCTURE
 \*------------------------------------*/
 .header {
-  display: none;
   position: fixed;
   top: 0;
   height: 50px;
   width: 100%;
+  padding: 0 1em;
   z-index: 3;
   background-color: white;
-  border-bottom: 1px solid black;
+  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
 }
 .header h4 {
   float: left;
+  padding: 0;
+  margin: 0;
+  line-height: 50px;
+  font-weight: 300;
+}
+.header h4 a:hover {
+  color: inherit;
+}
+.header a {
+  color: black;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.header a:hover {
+  color: #5b9bbc;
+  text-decoration: none;
+}
+
+.mainNav {
+  float: right;
+  margin-right: 1em;
 }
 
 .nav {
   list-style: none;
   margin-left: 0;
+  padding: 0;
+}
+.nav:target {
+  max-height: 25em;
+}
+
+.nav > li {
+  margin-right: 1em;
+  font-size: 0.875em;
+}
+.nav > li:nth-child(5) {
+  margin-right: 0;
+}
+@media only screen and (min-width: 48em) {
+  .nav > li {
+    font-size: 1em;
+  }
 }
 
 .nav > li,
@@ -2989,12 +3034,10 @@ i.icon-wrapper {
   display: inline-block;
   *display: inline;
   zoom: 1;
-  margin-right: 1em;
 }
 
-.mainNav {
-  float: right;
-  margin-right: 1em;
+.nav-toggle {
+  display: none;
 }
 
 footer {
