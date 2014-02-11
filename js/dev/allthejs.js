@@ -26,9 +26,9 @@ $(function() {
   $('.header a').click( function(e) {
     e.preventDefault();
 
-    var $this = this.hash
+    var $this = this.hash;
 
-    $(window).scrollTo($this, 800, { offset: -50 } );
+    $(window).scrollTo($this, 800, { offset: {top: -50} } );
 
     if( $this == '#intro-section' ) {
       // hide header bar
@@ -63,13 +63,13 @@ function resizeBackground() {
   // figure out how much height is left for the ship to fill the space
   var shipHeight = viewportHeight - startHeight - logoHeight - padding;
 
-  console.log("shipHeight: " + shipHeight);
+  //console.log("shipHeight: " + shipHeight);
 
   if(shipHeight > 398) {
   	extraSpace = shipHeight - 398;
   	shipHeight = 398;
   	$('.logo-holder').css( "margin-top", extraSpace/2+"px");
-  	console.log("extraSpace: " + extraSpace);
+  	//console.log("extraSpace: " + extraSpace);
   } else {
   	$('.logo-holder').css( "margin-top", 0);
   }

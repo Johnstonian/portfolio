@@ -92,16 +92,11 @@ module.exports = function(grunt) {
 
   });
 
-  // 3. Where we tell Grunt we plan to use this plug-in.
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-imagemin');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-autoprefixer');
-  grunt.loadNpmTasks('grunt-contrib-connect');
+  // 3. Where we tell Grunt which plugins we want to use
+  // use matchdep for this
+  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
-  // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
+  // 4. Where we tell Grunt what to do when we type "grunt" and "grunt dev" into the terminal.
   grunt.registerTask('default', ['concat', 'uglify', 'sass', 'imagemin']);
 
   grunt.registerTask('dev', ['connect', 'watch']);
