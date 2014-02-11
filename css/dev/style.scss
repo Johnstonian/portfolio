@@ -689,7 +689,7 @@ i.icon-wrapper {
     $STRUCTURE
 \*------------------------------------*/
 .header {
-	//display: none;
+	display: none;
 	position: fixed;
 	top:0;
 	height: 50px;
@@ -720,7 +720,7 @@ i.icon-wrapper {
 	}
 }
 
-.mainNav { float: right; margin-right: 1em;  }
+.mainNav { float: right; }
 
 .nav {
 	list-style: none;

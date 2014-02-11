@@ -2972,6 +2972,7 @@ i.icon-wrapper {
     $STRUCTURE
 \*------------------------------------*/
 .header {
+  display: none;
   position: fixed;
   top: 0;
   height: 50px;
@@ -3004,7 +3005,6 @@ i.icon-wrapper {
 
 .mainNav {
   float: right;
-  margin-right: 1em;
 }
 
 .nav {
