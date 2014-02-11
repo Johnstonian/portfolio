@@ -2975,12 +2975,17 @@ i.icon-wrapper {
   display: none;
   position: fixed;
   top: 0;
-  height: 50px;
+  min-height: 50px;
   width: 100%;
   z-index: 3;
   background-color: white;
   -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+}
+@media only screen and (min-width: 40em) {
+  .header {
+    height: 50px;
+  }
 }
 .header h4 {
   float: left;
@@ -3002,15 +3007,16 @@ i.icon-wrapper {
   text-decoration: none;
 }
 
-.mainNav {
-  float: none;
-  display: block;
+.main-nav {
+  float: left;
+  display: none;
   width: 100%;
 }
 @media only screen and (min-width: 40em) {
-  .mainNav {
+  .main-nav {
     float: right;
     display: block;
+    width: inherit;
   }
 }
 
@@ -3018,17 +3024,51 @@ i.icon-wrapper {
   list-style: none;
   margin-left: 0;
   padding: 0;
+  margin: 0 -2em;
 }
 .nav:target {
   max-height: 25em;
 }
+@media only screen and (min-width: 40em) {
+  .nav {
+    margin: 0;
+  }
+}
 
 .nav > li {
-  margin-right: 1em;
-  font-size: 0.875em;
+  font-size: 1em;
+  line-height: 50px;
 }
-.nav > li:nth-child(5) {
-  margin-right: 0;
+.nav > li a:hover {
+  color: inherit;
+}
+.nav > li:nth-of-type(1) a {
+  background: rgba(240, 139, 101, 0.08);
+}
+.nav > li:nth-of-type(2) a {
+  background: rgba(240, 139, 101, 0.11);
+}
+.nav > li:nth-of-type(3) a {
+  background: rgba(240, 139, 101, 0.14);
+}
+.nav > li:nth-of-type(4) a {
+  background: rgba(240, 139, 101, 0.17);
+}
+.nav > li:nth-of-type(5) a {
+  background: rgba(240, 139, 101, 0.2);
+}
+@media only screen and (min-width: 40em) {
+  .nav > li {
+    margin-right: 1em;
+    font-size: 0.875em;
+    line-height: inherit;
+  }
+  .nav > li:nth-child(5) {
+    margin-right: 0;
+  }
+  .nav > li a:hover {
+    color: #5b9bbc;
+  }
 }
 @media only screen and (min-width: 48em) {
   .nav > li {
@@ -3038,9 +3078,19 @@ i.icon-wrapper {
 
 .nav > li,
 .nav > li > a {
-  display: inline-block;
-  *display: inline;
+  display: block;
   zoom: 1;
+  padding: 0 1em;
+}
+@media only screen and (min-width: 40em) {
+  .nav > li,
+  .nav > li > a {
+    padding: 0;
+    background: none !important;
+    display: inline-block;
+    *display: inline;
+    line-height: 50px;
+  }
 }
 
 .nav-toggle {
