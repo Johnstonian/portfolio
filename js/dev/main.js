@@ -28,7 +28,7 @@ $(function() {
 $(document).load($(window).bind("resize", throttle(resizeBackground, 1000)));
 
 function resizeBackground() {
-  console.log("you resized me");
+  //console.log("you resized me");
 
   viewportHeight = $(window).height();
   viewportWidth = $(window).width();
@@ -39,8 +39,8 @@ function resizeBackground() {
 
   //console.log("new height: " + viewportHeight + " | new width: " + viewportWidth);
 
-  console.log("start height" + $('.start').height());
-  console.log("ryan height" + $('.ryan').height());
+  //console.log("start height" + $('.start').height());
+  //console.log("ryan height" + $('.ryan').height());
 
   var startHeight = 60;
   var logoHeight = $('.ryan').height();

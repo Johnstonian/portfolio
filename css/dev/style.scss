@@ -719,7 +719,18 @@ i.icon-wrapper {
 	}
 }
 
-.mainNav { float: right; }
+.mainNav { 
+
+	float: none;
+	display: block;
+	width: 100%;
+
+	@media only screen and (min-width: $brkpt-medium) {
+		float: right;
+		display: block;
+	}
+ 
+}
 
 .nav {
 	list-style: none;
@@ -751,7 +762,18 @@ i.icon-wrapper {
 			zoom:1;
 		}
 
-.nav-toggle { display: none; }
+.nav-toggle { 
+	display: block; 
+
+	float: right;
+	line-height: 50px;
+	text-transform: lowercase;
+
+	@media only screen and (min-width: $brkpt-medium) {
+	    display: none;
+	}
+	 
+}
 
 footer {
 	min-height: 40px;

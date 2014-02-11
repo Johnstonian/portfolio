@@ -3003,7 +3003,15 @@ i.icon-wrapper {
 }
 
 .mainNav {
-  float: right;
+  float: none;
+  display: block;
+  width: 100%;
+}
+@media only screen and (min-width: 40em) {
+  .mainNav {
+    float: right;
+    display: block;
+  }
 }
 
 .nav {
@@ -3036,7 +3044,15 @@ i.icon-wrapper {
 }
 
 .nav-toggle {
-  display: none;
+  display: block;
+  float: right;
+  line-height: 50px;
+  text-transform: lowercase;
+}
+@media only screen and (min-width: 40em) {
+  .nav-toggle {
+    display: none;
+  }
 }
 
 footer {
