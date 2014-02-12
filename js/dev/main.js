@@ -32,13 +32,13 @@ $(function() {
     $('.main-nav').toggle();
   });
 
-  $('.header h4 a').hover(
-    function() {
-    $( this ).html( "Web Developer" );
-    }, function() {
-      $( this ).html( "Ryan Johnston" );
-    }
-  );
+  // $('.header h4 a').hover(
+  //   function() {
+  //   $( this ).html( "Web Developer" );
+  //   }, function() {
+  //     $( this ).html( "Ryan Johnston" );
+  //   }
+  // );
 
 }); // end jQuery ready
 
