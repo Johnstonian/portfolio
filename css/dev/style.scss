@@ -827,21 +827,21 @@ i.icon-wrapper {
 			}
 		}
 
-.nav-toggle { 
-	display: block; 
+// .nav-toggle { 
+// 	display: block; 
 
-	float: right;
-	line-height: 50px;
-	text-transform: lowercase;
-	font-weight: 300;
+// 	float: right;
+// 	line-height: 50px;
+// 	text-transform: lowercase;
+// 	font-weight: 300;
 
-	color: white;
+// 	color: white;
 
-	@media only screen and (min-width: $brkpt-medium) {
-	    display: none;
-	}
+// 	@media only screen and (min-width: $brkpt-medium) {
+// 	    display: none;
+// 	}
 	 
-}
+// }
 
 footer {
 	min-height: 40px;
@@ -850,3 +850,5 @@ footer {
 	display: table;
 	width: 100%;
 }
+
+@import 'responsive-nav';

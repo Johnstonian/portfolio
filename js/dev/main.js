@@ -1,3 +1,5 @@
+var nav = responsiveNav(".nav-collapse");
+
 $(function() {
 
   // handle start button click
@@ -34,10 +36,10 @@ $(function() {
 
   $(".logo-header").hover(
     function() {
-        $(this).find('img').attr("src", "../images/logo_title_new.png");
+        $(this).find('img').attr("src", "../images/logo_title.png");
     },
     function() {
-        $(this).find('img').attr("src", "../images/logo_name_new.png");
+        $(this).find('img').attr("src", "../images/logo_name.png");
     }
   );
 
