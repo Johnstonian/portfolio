@@ -32,13 +32,14 @@ $(function() {
     $('.main-nav').toggle();
   });
 
-  // $('.header h4 a').hover(
-  //   function() {
-  //   $( this ).html( "Web Developer" );
-  //   }, function() {
-  //     $( this ).html( "Ryan Johnston" );
-  //   }
-  // );
+  $(".logo-header").hover(
+    function() {
+        $(this).find('img').attr("src", "../images/logo_title_new.png");
+    },
+    function() {
+        $(this).find('img').attr("src", "../images/logo_name_new.png");
+    }
+  );
 
 }); // end jQuery ready
 

@@ -2987,7 +2987,14 @@ i.icon-wrapper {
     height: 50px;
   }
 }
-.header h4 {
+.header a {
+  color: white;
+}
+.header a:hover {
+  text-decoration: none;
+}
+
+.logo-header {
   float: left;
   padding: 0;
   margin: 0;
@@ -2996,22 +3003,8 @@ i.icon-wrapper {
   color: white;
   max-width: 200px;
 }
-.header h4 a:hover {
-  color: inherit;
-}
-.header a {
-  color: white;
-}
-.header a:hover {
-  color: #5b9bbc;
-  text-decoration: none;
-}
-
-.logo-header {
-  background: url("../images/logo_name.png");
-}
-.logo-header:hover {
-  background: url("../images/logo_title.png");
+.logo-header a {
+  display: block;
 }
 
 .main-nav {
@@ -3112,7 +3105,7 @@ i.icon-wrapper {
   display: block;
   float: right;
   line-height: 50px;
-  text-transform: uppercase;
+  text-transform: lowercase;
   font-weight: 300;
   color: white;
 }

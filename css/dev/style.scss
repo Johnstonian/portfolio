@@ -703,32 +703,24 @@ i.icon-wrapper {
 	@media only screen and (min-width: $brkpt-medium) {
 		height: 50px;
 	}
-	 
-
-	h4 { 
-		float: left; 
-		padding: 0;
-		margin: 0;
-		line-height: 50px;
-		font-weight: 300;
-		color: white;
-		max-width: 200px;
-
-		a:hover { color: inherit; }
-	}
 
 	a {
 		color: white;
 
-		&:hover { color: $link-color; text-decoration: none; }
+		&:hover { text-decoration: none; }
 	}
 }
 
 .logo-header {
-	background: url('../images/logo_name.png');
-	&:hover {
-		background: url('../images/logo_title.png');
-	}
+	float: left; 
+	padding: 0;
+	margin: 0;
+	line-height: 50px;
+	font-weight: 300;
+	color: white;
+	max-width: 200px;
+
+	a { display: block; }
 }
 
 .main-nav { 
@@ -840,7 +832,7 @@ i.icon-wrapper {
 
 	float: right;
 	line-height: 50px;
-	text-transform: uppercase;
+	text-transform: lowercase;
 	font-weight: 300;
 
 	color: white;
