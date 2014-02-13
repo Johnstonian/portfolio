@@ -41,6 +41,8 @@
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
+
+  float: right;
 }
 
 @media screen and (min-width: 40em) {
@@ -52,5 +54,9 @@
   }
   .nav-toggle {
     display: none;
+  }
+
+  .nav-collapse li {
+    width: auto;
   }
 }

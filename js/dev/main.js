@@ -1,4 +1,6 @@
-var nav = responsiveNav(".nav-collapse");
+var nav = responsiveNav(".nav-collapse", {
+  insert: "before"
+  });
 
 $(function() {
 
@@ -20,18 +22,10 @@ $(function() {
 
     $(window).scrollTo($this, 800, { offset: {top: -50} } );
 
-    //$('.main-nav').hide();
-
     if( $this == '#intro-section' ) {
       // hide header bar
       $('.header').fadeOut();
     }
-  });
-
-  // handle mobile menu clicks
-  $('.nav-toggle').click( function(e) {
-    e.preventDefault();
-    $('.main-nav').toggle();
   });
 
   $(".logo-header").hover(

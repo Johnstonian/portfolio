@@ -2972,7 +2972,7 @@ i.icon-wrapper {
     $STRUCTURE
 \*------------------------------------*/
 .header {
-  display: block;
+  display: none;
   position: fixed;
   top: 0;
   min-height: 50px;
@@ -3002,11 +3002,74 @@ i.icon-wrapper {
   font-weight: 300;
   color: white;
   max-width: 200px;
+  margin-left: 1em;
 }
 .logo-header a {
   display: block;
 }
 
+/*------------------------------------*\
+    $RESPONSIVE NAV
+\*------------------------------------*/
+/*! responsive-nav.js 1.0.25 by @viljamis */
+.nav-collapse ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+  list-style: none;
+}
+
+.nav-collapse li {
+  width: 100%;
+  display: block;
+}
+
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.nav-collapse.opened {
+  max-height: 9999px;
+}
+
+.nav-collapse.disable-pointer-events {
+  pointer-events: none !important;
+}
+
+.nav-toggle {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  float: right;
+}
+
+@media screen and (min-width: 40em) {
+  .js .nav-collapse {
+    position: relative;
+  }
+
+  .js .nav-collapse.closed {
+    max-height: none;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-collapse li {
+    width: auto;
+  }
+}
 .main-nav {
   float: left;
   display: inline-block;
@@ -3017,7 +3080,8 @@ i.icon-wrapper {
   .main-nav {
     float: right;
     display: block;
-    width: inherit;
+    width: auto;
+    margin-right: 1em;
   }
 }
 
@@ -3087,7 +3151,6 @@ i.icon-wrapper {
 .nav > li > a {
   display: block;
   zoom: 1;
-  padding: 0 1em;
   color: white;
 }
 @media only screen and (min-width: 40em) {
@@ -3101,68 +3164,34 @@ i.icon-wrapper {
   }
 }
 
+.nav > li > a {
+  padding: 0 1em;
+}
+@media only screen and (min-width: 40em) {
+  .nav > li > a {
+    padding: 0;
+  }
+}
+
+.nav-toggle {
+  display: block;
+  float: right;
+  line-height: 50px;
+  text-transform: lowercase;
+  font-weight: 300;
+  margin-right: 1em;
+  color: white;
+}
+@media only screen and (min-width: 40em) {
+  .nav-toggle {
+    display: none;
+  }
+}
+
 footer {
   min-height: 40px;
   background-color: #1c1c1c;
   color: #757575;
   display: table;
   width: 100%;
-}
-
-/*------------------------------------*\
-    $RESPONSIVE NAV
-\*------------------------------------*/
-/*! responsive-nav.js 1.0.25 by @viljamis */
-.nav-collapse ul {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  display: block;
-  list-style: none;
-}
-
-.nav-collapse li {
-  width: 100%;
-  display: block;
-}
-
-.js .nav-collapse {
-  clip: rect(0 0 0 0);
-  max-height: 0;
-  position: absolute;
-  display: block;
-  overflow: hidden;
-  zoom: 1;
-}
-
-.nav-collapse.opened {
-  max-height: 9999px;
-}
-
-.nav-collapse.disable-pointer-events {
-  pointer-events: none !important;
-}
-
-.nav-toggle {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-}
-
-@media screen and (min-width: 40em) {
-  .js .nav-collapse {
-    position: relative;
-  }
-
-  .js .nav-collapse.closed {
-    max-height: none;
-  }
-
-  .nav-toggle {
-    display: none;
-  }
 }
