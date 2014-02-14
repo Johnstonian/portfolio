@@ -3202,6 +3202,15 @@ i.icon-wrapper {
   }
 }
 
+.nav-active {
+  background-color: #924224;
+}
+@media only screen and (min-width: 40em) {
+  .nav-active {
+    background-color: red;
+  }
+}
+
 footer {
   min-height: 40px;
   background-color: #1c1c1c;

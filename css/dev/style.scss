@@ -869,6 +869,15 @@ i.icon-wrapper {
 	 
  }
 
+ .nav-active {
+ 	background-color: $dark-orange;
+
+ 	@media only screen and (min-width: $brkpt-medium) {
+ 	    background-color: red;
+ 	}
+ 	 
+ }
+
 footer {
 	min-height: 40px;
 	background-color: $dark-gray;

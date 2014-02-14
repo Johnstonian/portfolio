@@ -24,20 +24,30 @@ $(function() {
 
     $(window).scrollTo( $this, 800 );
 
+
+    // move header menu off screen if Logo is clicked
     if( $this == '#intro-section' ) {
       // hide header bar
       $('.header').removeClass('show-header');
     }
   });
 
+  // handle switching of logo image on hover
   $(".logo-header").hover(
     function() {
-        $(this).find('img').attr("src", "../images/logo_title.png");
+        $(this).find('img').attr("src", "images/logo_title.png");
     },
     function() {
-        $(this).find('img').attr("src", "../images/logo_name.png");
+        $(this).find('img').attr("src", "images/logo_name.png");
     }
   );
+
+  // close mobile menu if nav item clicked
+  $('.nav li a').click( function(e) {
+    if( $(".nav-collapse").hasClass("opened") ) {
+      nav.toggle();
+    }
+  });
 
 }); // end jQuery ready
 
