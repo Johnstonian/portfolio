@@ -9,7 +9,7 @@ $(function() {
     e.preventDefault();
     $(window).scrollTo("#article-section", 800, {
       onAfter:function() {
-        $('.header').fadeIn();
+        $('.header').addClass('show-header');
       }
     });
   });
@@ -20,11 +20,13 @@ $(function() {
 
     var $this = this.hash;
 
-    $(window).scrollTo($this, 800, { offset: {top: -50} } );
+    //$(window).scrollTo($this, 800, { offset: {top: -50} } );
+
+    $(window).scrollTo( $this, 800 );
 
     if( $this == '#intro-section' ) {
       // hide header bar
-      $('.header').fadeOut();
+      $('.header').removeClass('show-header');
     }
   });
 
