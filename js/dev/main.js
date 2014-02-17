@@ -1,34 +1,42 @@
+// setup responsive nav
 var nav = responsiveNav(".nav-collapse", {
   insert: "before"
   });
 
-$(function() {
+$(function() { // document ready!
+
+  var header = $('.header');
 
   // handle start button click
   $('.startBtn').click( function(e) {
     e.preventDefault();
     $(window).scrollTo("#article-section", 800, {
       onAfter:function() {
-        $('.header').addClass('show-header');
+        $(header).addClass('show-header');
       }
     });
   });
 
   // handle nav item clicks
-  $('.header a').click( function(e) {
+  $('.header  a').click( function(e) {
     e.preventDefault();
 
     var $this = this.hash;
 
-    //$(window).scrollTo($this, 800, { offset: {top: -50} } );
+    // disable waypoint events
+    $('.section').waypoint('disable');
 
-    $(window).scrollTo( $this, 800 );
+    $(window).scrollTo( $this, 800, {
+      onAfter: function() {
+        $('.section').waypoint('enable');
+      }
+    } );
 
 
     // move header menu off screen if Logo is clicked
     if( $this == '#intro-section' ) {
       // hide header bar
-      $('.header').removeClass('show-header');
+      $(header).removeClass('show-header');
     }
   });
 
@@ -47,7 +55,44 @@ $(function() {
     if( $(".nav-collapse").hasClass("opened") ) {
       nav.toggle();
     }
+    $('.nav li a').removeClass('nav-active');
+    $(this).addClass('nav-active');
   });
+
+  // setup waypoints to toggle active nav states
+  $('.section').waypoint( function(direction) {
+    var that = this;
+
+    if( !$(that).hasClass('skillset') && !$(that).hasClass('hobbies') && !$(that).hasClass('intro')) {
+
+      // show navigation if not at top of page
+      if( !$(header).hasClass('show-header') ) {
+        $(header).addClass('show-header');
+      }
+
+      // remove nav-active class from navigation
+      $('.nav li a').removeClass('nav-active');
+
+      // add the appropriate nav-active item to the corresponding anchor tag
+      if( $(that).hasClass('articles') ) {
+        $('.nav-articles').find('a').addClass('nav-active');
+      } else if( $(that).hasClass('about') ){
+        $('.nav-about').find('a').addClass('nav-active');
+      } else if( $(that).hasClass('projects') ){
+        $('.nav-work').find('a').addClass('nav-active');
+      } else if( $(that).hasClass('contact') ){
+        $('.nav-contact').find('a').addClass('nav-active');
+      } else if( $(that).hasClass('testimonials') ){
+        $('.nav-testimonials').find('a').addClass('nav-active');
+      }
+    }
+  });
+
+  // remove header nav if scrolling to intro section
+  $('.intro').waypoint( function(direction) {
+      $(header).removeClass('show-header');
+    }, { offset: '-50%' }
+  );
 
 }); // end jQuery ready
 

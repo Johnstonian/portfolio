@@ -711,7 +711,7 @@ i.icon-wrapper {
 	a {
 		color: white;
 
-		&:hover { text-decoration: none; }
+		&:hover, &:focus { text-decoration: none; }
 	}
 }
 
@@ -750,32 +750,18 @@ i.icon-wrapper {
  
 }
 
-/*.nav {
-	list-style: none;
-	margin-left: 0;
-	padding: 0;
-
-	margin: 0 -2em;
-
-	&:target {
-		max-height: 25em;
-	}
-
-	@media only screen and (min-width: $brkpt-medium) {
-	    margin: 0;
-	}
-	 
-}*/
+.nav > li > .nav-active {
+ 	background-color: $dark-orange !important;
+ }
 
 	.nav > li { 
 		
 		font-size: 1em;
-		font-weight: 300;
 		line-height: 50px;
 
-		a:hover {
+		a:hover, &:focus  {
 			color: inherit;
-			background-color: $dark-orange;
+			background-color: $dark-orange !important;
 			transition: all 0.3s ease-in;
 		}
 
@@ -798,7 +784,7 @@ i.icon-wrapper {
 		text-transform: lowercase;
 
 		@media only screen and (min-width: $brkpt-medium) {
-		  margin-right: 1em;
+		  margin-right: .2em;
 			font-size: 0.875em;
 			font-weight: inherit;
 
@@ -806,10 +792,6 @@ i.icon-wrapper {
 
 			&:nth-child(5) {
 				margin-right: 0;
-			}
-
-			a:hover {
-				color: $link-color;
 			}
 		}
 		 
@@ -840,7 +822,7 @@ i.icon-wrapper {
 	.nav > li > a {
 		padding: 0 1em;
 		@media only screen and (min-width: $brkpt-medium) {
-				padding: 0;
+				padding: 0 .5em;
 			}
 	}
 
@@ -850,7 +832,6 @@ i.icon-wrapper {
 	 	float: right;
 	 	line-height: 50px;
 	 	text-transform: lowercase;
-	 	font-weight: 300;
 	 	z-index: 100;
 
 	 	padding: 0 1em;
@@ -859,7 +840,7 @@ i.icon-wrapper {
 
 	 	transition: all 0.3s ease-in;
 
-	 	&:hover {
+	 	&:hover, &:focus  {
 	 		background: $dark-orange;
 	 	}
 
@@ -867,15 +848,6 @@ i.icon-wrapper {
 	 	    display: none;
 	 	}
 	 
- }
-
- .nav-active {
- 	background-color: $dark-orange;
-
- 	@media only screen and (min-width: $brkpt-medium) {
- 	    background-color: red;
- 	}
- 	 
  }
 
 footer {

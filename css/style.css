@@ -2994,7 +2994,7 @@ i.icon-wrapper {
 .header a {
   color: white;
 }
-.header a:hover {
+.header a:hover, .header a:focus {
   text-decoration: none;
 }
 
@@ -3092,31 +3092,18 @@ i.icon-wrapper {
   }
 }
 
-/*.nav {
-	list-style: none;
-	margin-left: 0;
-	padding: 0;
+.nav > li > .nav-active {
+  background-color: #924224 !important;
+}
 
-	margin: 0 -2em;
-
-	&:target {
-		max-height: 25em;
-	}
-
-	@media only screen and (min-width: $brkpt-medium) {
-	    margin: 0;
-	}
-	 
-}*/
 .nav > li {
   font-size: 1em;
-  font-weight: 300;
   line-height: 50px;
   text-transform: lowercase;
 }
-.nav > li a:hover {
+.nav > li a:hover, .nav > li:focus {
   color: inherit;
-  background-color: #924224;
+  background-color: #924224 !important;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
@@ -3137,16 +3124,13 @@ i.icon-wrapper {
 }
 @media only screen and (min-width: 40em) {
   .nav > li {
-    margin-right: 1em;
+    margin-right: .2em;
     font-size: 0.875em;
     font-weight: inherit;
     line-height: inherit;
   }
   .nav > li:nth-child(5) {
     margin-right: 0;
-  }
-  .nav > li a:hover {
-    color: #5b9bbc;
   }
 }
 @media only screen and (min-width: 48em) {
@@ -3177,7 +3161,7 @@ i.icon-wrapper {
 }
 @media only screen and (min-width: 40em) {
   .nav > li > a {
-    padding: 0;
+    padding: 0 .5em;
   }
 }
 
@@ -3186,28 +3170,18 @@ i.icon-wrapper {
   float: right;
   line-height: 50px;
   text-transform: lowercase;
-  font-weight: 300;
   z-index: 100;
   padding: 0 1em;
   color: white;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
-.nav-toggle:hover {
+.nav-toggle:hover, .nav-toggle:focus {
   background: #924224;
 }
 @media only screen and (min-width: 40em) {
   .nav-toggle {
     display: none;
-  }
-}
-
-.nav-active {
-  background-color: #924224;
-}
-@media only screen and (min-width: 40em) {
-  .nav-active {
-    background-color: red;
   }
 }
 
