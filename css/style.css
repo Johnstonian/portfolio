@@ -2994,7 +2994,7 @@ i.icon-wrapper {
 .header a {
   color: white;
 }
-.header a:hover, .header a:focus {
+.header a:hover, .header a:focus, .header a:link {
   text-decoration: none;
 }
 
@@ -3101,7 +3101,7 @@ i.icon-wrapper {
   line-height: 50px;
   text-transform: lowercase;
 }
-.nav > li a:hover, .nav > li:focus {
+.nav > li a:hover, .nav > li:focus, .nav > li:link {
   color: inherit;
   background-color: #924224 !important;
   -webkit-transition: all 0.3s ease-in;
@@ -3176,7 +3176,7 @@ i.icon-wrapper {
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
-.nav-toggle:hover, .nav-toggle:focus {
+.nav-toggle:hover, .nav-toggle:focus, .nav-toggle:link {
   background: #924224;
 }
 @media only screen and (min-width: 40em) {

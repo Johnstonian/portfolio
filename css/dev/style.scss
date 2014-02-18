@@ -711,7 +711,7 @@ i.icon-wrapper {
 	a {
 		color: white;
 
-		&:hover, &:focus { text-decoration: none; }
+		&:hover, &:focus, &:link { text-decoration: none; }
 	}
 }
 
@@ -759,7 +759,7 @@ i.icon-wrapper {
 		font-size: 1em;
 		line-height: 50px;
 
-		a:hover, &:focus  {
+		a:hover, &:focus, &:link  {
 			color: inherit;
 			background-color: $dark-orange !important;
 			transition: all 0.3s ease-in;
@@ -840,7 +840,7 @@ i.icon-wrapper {
 
 	 	transition: all 0.3s ease-in;
 
-	 	&:hover, &:focus  {
+	 	&:hover, &:focus, &:link  {
 	 		background: $dark-orange;
 	 	}
 
