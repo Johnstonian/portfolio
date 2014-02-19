@@ -24,6 +24,8 @@ h3 {
 	-o-transition: font-size 0.3s ease-out;
 	transition: font-size 0.3s ease-out;
 
+	a { color: inherit; text-decoration: none; }
+
 	@media screen and (min-width: $brkpt-medium) {
 	    padding: 0 1em 0 0;
 	}
@@ -100,7 +102,6 @@ p {
 }
 
 .date {
-	font-weight: $thin;
 	@include font-size(14);
 	max-height: 14px;
 	padding-left: 0.875em;
@@ -152,8 +153,5 @@ p {
 
 .footer-copy{ 
 	@include font-size(12);
-	margin: 0;
 	padding: 0 1em;
-	display: table-cell;
-	vertical-align: middle;
 }

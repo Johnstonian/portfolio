@@ -147,6 +147,17 @@ i.icon-wrapper {
 .fullname { margin-right: 1.3333333333333%; }
 .email { float: right; }
 
+.copyright { 
+
+	float: none;
+	text-align: center; 
+
+	@media only screen and (min-width: $brkpt-medium) {
+	    float: left;
+	}
+	 
+}
+
 
 
 
@@ -683,6 +694,31 @@ i.icon-wrapper {
 	.endorsement {
 		margin-left: 32px;
 	}
+
+.social-links { 
+	float: none; 
+	text-align: center;
+	padding: 0 1em 1em 1em; 
+
+	a { 
+		display: inline-block;
+		color: inherit;
+		margin-left: 10px;
+
+		transition: color 0.4s linear;
+
+		&:first-child { margin-left: 0; }
+
+		&:hover { color: $link-color; }
+
+	}
+
+	@media only screen and (min-width: $brkpt-medium) {
+	    float: right;
+	    padding: 0 1em;
+	    margin-top: .5em;
+	}
+}
 /* */
 
 /*------------------------------------*\

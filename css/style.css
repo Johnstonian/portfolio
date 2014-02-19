@@ -436,6 +436,10 @@ h3 {
   -webkit-transition: font-size 0.3s ease-out;
   transition: font-size 0.3s ease-out;
 }
+h3 a {
+  color: inherit;
+  text-decoration: none;
+}
 @media screen and (min-width: 40em) {
   h3 {
     padding: 0 1em 0 0;
@@ -527,7 +531,6 @@ p {
 }
 
 .date {
-  font-weight: 100;
   font-size: 14px;
   font-size: 0.875rem;
   max-height: 14px;
@@ -600,10 +603,7 @@ p {
 .footer-copy {
   font-size: 12px;
   font-size: 0.75rem;
-  margin: 0;
   padding: 0 1em;
-  display: table-cell;
-  vertical-align: middle;
 }
 
 /*------------------------------------*\
@@ -2443,6 +2443,16 @@ i.icon-wrapper {
   float: right;
 }
 
+.copyright {
+  float: none;
+  text-align: center;
+}
+@media only screen and (min-width: 40em) {
+  .copyright {
+    float: left;
+  }
+}
+
 /*------------------------------------*\
     $GRIDS
 \*------------------------------------*/
@@ -2965,6 +2975,32 @@ i.icon-wrapper {
 
 .endorsement {
   margin-left: 32px;
+}
+
+.social-links {
+  float: none;
+  text-align: center;
+  padding: 0 1em 1em 1em;
+}
+.social-links a {
+  display: inline-block;
+  color: inherit;
+  margin-left: 10px;
+  -webkit-transition: color 0.4s linear;
+  transition: color 0.4s linear;
+}
+.social-links a:first-child {
+  margin-left: 0;
+}
+.social-links a:hover {
+  color: #5b9bbc;
+}
+@media only screen and (min-width: 40em) {
+  .social-links {
+    float: right;
+    padding: 0 1em;
+    margin-top: .5em;
+  }
 }
 
 /* */
