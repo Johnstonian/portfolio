@@ -80,6 +80,12 @@ p {
 	margin: 0;
 	float: left;
 }
+
+.more-skills {
+	float: right !important;
+	margin-right: 20px !important;
+	margin-left: 0 !important;
+}
 .more { 
 	font-weight: $bold;
 	@include font-size(18);

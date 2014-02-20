@@ -276,13 +276,11 @@ i.icon-wrapper {
 	display: inline-block;
 	width: 100%;
 
-	&:first-child { background-color: $dark-blue; }
-
 	/* handle pills based on breakpoints */
 	@media only screen and (min-width: $brkpt-420) {
 		width: 49.1379310344828%;
 		&:nth-child(n) {
-			margin-right: 0.08620689655172;
+			margin-right: 0.08620689655172%;
 		}
 		&:nth-child(2n) {
 			margin-right: 0;
@@ -312,6 +310,33 @@ i.icon-wrapper {
 			margin-right: 0;
 		}
 	}	 
+}
+
+.skills { background-color: $dark-blue; }
+
+.git {
+	display: none;
+
+	@media only screen and (min-width: $brkpt-420) {
+		display: inline-block;
+	}
+}
+
+.expanded-skills {
+	display: none;
+
+	@media only screen and (min-width: $brkpt-420) {
+		display: block;
+	}
+}
+
+
+.view-expanded-skills {
+	display: block;
+
+	@media screen and (min-width: $brkpt-420) {
+		display: none;
+	}
 }
 
 /**
@@ -563,27 +588,26 @@ i.icon-wrapper {
  * Example: 
 
 	<div class="pill">
-		<div class="skill-wrapper">
 		<div class="check-holder">
 			<i class="check  orange  fa  fa-check"></i>
 		</div>
 		<p>html</p>
-		</div>
 	</div>
 
  */
 
-.skill-wrapper {
-	display: table-cell;
-	vertical-align: middle;
-}
-
-.bolt-holder, .check-holder {
+.bolt-holder, .check-holder, .arrow-holder {
 	width: 30px;
 	height: 30px;
 	display: table;
+}
+
+.bolt-holder, .check-holder {
 	margin-right: 20px;
 	float: left;
+}
+.arrow-holder {
+	float: right;
 }
 
 .bolt-holder {
@@ -596,14 +620,19 @@ i.icon-wrapper {
 	border-radius: 5px;
 }
 
-.bolt, .check {
+.arrow-holder {
+	background-color: $about-blue;
+	border-radius: 5px;
+}
+
+.bolt, .check, .arrow {
 	text-align: center;
 	display: table-cell;
 	vertical-align: middle;
 }
 
 .bolt { color: white; }
-.check { color: $orange; }
+.check, .arrow { color: $orange; }
 /* */
 
 /* hobby styles */

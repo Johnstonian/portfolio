@@ -119,6 +119,16 @@ $(function() { // document ready!
     }, { offset: '-50%' }
   );
 
+  // handle click on more skills button
+  $('.skills').click( function(e) {
+    e.preventDefault();
+
+    $(this).fadeOut( function(e) {
+      $('.expanded-skills').slideDown("slow");
+    });
+    
+  });
+
 }); // end jQuery ready
 
 
