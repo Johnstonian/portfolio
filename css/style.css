@@ -2901,6 +2901,10 @@ i.icon-wrapper {
   background: url("../images/hobbies-background.png") repeat-x top #f08b65;
   color: #924224;
 }
+.hobbies h2 {
+  line-height: 1;
+  padding-bottom: 1em;
+}
 .hobbies p {
   margin: 0;
 }
@@ -2909,12 +2913,21 @@ i.icon-wrapper {
   float: left;
   margin-right: 1em;
   width: 19.4444444444444%;
-  margin-top: 13%;
+  margin-top: 5%;
 }
 
 .hobby-content {
   float: left;
   width: 76.1111111111111%;
+}
+.hobby-content a {
+  color: inherit;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.hobby-logo {
+  fill: #924224;
 }
 
 /* */

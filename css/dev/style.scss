@@ -613,6 +613,8 @@ i.icon-wrapper {
 
 	color: $dark-orange;
 
+	h2 { line-height: 1; padding-bottom: 1em; }
+
 	p { margin: 0; }
 }
 
@@ -620,12 +622,18 @@ i.icon-wrapper {
 	float: left;
 	margin-right: 1em;
 	width: 19.4444444444444%;
-	margin-top: 13%;
+	margin-top: 5%;
 }
 
 .hobby-content {
 	float: left;
 	width: 76.1111111111111%;
+
+	a { color: inherit; font-weight: bold; text-decoration: underline; }
+}
+
+.hobby-logo {
+	fill: $dark-orange;
 }
 /* */
 
