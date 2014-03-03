@@ -4,12 +4,11 @@
 /*h2*/.section-title { 
 	font-weight: $thin;
 	@include font-size(30);
-	line-height: 3em;
 	margin: 0;	
 	width: 100%;
 	text-align: center;
 	color: $gray;
-	padding-bottom: 2em;
+	margin-top: .9em;
 }
 
 h3 {
