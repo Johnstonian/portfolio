@@ -358,6 +358,7 @@ i.icon-wrapper {
 
 	    &:nth-child(3n) {
 	    	margin-right: 0;
+	    	margin-bottom: 0;
 	    }
 	}
 }
@@ -412,8 +413,16 @@ i.icon-wrapper {
 
 	position: relative;
 
+	margin-bottom: 3em;
+
+	&:nth-child(4n) {
+  	margin-bottom: 0;
+  }
+
 	@media only screen and (min-width: $brkpt-medium) {
 	    float: left;
+
+	    margin-bottom: 0;
 
 	    width: 47.25%;
 	    padding-bottom: 2em;
@@ -424,7 +433,7 @@ i.icon-wrapper {
 
 	    &:nth-child(2n) {
 	    	margin-right: 0;
-	    }	
+	    }
 	}
 
 	@media only screen and (min-width: $brkpt-1000) {

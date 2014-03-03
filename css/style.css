@@ -2649,6 +2649,7 @@ i.icon-wrapper {
   }
   .column-hobby:nth-child(3n) {
     margin-right: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -2699,10 +2700,15 @@ i.icon-wrapper {
 */
 .quote {
   position: relative;
+  margin-bottom: 3em;
+}
+.quote:nth-child(4n) {
+  margin-bottom: 0;
 }
 @media only screen and (min-width: 40em) {
   .quote {
     float: left;
+    margin-bottom: 0;
     width: 47.25%;
     padding-bottom: 2em;
   }
