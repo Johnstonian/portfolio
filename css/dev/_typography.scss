@@ -145,6 +145,13 @@ p {
 	}
 }
 
+.hobby-content h4 { 
+	line-height: 2em; 
+	@media only screen and (min-width: $brkpt-medium) {
+		line-height: inherit; 
+	}
+}
+
 .technologies { font-weight: $normal; }
 .url { font-weight: $bold; }
 
