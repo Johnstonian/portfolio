@@ -891,7 +891,7 @@ i.icon-wrapper {
 		a:hover, &:focus, &:link  {
 			color: inherit;
 			background-color: $dark-orange !important;
-			transition: all 0.3s ease-in;
+			transition: all 0.4s linear;
 		}
 
 		&:nth-child(1) {

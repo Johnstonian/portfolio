@@ -3242,8 +3242,8 @@ i.icon-wrapper {
 .nav > li a:hover, .nav > li:focus, .nav > li:link {
   color: inherit;
   background-color: #924224 !important;
-  -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
 }
 .nav > li:nth-child(1) {
   background: rgba(146, 66, 36, 0.1);
