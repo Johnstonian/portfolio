@@ -38,7 +38,8 @@ $(function() { // document ready!
     $(window).scrollTo("#article-section", 800, {
       onAfter:function() {
         $(header).addClass('show-header');
-      }
+      },
+      axis: 'y'
     });
   });
 
@@ -54,7 +55,8 @@ $(function() { // document ready!
     $(window).scrollTo( $this, 800, {
       onAfter: function() {
         $('.section').waypoint('enable');
-      }
+      },
+      axis: 'y'
     } );
 
 
