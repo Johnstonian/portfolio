@@ -1,5 +1,5 @@
 /* TEAM */
-	Front-end Development: Ryan Johnston
+	Development: Ryan Johnston
 	URL: johnstonianera.com
 	Twitter: @johnstonian
 

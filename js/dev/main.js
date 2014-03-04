@@ -120,7 +120,7 @@ function resizeBackground() {
 
   var startHeight = 60;
   var logoHeight = $('.ryan').height();
-  var padding = 32;
+  var padding = 42;
   var extraSpace;
 
   // figure out how much height is left for the ship to fill the space

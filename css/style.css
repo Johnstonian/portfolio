@@ -2842,6 +2842,11 @@ i.icon-wrapper {
   padding-top: 35px;
 }
 
+.startBtn {
+  display: block;
+  cursor: pointer;
+}
+
 /* */
 /* article section styles */
 .articles {
