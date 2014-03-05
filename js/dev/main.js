@@ -96,6 +96,35 @@ $(function() { // document ready!
     }, { offset: '-50%' }
   );
 
+  // owl carousels
+  $("#brs-slideshow").owlCarousel({
+    navigation : true, // Show next and prev buttons
+      slideSpeed : 300,
+      paginationSpeed : 400,
+      singleItem:true
+  });
+
+  $("#aca-slideshow").owlCarousel({
+    navigation : true, // Show next and prev buttons
+      slideSpeed : 300,
+      paginationSpeed : 400,
+      singleItem:true
+  });
+
+  $("#cf-slideshow").owlCarousel({
+    navigation : true, // Show next and prev buttons
+      slideSpeed : 300,
+      paginationSpeed : 400,
+      singleItem:true
+  });
+
+  $("#simplydrive-slideshow").owlCarousel({
+    navigation : true, // Show next and prev buttons
+      slideSpeed : 300,
+      paginationSpeed : 400,
+      singleItem:true
+  });
+
 }); // end jQuery ready
 
 
