@@ -12,4 +12,4 @@
 	Langauge: English
 	Doctype: HTML5
 	Software: Submime Text 2, Photoshop
-	Libraries: Font Awesome
+	Libraries: Font Awesome (fontawesome.io), Responsive Nav (http://responsive-nav.com), Owl Carousel (http://owlgraphic.com/owlcarousel)
