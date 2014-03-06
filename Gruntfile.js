@@ -71,13 +71,13 @@ module.exports = function(grunt) {
 
         }
       },
-      images: {
-        files: ['images/**/*.{png,jpg,gif}', 'images/*.{png,jpg,gif}'],
-        tasks: ['imagemin'],
-        options: {
-          spawn: false,
-        }
-      },
+      // images: {
+      //   files: ['images/**/*.{png,jpg,gif}', 'images/*.{png,jpg,gif}'],
+      //   tasks: ['imagemin'],
+      //   options: {
+      //     spawn: false,
+      //   }
+      // },
     },
 
     connect: {

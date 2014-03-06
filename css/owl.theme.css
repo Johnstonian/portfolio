@@ -6,25 +6,28 @@
 .owl-theme .owl-controls{
 	margin-top: 10px;
 	text-align: center;
+	height: 50px;
 }
 
 /* Styling Next and Prev buttons */
 
 .owl-theme .owl-controls .owl-buttons div{
-	color: #FFF;
+	color: #000;
 	display: inline-block;
 	zoom: 1;
 	*display: inline;/*IE7 life-saver */
 	margin: 5px;
 	padding: 3px 10px;
-	font-size: 12px;
-	-webkit-border-radius: 30px;
-	-moz-border-radius: 30px;
-	border-radius: 30px;
-	background: #869791;
+
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 2em;
 	filter: Alpha(Opacity=50);/*IE7 fix*/
 	opacity: 0.5;
 }
+
+.owl-buttons { float: left; }
 /* Clickable class fix problem with hover on touch devices */
 /* Use it for non-touch hover action */
 .owl-theme .owl-controls.clickable .owl-buttons div:hover{
@@ -50,7 +53,7 @@
 	-webkit-border-radius: 20px;
 	-moz-border-radius: 20px;
 	border-radius: 20px;
-	background: #869791;
+	background: #000;
 }
 
 .owl-theme .owl-controls .owl-page.active span,
@@ -72,8 +75,14 @@
 	border-radius: 30px;
 }
 
+.owl-pagination { float: right; padding-top: 12px; }
+
 /* preloading images */
 .owl-item.loading{
 	min-height: 150px;
 	background: url(AjaxLoader.gif) no-repeat center center
 }
+
+.owl-next:before { content: "\f054"; }
+
+.owl-prev:before { content: "\f053"; }
