@@ -1741,6 +1741,35 @@ function throttle(func, wait, options) {
 
 resizeBackground();
 
+
+/*
+Show a progress element for any form submission via POST.
+Prevent the form element from being submitted twice.
+https://gist.github.com/adactio/9315750
+*/
+(function (win, doc) {
+    'use strict';
+    if (!doc.querySelectorAll || !win.addEventListener) {
+        // doesn't cut the mustard.
+        return;
+    }
+    var forms = doc.querySelectorAll('form[method="post"]'),
+        formcount = forms.length,
+        i,
+        submitting = false,
+        checkForm = function (ev) {
+            if (submitting) {
+                ev.preventDefault();
+            } else {
+                submitting = true;
+                this.appendChild(doc.createElement('progress'));
+            }
+        };
+    for (i = 0; i < formcount; i = i + 1) {
+        forms[i].addEventListener('submit', checkForm, false);
+    }
+}(this, this.document));
+
 // catch console.log if not acceptable by browser (example: IE8)
 // http://stackoverflow.com/questions/690251/what-happened-to-console-log-in-ie8/14246240#14246240
 (function (fallback) {    

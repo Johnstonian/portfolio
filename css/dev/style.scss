@@ -98,11 +98,16 @@ input[type='text'], input[type='email'] {
 }
 
 input[type='submit'] {
-	width: 130px;
+	width: 100%;
 	height: 50px;
 	background-color: $link-color;
 	margin-bottom: 0;
 	@include font-size(24);
+
+	@media only screen and (min-width: $brkpt-420) {
+	  width: 130px;
+	}
+	 
 }
 
 textarea { 
@@ -573,7 +578,6 @@ i.icon-wrapper {
 	i.icon-wrapper {
 		background-color: $about-blue;
 		color: white;
-		left: 50%;
 	}
 
 	.container {
