@@ -729,7 +729,14 @@ i.icon-wrapper {
 	width: 100%;
 	height: auto;
 	margin-bottom: 2.5em;
+	text-align: center;
+
+	img {
+		box-shadow: 0 0 0 4px rgba(0,0,0,0.1);
+	}
 }
+
+.screenshot { max-height: 420px; text-align: center; }
 
 /* contact section styles */
 .contact {

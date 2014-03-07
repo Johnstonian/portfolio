@@ -432,17 +432,13 @@ h3 {
   font-size: 2rem;
   padding: 0;
   margin: 0;
+  padding-bottom: .5em;
   -webkit-transition: font-size 0.3s ease-out;
   transition: font-size 0.3s ease-out;
 }
 h3 a {
   color: inherit;
   text-decoration: none;
-}
-@media screen and (min-width: 40em) {
-  h3 {
-    padding: 0 1em 0 0;
-  }
 }
 @media screen and (min-width: 48em) {
   h3 {
@@ -3029,6 +3025,16 @@ i.icon-wrapper {
   width: 100%;
   height: auto;
   margin-bottom: 2.5em;
+  text-align: center;
+}
+.screenshot-container img {
+  -webkit-box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.screenshot {
+  max-height: 420px;
+  text-align: center;
 }
 
 /* contact section styles */

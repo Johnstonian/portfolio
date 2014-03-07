@@ -17,6 +17,8 @@ h3 {
 	padding: 0;
 	margin: 0;
 
+	padding-bottom: .5em;
+
 	-webkit-transition: font-size 0.3s ease-out;
 	-moz-transition: font-size 0.3s ease-out;
 	-ms-transition: font-size 0.3s ease-out;
@@ -25,9 +27,9 @@ h3 {
 
 	a { color: inherit; text-decoration: none; }
 
-	@media screen and (min-width: $brkpt-medium) {
-	    padding: 0 1em 0 0;
-	}
+	// @media screen and (min-width: $brkpt-medium) {
+	//     padding: 0 1em 0 0;
+	// }
 	 
 	@media screen and (min-width: $brkpt-large) {
 	    @include font-size(40);
