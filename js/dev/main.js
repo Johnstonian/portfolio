@@ -96,6 +96,23 @@ $(function() { // document ready!
     }, { offset: '-50%' }
   );
 
+  // handle ajax form request
+  $('.sendBtn').click(function(e) {
+
+    e.preventDefault();
+
+    $.ajax({
+      type: "POST",
+      url: 'contact.php',
+      data: { formSubmitted: true },
+      success: function() {
+        console.log('form posted and returned!');
+      }
+    });
+
+    return false;
+  });
+
   // owl carousels
   $("#brs-slideshow").owlCarousel({
     navigation : true, // Show next and prev buttons
@@ -129,11 +146,10 @@ $(function() { // document ready!
 
 
 
-
+// handle intro section resizing based on browser window size
 $(document).load($(window).bind("resize", throttle(resizeBackground, 1000)));
 
 function resizeBackground() {
-  //console.log("you resized me");
 
   viewportHeight = $(window).height();
   viewportWidth = $(window).width();
@@ -141,11 +157,6 @@ function resizeBackground() {
   //set .stars height and width
   $('.starImg').css( "height", viewportHeight+"px");
   $('.starImg').css( "width", viewportWidth+"px");
-
-  //console.log("new height: " + viewportHeight + " | new width: " + viewportWidth);
-
-  //console.log("start height" + $('.start').height());
-  //console.log("ryan height" + $('.ryan').height());
 
   var startHeight = 60;
   var logoHeight = $('.ryan').height();
@@ -155,13 +166,10 @@ function resizeBackground() {
   // figure out how much height is left for the ship to fill the space
   var shipHeight = viewportHeight - startHeight - logoHeight - padding;
 
-  //console.log("shipHeight: " + shipHeight);
-
   if(shipHeight > 398) {
   	extraSpace = shipHeight - 398;
   	shipHeight = 398;
   	$('.logo-holder').css( "margin-top", extraSpace/2+"px");
-  	//console.log("extraSpace: " + extraSpace);
   } else {
   	$('.logo-holder').css( "margin-top", 0);
   }
