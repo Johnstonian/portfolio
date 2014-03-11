@@ -563,16 +563,15 @@
 	<section class="section  contact" id="contact-section">
 		<div class="container">
 			<h2 class="section-title">Let's Chat...</h2>
-			<form name="contact-form" id="contactForm" method="POST">
+			<form name="contact-form" id="contactForm" method="POST" action="">
 				<fieldset>
 					<label name="name-label" for="fullname">Full Name</label>
-					<input type="text" class="fullname" name="fullname" placeholder="Full name" required value="Ryan Johnston" />
+					<input type="text" class="fullname" id="fullname" name="fullname" placeholder="Full name" required value="Ryan Johnston" />
 					<label name="email-label" for="email">Email</label>
-					<input type="email" class="email" name="email" placeholder="Email" required value="ryanjohnston@gmail.com" />
+					<input type="email" id="email" class="email" name="email" placeholder="Email" required value="ryanjohnston@gmail.com ugg" />
 					<label name="message-label" for="message">Your message...</label>
-					<textarea class="message" name="message" placeholder="Your message..." cols="30" rows="5" required>This is a test message. Let's test it!</textarea>
+					<textarea class="message" id="message" name="message" placeholder="Your message..." cols="30" rows="5" required>This is a test message. Let's test it!</textarea>
 					<input type="submit" name="Send" id="sendBtn" value="Send" /> 
-					<span class="form-messaging">Form messaging will go here...</span>
 				</fieldset>
 			</form>
 		</div>

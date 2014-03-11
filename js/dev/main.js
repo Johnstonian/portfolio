@@ -101,19 +101,26 @@ $(function() { // document ready!
 
     e.preventDefault();
 
+    var name = $("input#fullname").val();
+    var email = $("input#email").val();
+    var message = $("textarea#message").val();
+    var dataString = 'formSubmitted=true&fullname='+ fullname + '&email=' + email + '&message=' + message;
+
     var request = $.ajax({
       type: "POST",
       url: 'contact.php',
-      data: { formSubmitted: true },
+      data: dataString,
       dataType: 'html'
     });
 
     request.done(function(msg) {
       console.log(msg);
+      $('#sendBtn').after("<span class='form-messaging'>Thank you for your message!</span>");
     });
 
     request.fail(function( jqXHR, textStatus ) {
       console.log( "Sorry about this, but there was a problem. Please try sending again." );
+      $('#sendBtn').after("<span class='form-messaging error'>Sorry about this, but there was a problem. Please try sending again.</span>");
     });
 
     return false;
