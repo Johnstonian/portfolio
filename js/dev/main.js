@@ -97,17 +97,23 @@ $(function() { // document ready!
   );
 
   // handle ajax form request
-  $('.sendBtn').click(function(e) {
+  $('#sendBtn').click(function(e) {
 
     e.preventDefault();
 
-    $.ajax({
+    var request = $.ajax({
       type: "POST",
       url: 'contact.php',
       data: { formSubmitted: true },
-      success: function() {
-        console.log('form posted and returned!');
-      }
+      dataType: 'html'
+    });
+
+    request.done(function(msg) {
+      console.log(msg);
+    });
+
+    request.fail(function( jqXHR, textStatus ) {
+      console.log( "Sorry about this, but there was a problem. Please try sending again." );
     });
 
     return false;
@@ -216,28 +222,28 @@ Show a progress element for any form submission via POST.
 Prevent the form element from being submitted twice.
 https://gist.github.com/adactio/9315750
 */
-(function (win, doc) {
-    'use strict';
-    if (!doc.querySelectorAll || !win.addEventListener) {
-        // doesn't cut the mustard.
-        return;
-    }
-    var forms = doc.querySelectorAll('form[method="post"]'),
-        formcount = forms.length,
-        i,
-        submitting = false,
-        checkForm = function (ev) {
-            if (submitting) {
-                ev.preventDefault();
-            } else {
-                submitting = true;
-                this.appendChild(doc.createElement('progress'));
-            }
-        };
-    for (i = 0; i < formcount; i = i + 1) {
-        forms[i].addEventListener('submit', checkForm, false);
-    }
-}(this, this.document));
+// (function (win, doc) {
+//     'use strict';
+//     if (!doc.querySelectorAll || !win.addEventListener) {
+//         // doesn't cut the mustard.
+//         return;
+//     }
+//     var forms = doc.querySelectorAll('form[method="post"]'),
+//         formcount = forms.length,
+//         i,
+//         submitting = false,
+//         checkForm = function (ev) {
+//             if (submitting) {
+//                 ev.preventDefault();
+//             } else {
+//                 submitting = true;
+//                 this.appendChild(doc.createElement('progress'));
+//             }
+//         };
+//     for (i = 0; i < formcount; i = i + 1) {
+//         forms[i].addEventListener('submit', checkForm, false);
+//     }
+// }(this, this.document));
 
 // catch console.log if not acceptable by browser (example: IE8)
 // http://stackoverflow.com/questions/690251/what-happened-to-console-log-in-ie8/14246240#14246240

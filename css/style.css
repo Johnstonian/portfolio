@@ -3060,6 +3060,26 @@ i.icon-wrapper {
   padding-bottom: 2em;
 }
 
+.form-messaging {
+  display: block;
+  background-color: #aaaa55;
+  color: white;
+  padding: .8em;
+  margin-top: .5em;
+}
+@media only screen and (min-width: 33.125em) {
+  .form-messaging {
+    display: inline-block;
+    margin-top: 2px;
+    float: right;
+    width: 68%;
+  }
+}
+
+.error {
+  background-color: #ed1b24;
+}
+
 /* */
 /* testimonial seciton styles */
 .testimonials {

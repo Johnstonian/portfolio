@@ -1,18 +1,18 @@
 <?php
 
-	if( isset( $_POST[''] ) && &_POST[''] != '' )
+	if( isset( $_POST['formSubmitted'] ) && $_POST['formSubmitted'] == true )
 	{
 		$errors = array();
 
     $defs = array(
       'email' => FILTER_VALIDATE_EMAIL,
-      'options' => array('regexp' => "/^((\?+\d{1,3}(-| )?\(?\d\)?(-|[ .])?\d{1,6})|(\(?\d{2,5}\)?))(-| |.)(\d{3,4})(-| |.)?(\d{4})$/"))
+      'options' => array('regexp' => "/^((\?+\d{1,3}(-| )?\(?\d\)?(-|[ .])?\d{1,6})|(\(?\d{2,5}\)?))(-| |.)(\d{3,4})(-| |.)?(\d{4})$/")
     );
 
     $input = filter_input_array(INPUT_POST, $defs);
 
     // check for all valid fields, set errors if any field not valid
-    if(!filter_var($_POST['fullname'], FILTER_SANITIZE_STRING))
+    if( !filter_var($_POST['fullname'], FILTER_SANITIZE_STRING) )
       $errors['fullname'] = 'Please enter your name';
 
     if (empty($_POST['email'])) {
@@ -21,7 +21,7 @@
       $errors['email'] = "Please enter a valid Email Address.";
     }
 
-    if(!filter_var($_POST['message'], FILTER_SANITIZE_STRING))
+    if( !filter_var($_POST['message'], FILTER_SANITIZE_STRING) )
       $errors['message'] = 'Please add a message.';
 
     $numErrors = count($errors);
@@ -45,7 +45,7 @@
       $email = htmlspecialchars_decode($email);
 
       // send email
-      require 'includes/PHPMailer/class.phpmailer.php';
+      require 'PHPMailerAutoload.php';
       $mail = new PHPMailer;
       $mail->From = $email;
       $mail->FromName = $fullname;
@@ -66,10 +66,12 @@
       if($emailSent){
         echo "Your message was received, thank you!";
       } else {
-         echo 'Sorry about this, but there was a problem. Please try again sending again.';
+         echo 'Sorry about this, but there was a problem. Please try sending again.';
       }
 
 
+    } else {
+      echo "Sorry about this, but there was a problem. Please try sending again.";
     }
 	}
 
