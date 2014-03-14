@@ -1638,31 +1638,42 @@ $(function() { // document ready!
   // handle ajax form request
   $('#sendBtn').click(function(e) {
 
-    e.preventDefault();
+    // make sure form passes html5 validation
+    if($("form")[0].checkValidity()) {
 
-    var name = $("input#fullname").val();
-    var email = $("input#email").val();
-    var message = $("textarea#message").val();
-    var dataString = 'formSubmitted=true&fullname='+ fullname + '&email=' + email + '&message=' + message;
+      e.preventDefault();
 
-    var request = $.ajax({
-      type: "POST",
-      url: 'contact.php',
-      data: dataString,
-      dataType: 'html'
-    });
+      $('#sendBtn').prop('disabled', true);
 
-    request.done(function(msg) {
-      console.log(msg);
-      $('#sendBtn').after("<span class='form-messaging'>Thank you for your message!</span>");
-    });
+      var name = $("input#fullname").val();
+      var email = $("input#email").val();
+      var message = $("textarea#message").val();
+      var dataString = 'formSubmitted=true&fullname='+ fullname + '&email=' + email + '&message=' + message;
 
-    request.fail(function( jqXHR, textStatus ) {
-      console.log( "Sorry about this, but there was a problem. Please try sending again." );
-      $('#sendBtn').after("<span class='form-messaging error'>Sorry about this, but there was a problem. Please try sending again.</span>");
-    });
+      var request = $.ajax({
+        type: "POST",
+        url: 'contact.php',
+        data: dataString,
+        dataType: 'html'
+      });
 
-    return false;
+      request.done(function(msg) {
+        console.log(msg);
+        $('#sendBtn').after("<span class='form-messaging'>Thank you for your message!</span>");
+        $('.form-messaging').fadeIn().css('display', 'block');
+        $('#contactForm')[0].reset();
+
+      });
+
+      request.fail(function( jqXHR, textStatus ) {
+        console.log( "Sorry about this, but there was a problem. Please try sending again." );
+        $('#sendBtn').after("<span class='form-messaging error'>Sorry about this, but there was a problem. Please try sending again.</span>");
+        $('.form-messaging').fadeIn().css('display', 'block');
+      });
+
+      return false;
+    } // end validity check
+    
   });
 
   // owl carousels

@@ -107,6 +107,10 @@ input[type='submit'] {
 	@media only screen and (min-width: $brkpt-420) {
 	  width: 130px;
 	}
+
+	&:disabled {
+		background-color: rgba(0,0,0,.5);
+	}
 	 
 }
 
@@ -764,14 +768,13 @@ i.icon-wrapper {
 }
 
 .form-messaging { 
-	display: block;
+	display: none;
 	background-color: $light-green;
 	color: white;
 	padding: .8em;
-	margin-top: .5em;
+	margin-top: .8em;
 
 	@media only screen and (min-width: $brkpt-small) {
-	    display: inline-block;
 	    margin-top: 2px;
 	    float: right;
 	    width: 68%;
