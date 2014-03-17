@@ -1635,17 +1635,25 @@ $(function() { // document ready!
     }, { offset: '-50%' }
   );
 
+  var formMessageShown = false;
   // handle ajax form request
   $('#sendBtn').click(function(e) {
 
+    var btn = $('#sendBtn');
+
     // make sure form passes html5 validation
-    if($("form")[0].checkValidity()) {
+    if( $("form")[0].checkValidity() ) {
 
       e.preventDefault();
 
-      $('#sendBtn').prop('disabled', true);
+      btn.after("<progress class='progress'>Sending...</progress>");
 
-      var name = $("input#fullname").val();
+      if( formMessageShown )
+        $('.form-messaging').hide();
+
+      btn.prop('disabled', true);
+
+      var fullname = $("input#fullname").val();
       var email = $("input#email").val();
       var message = $("textarea#message").val();
       var dataString = 'formSubmitted=true&fullname='+ fullname + '&email=' + email + '&message=' + message;
@@ -1658,18 +1666,28 @@ $(function() { // document ready!
       });
 
       request.done(function(msg) {
-        console.log(msg);
-        $('#sendBtn').after("<span class='form-messaging'>Thank you for your message!</span>");
+        $('.progress').hide();
+        if( !formMessageShown ) {
+          btn.after("<span class='form-messaging'>Thank you for your message!</span>");
+          formMessageShown = true;
+        }
         $('.form-messaging').fadeIn().css('display', 'block');
         $('#contactForm')[0].reset();
 
       });
 
       request.fail(function( jqXHR, textStatus ) {
-        console.log( "Sorry about this, but there was a problem. Please try sending again." );
-        $('#sendBtn').after("<span class='form-messaging error'>Sorry about this, but there was a problem. Please try sending again.</span>");
+
+        $('.progress').hide();
+        if( !formMessageShown ) {
+          btn.after("<span class='form-messaging error'>My apologies, there was a problem. Please try sending again.</span>");
+          formMessageShown = true;
+        }
+        
         $('.form-messaging').fadeIn().css('display', 'block');
+        btn.prop('disabled', false);
       });
+      
 
       return false;
     } // end validity check
@@ -1772,35 +1790,6 @@ function throttle(func, wait, options) {
 };
 
 resizeBackground();
-
-
-/*
-Show a progress element for any form submission via POST.
-Prevent the form element from being submitted twice.
-https://gist.github.com/adactio/9315750
-*/
-// (function (win, doc) {
-//     'use strict';
-//     if (!doc.querySelectorAll || !win.addEventListener) {
-//         // doesn't cut the mustard.
-//         return;
-//     }
-//     var forms = doc.querySelectorAll('form[method="post"]'),
-//         formcount = forms.length,
-//         i,
-//         submitting = false,
-//         checkForm = function (ev) {
-//             if (submitting) {
-//                 ev.preventDefault();
-//             } else {
-//                 submitting = true;
-//                 this.appendChild(doc.createElement('progress'));
-//             }
-//         };
-//     for (i = 0; i < formcount; i = i + 1) {
-//         forms[i].addEventListener('submit', checkForm, false);
-//     }
-// }(this, this.document));
 
 // catch console.log if not acceptable by browser (example: IE8)
 // http://stackoverflow.com/questions/690251/what-happened-to-console-log-in-ie8/14246240#14246240

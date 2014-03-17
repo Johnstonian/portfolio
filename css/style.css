@@ -2323,6 +2323,10 @@ img {
   max-width: 100%;
 }
 
+progress {
+  margin-left: 1em;
+}
+
 form {
   max-width: 59em;
   margin: 0 auto;
