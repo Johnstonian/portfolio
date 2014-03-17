@@ -34,7 +34,6 @@ $(function() { // document ready!
       axis: 'y'
     } );
 
-
     // move header menu off screen if Logo is clicked
     if( $this == '#intro-section' ) {
       // hide header bar
