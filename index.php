@@ -571,7 +571,7 @@
 					<input type="email" id="email" class="email" name="email" placeholder="Email" required  />
 					<label name="message-label" for="message">Your message...</label>
 					<textarea class="message" id="message" name="message" placeholder="Your message..." cols="30" rows="5" required></textarea>
-					<input type="submit" name="Send" id="sendBtn" value="Send" />
+					<input type="submit" name="Send" id="sendBtn" value="Send" /> 
 				</fieldset>
 			</form>
 		</div>

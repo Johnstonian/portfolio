@@ -1635,6 +1635,65 @@ $(function() { // document ready!
     }, { offset: '-50%' }
   );
 
+  var formMessageShown = false;
+  // handle ajax form request
+  $('#sendBtn').click(function(e) {
+
+    var btn = $('#sendBtn');
+
+    // make sure form passes html5 validation
+    if( $("form")[0].checkValidity() ) {
+
+      e.preventDefault();
+
+      btn.after("<progress class='progress'>Sending...</progress>");
+
+      if( formMessageShown )
+        $('.form-messaging').hide();
+
+      btn.prop('disabled', true);
+
+      var fullname = $("input#fullname").val();
+      var email = $("input#email").val();
+      var message = $("textarea#message").val();
+      var dataString = 'formSubmitted=true&fullname='+ fullname + '&email=' + email + '&message=' + message;
+
+      var request = $.ajax({
+        type: "POST",
+        url: 'contact.php',
+        data: dataString,
+        dataType: 'html'
+      });
+
+      request.done(function(msg) {
+        $('.progress').hide();
+        if( !formMessageShown ) {
+          btn.after("<span class='form-messaging'>Thank you for your message!</span>");
+          formMessageShown = true;
+        }
+        $('.form-messaging').fadeIn().css('display', 'block');
+        $('#contactForm')[0].reset();
+
+      });
+
+      request.fail(function( jqXHR, textStatus ) {
+
+        $('.progress').hide();
+        if( !formMessageShown ) {
+          btn.after("<span class='form-messaging error'>My apologies, there was a problem. Please try sending again.</span>");
+          formMessageShown = true;
+        }
+        
+        $('.form-messaging').fadeIn().css('display', 'block');
+        btn.prop('disabled', false);
+      });
+      
+
+      return false;
+    } // end validity check
+    
+  });
+
   // owl carousels
   $("#brs-slideshow").owlCarousel({
     navigation : true, // Show next and prev buttons
@@ -1668,11 +1727,10 @@ $(function() { // document ready!
 
 
 
-
+// handle intro section resizing based on browser window size
 $(document).load($(window).bind("resize", throttle(resizeBackground, 1000)));
 
 function resizeBackground() {
-  //console.log("you resized me");
 
   viewportHeight = $(window).height();
   viewportWidth = $(window).width();
@@ -1680,11 +1738,6 @@ function resizeBackground() {
   //set .stars height and width
   $('.starImg').css( "height", viewportHeight+"px");
   $('.starImg').css( "width", viewportWidth+"px");
-
-  //console.log("new height: " + viewportHeight + " | new width: " + viewportWidth);
-
-  //console.log("start height" + $('.start').height());
-  //console.log("ryan height" + $('.ryan').height());
 
   var startHeight = 60;
   var logoHeight = $('.ryan').height();
@@ -1694,13 +1747,10 @@ function resizeBackground() {
   // figure out how much height is left for the ship to fill the space
   var shipHeight = viewportHeight - startHeight - logoHeight - padding;
 
-  //console.log("shipHeight: " + shipHeight);
-
   if(shipHeight > 398) {
   	extraSpace = shipHeight - 398;
   	shipHeight = 398;
   	$('.logo-holder').css( "margin-top", extraSpace/2+"px");
-  	//console.log("extraSpace: " + extraSpace);
   } else {
   	$('.logo-holder').css( "margin-top", 0);
   }
@@ -1740,35 +1790,6 @@ function throttle(func, wait, options) {
 };
 
 resizeBackground();
-
-
-/*
-Show a progress element for any form submission via POST.
-Prevent the form element from being submitted twice.
-https://gist.github.com/adactio/9315750
-*/
-(function (win, doc) {
-    'use strict';
-    if (!doc.querySelectorAll || !win.addEventListener) {
-        // doesn't cut the mustard.
-        return;
-    }
-    var forms = doc.querySelectorAll('form[method="post"]'),
-        formcount = forms.length,
-        i,
-        submitting = false,
-        checkForm = function (ev) {
-            if (submitting) {
-                ev.preventDefault();
-            } else {
-                submitting = true;
-                this.appendChild(doc.createElement('progress'));
-            }
-        };
-    for (i = 0; i < formcount; i = i + 1) {
-        forms[i].addEventListener('submit', checkForm, false);
-    }
-}(this, this.document));
 
 // catch console.log if not acceptable by browser (example: IE8)
 // http://stackoverflow.com/questions/690251/what-happened-to-console-log-in-ie8/14246240#14246240

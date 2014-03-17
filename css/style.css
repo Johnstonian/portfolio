@@ -2323,6 +2323,10 @@ img {
   max-width: 100%;
 }
 
+progress {
+  margin-left: 1em;
+}
+
 form {
   max-width: 59em;
   margin: 0 auto;
@@ -2380,6 +2384,9 @@ input[type='submit'] {
   input[type='submit'] {
     width: 130px;
   }
+}
+input[type='submit']:disabled {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 textarea {
@@ -3058,6 +3065,25 @@ i.icon-wrapper {
   margin-bottom: 0;
   color: white;
   padding-bottom: 2em;
+}
+
+.form-messaging {
+  display: none;
+  background-color: #aaaa55;
+  color: white;
+  padding: .8em;
+  margin-top: .8em;
+}
+@media only screen and (min-width: 33.125em) {
+  .form-messaging {
+    margin-top: 2px;
+    float: right;
+    width: 68%;
+  }
+}
+
+.error {
+  background-color: #ed1b24;
 }
 
 /* */

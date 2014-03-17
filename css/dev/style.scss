@@ -51,6 +51,8 @@ a {
 
 img { max-width: 100%; }
 
+progress { margin-left: 1em; }
+
 form { 
 	max-width: 59em; 
 	margin: 0 auto;
@@ -106,6 +108,10 @@ input[type='submit'] {
 
 	@media only screen and (min-width: $brkpt-420) {
 	  width: 130px;
+	}
+
+	&:disabled {
+		background-color: rgba(0,0,0,.5);
 	}
 	 
 }
@@ -761,6 +767,24 @@ i.icon-wrapper {
 		color: white;
 		padding-bottom: 2em;
 	}
+}
+
+.form-messaging { 
+	display: none;
+	background-color: $light-green;
+	color: white;
+	padding: .8em;
+	margin-top: .8em;
+
+	@media only screen and (min-width: $brkpt-small) {
+	    margin-top: 2px;
+	    float: right;
+	    width: 68%;
+	}
+}
+
+.error {
+	background-color: $form-error;
 }
 /* */
 
