@@ -128,7 +128,7 @@
 
 		<a href="//johnstonianera.com">
 			<div class="view-all-circle">
-				<p class="view-all">View All</p>
+				<p class="view-all">View More</p>
 			</div>	
 		</a>
 
@@ -416,7 +416,7 @@
 					</div>
 					<div class="hobby-content">
 						<h4>Soccer</h4>
-						<p>Participating/managing recreational leagues and coaching.</p>
+						<p>Participating/managing recreational soccer leagues and coaching.</p>
 					</div>
 				</div>
 
@@ -568,17 +568,56 @@
 	<section class="section  contact" id="contact-section">
 		<div class="container">
 			<h2 class="section-title">Let's Chat...</h2>
-			<form name="contact-form" id="contactForm" method="POST" action="">
+			<form name="contact-form" class="validate-form" id="contactForm" method="POST">
 				<fieldset>
 					<label name="name-label" for="fullname">Full Name</label>
-					<input type="text" class="fullname" id="fullname" name="fullname" placeholder="Full name" required />
+					<input 
+						type="text" 
+						class="fullname"
+						id="fullname"
+						name="fullname" 
+						placeholder="Full name" 
+						required />
 					<label name="email-label" for="email">Email</label>
-					<input type="email" id="email" class="email" name="email" placeholder="Email" required  />
+					<input 
+						type="email" 
+						id="email" 
+						class="email" 
+						name="email" 
+						placeholder="Email" 
+						required  />
 					<label name="message-label" for="message">Your message...</label>
-					<textarea class="message" id="message" name="message" placeholder="Your message..." cols="30" rows="5" required></textarea>
+					<textarea 
+						class="message" 
+						id="message" 
+						name="message" 
+						placeholder="Your message..."
+						minlength="15" 
+						cols="30" 
+						rows="5" 
+						required></textarea>
 					<input type="submit" name="Send" id="sendBtn" value="Send" />
 				</fieldset>
 			</form>
+
+
+			<!-- <h1>Cross Browser HTML5 Validation</h1>
+			<p>Works in the latest version of all browsers. <strong>Note</strong> Codepen iframes may cause issues with validation messages showing.</p>
+			<form class="validate-form">
+			  <input type="text" 
+			         title="required input" 
+			         placeholder="required" 
+			         required />
+			  <input type="text" 
+			         title="Must be 5 numeric numbers" 
+			         placeholder="zip code" 
+			         pattern="\d{5}"
+			         maxlength="5"
+			         required />
+			  <input type="submit" />
+			</form>
+			<p>Status: <span id="status">Unsubmitted</span></p> -->
+
 		</div>
 	</section>
 

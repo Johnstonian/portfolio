@@ -6,5 +6,5 @@ WARNING: This work is in constant development. I'm always working on ways to opt
 ## Todos
 * Build out styles for secitons:
 	* Projects/Recent Work - 60% done. need to work on thumbnail gallery
-	* Contact Form - needs server-side validation and processing
+	* Contact Form Progress Bar - work on styling of the progress bar
 * need to optimzie js for resizing the intro section

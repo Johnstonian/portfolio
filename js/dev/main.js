@@ -131,8 +131,11 @@ $(function() { // document ready!
           btn.after("<span class='form-messaging'>Thank you for your message!</span>");
           formMessageShown = true;
         }
-        $('.form-messaging').fadeIn().css('display', 'block');
-        $('#contactForm')[0].reset();
+        //$('.form-messaging').fadeIn().css('display', 'block');
+        $('.form-messaging').css('display', 'block');
+
+        $('#contactForm').find(':input:not(:disabled)').prop('disabled',true);
+        //$('#contactForm')[0].reset();
 
       });
 
@@ -144,7 +147,8 @@ $(function() { // document ready!
           formMessageShown = true;
         }
         
-        $('.form-messaging').fadeIn().css('display', 'block');
+        //$('.form-messaging').fadeIn().css('display', 'block');
+        $('.form-messaging').css('display', 'block');
         btn.prop('disabled', false);
       });
       
@@ -184,6 +188,25 @@ $(function() { // document ready!
   });
 
 }); // end jQuery ready
+
+
+/* add html5 form validation fallback for browsers like Safari and mobile Sarafi
+* http://blueashes.com/2013/web-development/html5-form-validation-fallback/
+*/
+function hasHtml5Validation () {
+  return typeof document.createElement('input').checkValidity === 'function';
+}
+
+if (hasHtml5Validation()) {
+  $('.validate-form').submit(function (e) {
+    if (!this.checkValidity()) {
+      e.preventDefault();
+      $(this).addClass('invalid');
+    } else {
+      $(this).removeClass('invalid');
+    }
+  });
+}
 
 
 

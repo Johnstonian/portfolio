@@ -47,29 +47,29 @@
       $email = htmlspecialchars_decode($email);
 
       //send email
-      require 'PHPMailer/PHPMailerAutoload.php';
-      $mail = new PHPMailer;
-      $mail->From = $email;
-      $mail->FromName = $fullname;
-      $mail->AddAddress('ryanjohnston+portfolio@gmail.com');
-      $mail->Subject = "Comment from Portfolio Website";
+      // require 'PHPMailer/PHPMailerAutoload.php';
+      // $mail = new PHPMailer;
+      // $mail->From = $email;
+      // $mail->FromName = $fullname;
+      // $mail->AddAddress('ryanjohnston+portfolio@gmail.com');
+      // $mail->Subject = "Comment from Portfolio Website";
       
-      $bodyString = "The following message was sent from Johnstonian Era's Portfolio Website: \n\r" .
-      "------------------------------------\n\r" .
-      "Full Name: " . $fullname . "\n\r" .
-      "Email: " . $email . "\n\r" . 
-      "Message: \n\r" . $message . "\n\r" .
-      "------------------------------------\n\r" .
-      "End of transmission";
+      // $bodyString = "The following message was sent from Johnstonian Era's Portfolio Website: \n\r" .
+      // "------------------------------------\n\r" .
+      // "Full Name: " . $fullname . "\n\r" .
+      // "Email: " . $email . "\n\r" . 
+      // "Message: \n\r" . $message . "\n\r" .
+      // "------------------------------------\n\r" .
+      // "End of transmission";
 
-      $mail->Body = $bodyString;
-      $emailSent = $mail->Send();
+      // $mail->Body = $bodyString;
+      // $emailSent = $mail->Send();
 
-      if($emailSent){
-        echo "Your message was received, thank you!";
-      } else {
-         echo 'Sorry about this, but there was a problem. Please try sending again.';
-      }
+      // if($emailSent){
+      //   echo "Your message was received, thank you!";
+      // } else {
+      //    echo 'Sorry about this, but there was a problem. Please try sending again.';
+      // }
 
 
     } else {

@@ -122,6 +122,15 @@ textarea {
 	resize: vertical;
 }
 
+.invalid input:required:invalid, .invalid textarea:required:invalid {
+    background: $form-error;
+    border-color: 1px solid #BE4C54;
+}
+
+.invalid input:required:valid, .invalid textarea:required:valid {
+    background: $light-orange;
+}
+
 /* globaly style for font awesome icons */
 i.icon-wrapper {
 	position: absolute;
