@@ -1,3 +1,10 @@
+// replace .svg with .png
+if(!Modernizr.svg) {
+  $('img[src*="svg"]').attr('src', function() {
+    return $(this).attr('src').replace('.svg', '.png');
+  });
+}
+
 // setup responsive nav
 var nav = responsiveNav(".nav-collapse", {
   insert: "before"
@@ -124,6 +131,7 @@ $(function() { // document ready!
         data: dataString,
         dataType: 'html'
       });
+
 
       request.done(function(msg) {
         $('.progress').hide();

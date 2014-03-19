@@ -740,7 +740,11 @@ i.icon-wrapper {
 }
 
 .hobby-logo {
-	fill: $dark-orange;
+	background: transparent;
+}
+
+.music-note {
+	background: url('../images/music-note.svg') no-repeat transparent;
 }
 /* */
 

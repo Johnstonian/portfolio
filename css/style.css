@@ -3037,7 +3037,11 @@ i.icon-wrapper {
 }
 
 .hobby-logo {
-  fill: #924224;
+  background: transparent;
+}
+
+.music-note {
+  background: url("../images/music-note.svg") no-repeat transparent;
 }
 
 /* */
