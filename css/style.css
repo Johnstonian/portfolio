@@ -2296,6 +2296,18 @@ p {
   box-sizing: border-box;
 }
 
+::-moz-selection {
+  background: #f08b65;
+  color: white;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+::selection {
+  background: #f08b65;
+  color: white;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -2397,7 +2409,7 @@ textarea {
 
 .invalid input:required:invalid, .invalid textarea:required:invalid {
   background: #ed1b24;
-  border-color: 1px solid #BE4C54;
+  border-color: 1px solid #be4c54;
 }
 
 .invalid input:required:valid, .invalid textarea:required:valid {
