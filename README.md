@@ -9,4 +9,4 @@ WARNING: This work is in constant development. I'm always working on ways to opt
 * cut out parts of font awesome library that aren't needed
 * need to optimzie js for resizing the intro section
 * convert jQuery pieces to vanilla js
-* fix IE issues
+* fix contact form in IE
