@@ -24,9 +24,9 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
 
   <!--[if lt IE 9]>
-		<script type="text/javascript" src="js/html5shiv.min.js"></script>
-		<script type="text/javascript" src="js/respond.min.js"></script>
-		<script type="text/javascript" src="js/placeholders.min.js"></script>
+		<script type="text/javascript" src="js/iehacks/html5shiv.min.js"></script>
+		<script type="text/javascript" src="js/iehacks/respond.min.js"></script>
+		<script type="text/javascript" src="js/iehacks/placeholders.min.js"></script>
 	<![endif]-->
 
 </head>
@@ -522,7 +522,7 @@
 		<div class="contact-top"></div>
 		<div class="container">
 			<h2 class="section-title">Let's Chat...</h2>
-			<form name="contact-form" class="validate-form" id="contactForm" method="POST">
+			<form name="contact-form" class="validate-form" id="contactForm" method="POST" action="#">
 				<fieldset>
 					<label name="name-label" for="fullname">Full Name</label>
 					<input 
@@ -550,6 +550,10 @@
 						cols="30" 
 						rows="5" 
 						required></textarea>
+
+				<div id="errorContainer">
+					<ul id="errors"></ul>
+				</div>
 					<input type="submit" name="Send" id="sendBtn" value="Send" />
 				</fieldset>
 			</form>
@@ -620,5 +624,9 @@
 		</div>
 </body>
 
-<script src="js/dev/allthejs.js"></script>
+<script src="js/main.min.js"></script>
+<!--[if lt IE 9]>
+		<script type="text/javascript" src="js/iehacks/validate/jquery.validate.js"></script>
+		<script type="text/javascript" src="js/iehacks/validate/form-validations.js"></script>
+	<![endif]-->
 </html>

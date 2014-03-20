@@ -104,67 +104,82 @@ $(function() { // document ready!
 
   var formMessageShown = false;
   // handle ajax form request
-  $('#sendBtn').click(function(e) {
 
-    var btn = $('#sendBtn');
+  function hasFormValidation() {
+    return (typeof document.createElement( 'input' ).checkValidity == 'function');
+  };
 
-    // make sure form passes html5 validation
-    if( $("form")[0].checkValidity() ) {
+  // $('#sendBtn').click(function(e) {
 
-      e.preventDefault();
+  //   e.preventDefault();
 
-      btn.after("<progress class='progress'>Sending...</progress>");
+  //   var btn = $('#sendBtn');
 
-      if( formMessageShown )
-        $('.form-messaging').hide();
+  //   //check if html5 validation is available
+  //   if( !hasFormValidation() ) {
+  //     // doesn't cut the mustard, default to jquery validation
+  //     console.log( hasFormValidation() );
+  //   } else {
 
-      btn.prop('disabled', true);
+  //     console.log( hasFormValidation() );
 
-      var fullname = $("input#fullname").val();
-      var email = $("input#email").val();
-      var message = $("textarea#message").val();
-      var dataString = 'formSubmitted=true&fullname='+ fullname + '&email=' + email + '&message=' + message;
+  //     // make sure form passes html5 validation
+  //     if( $("form")[0].checkValidity() ) {
 
-      var request = $.ajax({
-        type: "POST",
-        url: 'contact.php',
-        data: dataString,
-        dataType: 'html'
-      });
+  //       btn.after("<progress class='progress'>Sending...</progress>");
+
+  //       if( formMessageShown )
+  //         $('.form-messaging').hide();
+
+  //       btn.prop('disabled', true);
+
+  //       var fullname = $("input#fullname").val();
+  //       var email = $("input#email").val();
+  //       var message = $("textarea#message").val();
+  //       var dataString = 'formSubmitted=true&fullname='+ fullname + '&email=' + email + '&message=' + message;
+
+  //       var request = $.ajax({
+  //         type: "POST",
+  //         url: 'contact.php',
+  //         data: dataString,
+  //         dataType: 'html'
+  //       });
 
 
-      request.done(function(msg) {
-        $('.progress').hide();
-        if( !formMessageShown ) {
-          btn.after("<span class='form-messaging'>Thank you for your message!</span>");
-          formMessageShown = true;
-        }
-        //$('.form-messaging').fadeIn().css('display', 'block');
-        $('.form-messaging').css('display', 'block');
+  //       request.done(function(msg) {
+  //         $('.progress').hide();
+  //         if( !formMessageShown ) {
+  //           btn.after("<span class='form-messaging'>Thank you for your message!</span>");
+  //           formMessageShown = true;
+  //         }
+  //         //$('.form-messaging').fadeIn().css('display', 'block');
+  //         $('.form-messaging').css('display', 'block');
 
-        $('#contactForm').find(':input:not(:disabled)').prop('disabled',true);
-        //$('#contactForm')[0].reset();
+  //         $('#contactForm').find(':input:not(:disabled)').prop('disabled',true);
+  //         //$('#contactForm')[0].reset();
 
-      });
+  //       });
 
-      request.fail(function( jqXHR, textStatus ) {
+  //       request.fail(function( jqXHR, textStatus ) {
 
-        $('.progress').hide();
-        if( !formMessageShown ) {
-          btn.after("<span class='form-messaging error'>My apologies, there was a problem. Please try sending again.</span>");
-          formMessageShown = true;
-        }
+  //         $('.progress').hide();
+  //         if( !formMessageShown ) {
+  //           btn.after("<span class='form-messaging error'>My apologies, there was a problem. Please try sending again.</span>");
+  //           formMessageShown = true;
+  //         }
+          
+  //         //$('.form-messaging').fadeIn().css('display', 'block');
+  //         $('.form-messaging').css('display', 'block');
+  //         btn.prop('disabled', false);
+  //       });
         
-        //$('.form-messaging').fadeIn().css('display', 'block');
-        $('.form-messaging').css('display', 'block');
-        btn.prop('disabled', false);
-      });
-      
 
-      return false;
-    } // end validity check
+  //       return false;
+  //     } // end validity check
+  //   }
     
-  });
+    
+  // });
 
   // owl carousels
   $("#brs-slideshow").owlCarousel({
