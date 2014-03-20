@@ -2595,7 +2595,7 @@ i.icon-wrapper {
     width: 49.1379310344828%;
   }
   .pill:nth-child(n) {
-    margin-right: 0.08620689655172;
+    margin-right: 0.08620689655172%;
   }
   .pill:nth-child(2n) {
     margin-right: 0;
@@ -3063,14 +3063,28 @@ i.icon-wrapper {
 
 /* contact section styles */
 .contact {
-  background: url("../images/spikes.png"), url("../images/bottom_contact.gif");
-  background-repeat: repeat-x;
+  background: #924224;
+  padding: 0;
+}
+.contact:after {
+  content: ' ';
+  background: url("../images/bottom_contact.gif");
   background-color: #924224;
-  background-position: top, bottom;
+  background-position: bottom;
+  width: 100%;
+  height: 330px;
+  margin-top: -330px;
+  top: 0;
+  z-index: 1;
+  display: block;
+  position: relative;
 }
 .contact .container {
   background: url("../images/pilot_rope.png") no-repeat transparent;
   min-height: 650px;
+  margin-top: -9.5em;
+  position: relative;
+  z-index: 2;
 }
 .contact .section-title {
   padding-top: 3em;
@@ -3078,6 +3092,11 @@ i.icon-wrapper {
   margin-bottom: 0;
   color: white;
   padding-bottom: 2em;
+}
+
+.contact-top {
+  background: url("../images/spikes.png") repeat-x #924224 top;
+  height: 245px;
 }
 
 .form-messaging {
@@ -3102,17 +3121,31 @@ i.icon-wrapper {
 /* */
 /* testimonial seciton styles */
 .testimonials {
-  background: url("../images/bottom_red_to_black.png"), url("../images/pilot_monster.png");
-  background-repeat: repeat-x, no-repeat;
-  background-position: top, 88% 94%;
   background-color: #000;
   color: white;
   padding-top: 0;
+}
+.testimonials:after {
+  content: ' ';
+  background: url("../images/pilot_monster.png");
+  background-repeat: no-repeat;
+  background-color: #000;
+  background-position: 88% 94%;
+  width: 100%;
+  height: 74px;
+  margin-top: -74px;
+  top: 0;
+  z-index: 1;
+  display: block;
+  position: relative;
 }
 .testimonials .container {
   background: url("../images/bottom_crack.png") no-repeat;
   background-position: 73% top;
   padding-top: 5.475em;
+  margin-top: -100px;
+  position: relative;
+  z-index: 2;
 }
 .testimonials .section-title {
   color: white;
@@ -3123,6 +3156,11 @@ i.icon-wrapper {
 .testimonials i.icon-wrapper {
   background-color: black;
   color: white;
+}
+
+.testimonials-top {
+  background: url("../images/bottom_red_to_black.png") repeat-x black top;
+  height: 100px;
 }
 
 .left-quote {
