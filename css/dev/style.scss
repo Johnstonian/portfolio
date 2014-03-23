@@ -411,6 +411,18 @@ i.icon-wrapper {
 
 	padding-bottom: 3.75em;
 
+	h3 {
+		@media screen and (min-width: $brkpt-large) {
+		    @include font-size(26);
+		    min-height: 82px;
+		}
+
+		@media screen and (min-width: $brkpt-820) {
+		    @include font-size(40);
+		    min-height: 126px;
+		}
+	}
+
 	@media only screen and (min-width: $brkpt-large) {
 		float: left;
 	  width: 47.5%;
@@ -754,18 +766,12 @@ i.icon-wrapper {
 }
 /* */
 
-.screenshot-container {
-	width: 100%;
-	height: auto;
-	margin-bottom: 2.5em;
-	text-align: center;
+.screenshot { max-height: 420px; text-align: center; }
 
-	img {
-		box-shadow: 0 0 0 4px rgba(0,0,0,0.1);
-	}
+.no-slideshow {
+	margin-bottom: 78px;
 }
 
-.screenshot { max-height: 420px; text-align: center; }
 
 /* contact section styles */
 .contact {

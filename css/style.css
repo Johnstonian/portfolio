@@ -2702,6 +2702,20 @@ i.icon-wrapper {
 .project {
   padding-bottom: 3.75em;
 }
+@media screen and (min-width: 48em) {
+  .project h3 {
+    font-size: 26px;
+    font-size: 1.625rem;
+    min-height: 82px;
+  }
+}
+@media screen and (min-width: 51.25em) {
+  .project h3 {
+    font-size: 40px;
+    font-size: 2.5rem;
+    min-height: 126px;
+  }
+}
 @media only screen and (min-width: 48em) {
   .project {
     float: left;
@@ -3057,20 +3071,13 @@ i.icon-wrapper {
 }
 
 /* */
-.screenshot-container {
-  width: 100%;
-  height: auto;
-  margin-bottom: 2.5em;
-  text-align: center;
-}
-.screenshot-container img {
-  -webkit-box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
-}
-
 .screenshot {
   max-height: 420px;
   text-align: center;
+}
+
+.no-slideshow {
+  margin-bottom: 78px;
 }
 
 /* contact section styles */
