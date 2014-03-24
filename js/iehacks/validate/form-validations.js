@@ -14,10 +14,13 @@ $(document).ready(function(){
       }
     },
     messages: {
-       fullname: "(Fullname name is required.)",
-       email: "(Please enter a valid email.)",
-       message: "(Please enter a comment or question.)"
-    }
+       fullname: "Please enter your fullname.",
+       email: "Please enter a valid email.",
+       message: "Please enter a comment or question."
+    }, 
+    errorContainer: "#errorContainer",
+    errorLabelContainer: "#errors",
+    wrapper: "li"
   });
 
 });

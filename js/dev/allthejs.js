@@ -40,10 +40,10 @@ if(!Modernizr.svg) {
   });
 }
 
-// setup responsive nav
-var nav = responsiveNav(".nav-collapse", {
-  insert: "before"
-  });
+// // setup responsive nav
+// var nav = responsiveNav(".nav-collapse", {
+//   insert: "before"
+//   });
 
 $(function() { // document ready!
 
@@ -199,7 +199,7 @@ $(function() { // document ready!
 
   //         $('.progress').hide();
   //         if( !formMessageShown ) {
-  //           btn.after("<span class='form-messaging error'>My apologies, there was a problem. Please try sending again.</span>");
+  //           btn.after("<span class='form-messaging error-message'>My apologies, there was a problem. Please try sending again.</span>");
   //           formMessageShown = true;
   //         }
           
