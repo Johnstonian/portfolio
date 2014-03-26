@@ -41,9 +41,9 @@ if(!Modernizr.svg) {
 }
 
 // // setup responsive nav
-// var nav = responsiveNav(".nav-collapse", {
-//   insert: "before"
-//   });
+var nav = responsiveNav(".nav-collapse", {
+  insert: "before"
+  });
 
 $(function() { // document ready!
 
