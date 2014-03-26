@@ -32,7 +32,6 @@
 <!--[if lt IE 9]>
 		<link rel="stylesheet" type="text/css" href="css/ie-styles.css">
 		<script type="text/javascript" src="js/iehacks/validate/jquery.validate.js"></script>
-		<script type="text/javascript" src="js/iehacks/validate/additional-methods.min.js"></script>
 	<![endif]-->
 
 </head>
@@ -529,8 +528,12 @@
 		<div class="container">
 			<h2 class="section-title">Let's Chat...</h2>
 			<form name="contact-form" class="validate-form" id="contactForm" method="POST" action="#">
+				<div id="errorContainer">
+				<p>Please correct the following error(s) before a message can be sent:</p>
+					<ul id="errors"></ul>
+				</div>
 				<fieldset>
-					<label name="name-label" for="fullname">Full Name</label>
+					<label name="name-label" for="fullname">Full Name<span class="required">*</span></label>
 					<input 
 						type="text" 
 						class="fullname"
@@ -538,7 +541,7 @@
 						name="fullname"
 						placeholder="Full name" 
 						required />
-					<label name="email-label" for="email">Email</label>
+					<label name="email-label" for="email">Email<span class="required">*</span></label>
 					<input 
 						type="email" 
 						id="email" 
@@ -546,7 +549,7 @@
 						name="email" 
 						placeholder="Email" 
 						required  />
-					<label name="message-label" for="message">Your message...</label>
+					<label name="message-label" for="message">Message<span class="required">*</span></label>
 					<textarea 
 						class="message" 
 						id="message" 
@@ -557,9 +560,6 @@
 						rows="5" 
 						required></textarea>
 
-				<div id="errorContainer">
-					<ul id="errors"></ul>
-				</div>
 					<input type="submit" name="Send" id="sendBtn" value="Send" />
 				</fieldset>
 			</form>

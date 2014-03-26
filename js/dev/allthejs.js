@@ -156,8 +156,7 @@ $(function() { // document ready!
       $('#contactForm').validate({
         rules : {
           "fullname" : {
-            required : true,
-            lettersonly : true
+            required : true
           },
           "email" : {
             required : true,
@@ -168,9 +167,9 @@ $(function() { // document ready!
           }
         },
         messages: {
-           fullname: "Please enter your fullname.",
-           email: "Please enter a valid email.",
-           message: "Please enter a comment or question."
+           fullname: "A valid name is needed",
+           email: "A valid email is needed.",
+           message: "A comment or question is needed."
         }, 
         errorContainer: "#errorContainer",
         errorLabelContainer: "#errors",

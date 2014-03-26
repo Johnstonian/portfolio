@@ -146,6 +146,9 @@ i.icon-wrapper {
 	background-color: white;
 }
 
+#errorContainer {
+	display: none;
+}
 
 
 
@@ -173,6 +176,10 @@ i.icon-wrapper {
 }
 .fullname { margin-right: 1.3333333333333%; }
 .email { float: right; }
+
+/*span*/.required {
+	color: $form-error;
+}
 
 .copyright { 
 

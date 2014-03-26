@@ -2425,6 +2425,10 @@ i.icon-wrapper {
   background-color: white;
 }
 
+#errorContainer {
+  display: none;
+}
+
 /*------------------------------------*\
     $CLASSES
 \*------------------------------------*/
@@ -2479,6 +2483,11 @@ i.icon-wrapper {
 
 .email {
   float: right;
+}
+
+/*span*/
+.required {
+  color: #ed1b24;
 }
 
 .copyright {

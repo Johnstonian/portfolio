@@ -1,7 +1,34 @@
 label {
 	display: block;
+	color: white;
+	font-size: 24px;
 }
 
 #errorContainer {
 	color: #ed1b24;
+}
+
+#errorContainer > p {
+	color: white;
+	font-weight: bold;
+}
+
+#errors {
+	margin-left: 0;
+	padding-left: 12px;
+}
+
+#errors > li {
+	margin-bottom: 16px;
+}
+
+.error { 
+	color: white;
+	background-color: #ed1b24;
+}
+
+label.error {
+	font-size: 18px;
+	font-weight: bold;
+	padding: 4px;
 }
