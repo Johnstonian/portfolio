@@ -110,102 +110,106 @@ $(function() { // document ready!
   };
 
   
-  // $('#sendBtn').click(function(e) {
+  $('#sendBtn').click(function(e) {
 
-  //   //e.preventDefault();
+    //e.preventDefault();
 
-  //   var btn = $('#sendBtn');
+    //check if html5 validation is available
+    if( !hasFormValidation() ) {
+      // doesn't cut the mustard, default to jquery validation
 
-  //   //check if html5 validation is available
-  //   if( !hasFormValidation() ) {
-  //     // doesn't cut the mustard, default to jquery validation
-  //     console.log( hasFormValidation() );
+      $('#contactForm').validate({
+        rules : {
+          "fullname" : {
+            required : true,
+            lettersonly : true
+          },
+          "email" : {
+            required : true,
+            email : true
+          },
+          "message" : {
+            required : true
+          }
+        },
+        messages: {
+           fullname: "Please enter your fullname.",
+           email: "Please enter a valid email.",
+           message: "Please enter a comment or question."
+        }, 
+        errorContainer: "#errorContainer",
+        errorLabelContainer: "#errors",
+        wrapper: "li",
+        submitHandler: function(form) {
+          sendForm();
+        }
+      });
 
-  //     $('#contactForm').validate({
-  //       rules : {
-  //         "fullname" : {
-  //           required : true,
-  //           lettersonly : true
-  //         },
-  //         "email" : {
-  //           required : true,
-  //           email : true
-  //         },
-  //         "message" : {
-  //           required : true
-  //         }
-  //       },
-  //       messages: {
-  //          fullname: "Please enter your fullname.",
-  //          email: "Please enter a valid email.",
-  //          message: "Please enter a comment or question."
-  //       }, 
-  //       errorContainer: "#errorContainer",
-  //       errorLabelContainer: "#errors",
-  //       wrapper: "li"
-  //     });
+    } else {
 
-  //   } else {
+      // make sure form passes html5 validation
+      if( $("form")[0].checkValidity() ) {
 
-  //     console.log( hasFormValidation() );
-
-  //     // make sure form passes html5 validation
-  //     if( $("form")[0].checkValidity() ) {
-
-  //       btn.after("<progress class='progress'>Sending...</progress>");
-
-  //       if( formMessageShown )
-  //         $('.form-messaging').hide();
-
-  //       btn.prop('disabled', true);
-
-  //       var fullname = $("input#fullname").val();
-  //       var email = $("input#email").val();
-  //       var message = $("textarea#message").val();
-  //       var dataString = 'formSubmitted=true&fullname='+ fullname + '&email=' + email + '&message=' + message;
-
-  //       var request = $.ajax({
-  //         type: "POST",
-  //         url: 'contact.php',
-  //         data: dataString,
-  //         dataType: 'html'
-  //       });
-
-
-  //       request.done(function(msg) {
-  //         $('.progress').hide();
-  //         if( !formMessageShown ) {
-  //           btn.after("<span class='form-messaging'>Thank you for your message!</span>");
-  //           formMessageShown = true;
-  //         }
-  //         //$('.form-messaging').fadeIn().css('display', 'block');
-  //         $('.form-messaging').css('display', 'block');
-
-  //         $('#contactForm').find(':input:not(:disabled)').prop('disabled',true);
-  //         //$('#contactForm')[0].reset();
-
-  //       });
-
-  //       request.fail(function( jqXHR, textStatus ) {
-
-  //         $('.progress').hide();
-  //         if( !formMessageShown ) {
-  //           btn.after("<span class='form-messaging error-message'>My apologies, there was a problem. Please try sending again.</span>");
-  //           formMessageShown = true;
-  //         }
-          
-  //         //$('.form-messaging').fadeIn().css('display', 'block');
-  //         $('.form-messaging').css('display', 'block');
-  //         btn.prop('disabled', false);
-  //       });
+        sendForm();
         
+        return false;
+      } // end validity check
+    }
+    
+  });
 
-  //       return false;
-  //     } // end validity check
-  //   }
-    
-    
-  // });
+  function sendForm() {
+
+    var btn = $('#sendBtn');
+
+    btn.after("<progress class='progress'>Sending...</progress>");
+
+    if( formMessageShown )
+      $('.form-messaging').hide();
+
+    btn.prop('disabled', true);
+
+    var fullname = $("input#fullname").val();
+    var email = $("input#email").val();
+    var message = $("textarea#message").val();
+    var dataString = 'formSubmitted=true&fullname='+ fullname + '&email=' + email + '&message=' + message;
+
+    var request = $.ajax({
+      type: "POST",
+      url: 'contact.php',
+      data: dataString,
+      dataType: 'html'
+    });
+
+
+    request.done(function(msg) {
+      $('.progress').hide();
+      if( !formMessageShown ) {
+        btn.after("<span class='form-messaging'>Thank you for your message!</span>");
+        formMessageShown = true;
+      }
+      //$('.form-messaging').fadeIn().css('display', 'block');
+      $('.form-messaging').css('display', 'block');
+
+      $('#contactForm').find(':input:not(:disabled)').prop('disabled',true);
+      //$('#contactForm')[0].reset();
+
+    });
+
+    request.fail(function( jqXHR, textStatus ) {
+
+      $('.progress').hide();
+      if( !formMessageShown ) {
+        btn.after("<span class='form-messaging error-message'>My apologies, there was a problem. Please try sending again.</span>");
+        formMessageShown = true;
+      }
+      
+      //$('.form-messaging').fadeIn().css('display', 'block');
+      $('.form-messaging').css('display', 'block');
+      btn.prop('disabled', false);
+    });
+
+  }
 
   // owl carousels
   $("#brs-slideshow").owlCarousel({
