@@ -3,7 +3,6 @@
 	if( isset( $_POST['formSubmitted'] ) && $_POST['formSubmitted'] == true )
 	{
 
-    var_dump($_POST);
 		$errors = array();
 
     $defs = array(
