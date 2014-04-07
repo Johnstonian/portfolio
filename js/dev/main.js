@@ -5,7 +5,7 @@ if(!Modernizr.svg) {
   });
 }
 
-// setup responsive nav
+// // setup responsive nav
 var nav = responsiveNav(".nav-collapse", {
   insert: "before"
   });
@@ -104,67 +104,111 @@ $(function() { // document ready!
 
   var formMessageShown = false;
   // handle ajax form request
+
+  function hasFormValidation() {
+    return (typeof document.createElement( 'input' ).checkValidity == 'function');
+  };
+
+  
   $('#sendBtn').click(function(e) {
+
+    //e.preventDefault();
+
+    //check if html5 validation is available
+    if( !hasFormValidation() ) {
+      // doesn't cut the mustard, default to jquery validation
+
+      $('#contactForm').validate({
+        rules : {
+          "fullname" : {
+            required : true
+          },
+          "email" : {
+            required : true,
+            email : true
+          },
+          "message" : {
+            required : true
+          }
+        },
+        messages: {
+           fullname: "A valid name is needed",
+           email: "A valid email is needed.",
+           message: "A comment or question is needed."
+        }, 
+        errorContainer: "#errorContainer",
+        errorLabelContainer: "#errors",
+        wrapper: "li",
+        submitHandler: function(form) {
+          sendForm();
+        }
+      });
+
+    } else {
+
+      // make sure form passes html5 validation
+      if( $("form")[0].checkValidity() ) {
+
+        sendForm();
+        
+        return false;
+      } // end validity check
+    }
+    
+  });
+
+  function sendForm() {
 
     var btn = $('#sendBtn');
 
-    // make sure form passes html5 validation
-    if( $("form")[0].checkValidity() ) {
+    btn.after("<progress class='progress'>Sending...</progress>");
 
-      e.preventDefault();
+    if( formMessageShown )
+      $('.form-messaging').hide();
 
-      btn.after("<progress class='progress'>Sending...</progress>");
+    btn.prop('disabled', true);
 
-      if( formMessageShown )
-        $('.form-messaging').hide();
+    var fullname = $("input#fullname").val();
+    var email = $("input#email").val();
+    var message = $("textarea#message").val();
+    var dataString = 'formSubmitted=true&fullname='+ fullname + '&email=' + email + '&message=' + message;
 
-      btn.prop('disabled', true);
-
-      var fullname = $("input#fullname").val();
-      var email = $("input#email").val();
-      var message = $("textarea#message").val();
-      var dataString = 'formSubmitted=true&fullname='+ fullname + '&email=' + email + '&message=' + message;
-
-      var request = $.ajax({
-        type: "POST",
-        url: 'contact.php',
-        data: dataString,
-        dataType: 'html'
-      });
+    var request = $.ajax({
+      type: "POST",
+      url: 'contact.php',
+      data: dataString,
+      dataType: 'html'
+    });
 
 
-      request.done(function(msg) {
-        $('.progress').hide();
-        if( !formMessageShown ) {
-          btn.after("<span class='form-messaging'>Thank you for your message!</span>");
-          formMessageShown = true;
-        }
-        //$('.form-messaging').fadeIn().css('display', 'block');
-        $('.form-messaging').css('display', 'block');
+    request.done(function(msg) {
+      $('.progress').hide();
+      if( !formMessageShown ) {
+        btn.after("<span class='form-messaging'>Thank you for your message!</span>");
+        formMessageShown = true;
+      }
+      //$('.form-messaging').fadeIn().css('display', 'block');
+      $('.form-messaging').css('display', 'block');
 
-        $('#contactForm').find(':input:not(:disabled)').prop('disabled',true);
-        //$('#contactForm')[0].reset();
+      $('#contactForm').find(':input:not(:disabled)').prop('disabled',true);
+      //$('#contactForm')[0].reset();
 
-      });
+    });
 
-      request.fail(function( jqXHR, textStatus ) {
+    request.fail(function( jqXHR, textStatus ) {
 
-        $('.progress').hide();
-        if( !formMessageShown ) {
-          btn.after("<span class='form-messaging error'>My apologies, there was a problem. Please try sending again.</span>");
-          formMessageShown = true;
-        }
-        
-        //$('.form-messaging').fadeIn().css('display', 'block');
-        $('.form-messaging').css('display', 'block');
-        btn.prop('disabled', false);
-      });
+      $('.progress').hide();
+      if( !formMessageShown ) {
+        btn.after("<span class='form-messaging error-message'>My apologies, there was a problem. Please try sending again.</span>");
+        formMessageShown = true;
+      }
       
+      //$('.form-messaging').fadeIn().css('display', 'block');
+      $('.form-messaging').css('display', 'block');
+      btn.prop('disabled', false);
+    });
 
-      return false;
-    } // end validity check
-    
-  });
+  }
 
   // owl carousels
   $("#brs-slideshow").owlCarousel({

@@ -3,25 +3,12 @@
 	if( isset( $_POST['formSubmitted'] ) && $_POST['formSubmitted'] == true )
 	{
 
-    var_dump($_POST);
-		$errors = array();
-
-    $defs = array(
-      'email' => FILTER_VALIDATE_EMAIL,
-      'options' => array('regexp' => "/^((\?+\d{1,3}(-| )?\(?\d\)?(-|[ .])?\d{1,6})|(\(?\d{2,5}\)?))(-| |.)(\d{3,4})(-| |.)?(\d{4})$/")
-    );
-
-    $input = filter_input_array(INPUT_POST, $defs);
-
     // check for all valid fields, set errors if any field not valid
     if( !filter_var($_POST['fullname'], FILTER_SANITIZE_STRING) )
       $errors['fullname'] = 'Please enter your name';
 
-    if (empty($_POST['email'])) {
-      $errors['email'] = "Email Address is required.";
-    } else if ($input['email'] === FALSE) {
-      $errors['email'] = "Please enter a valid Email Address.";
-    }
+    if( !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) )
+      $errors['fullname'] = 'Please enter a valid email address';
 
     if( !filter_var($_POST['message'], FILTER_SANITIZE_STRING) )
       $errors['message'] = 'Please add a message.';
