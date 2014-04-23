@@ -428,6 +428,12 @@ i.icon-wrapper {
 		    @include font-size(40);
 		    min-height: 126px;
 		}
+
+		@media screen and (min-width: $brkpt-1205) {
+			min-height: inherit;
+		}
+
+
 	}
 
 	@media only screen and (min-width: $brkpt-large) {
@@ -773,11 +779,7 @@ i.icon-wrapper {
 }
 /* */
 
-.screenshot { max-height: 420px; text-align: center; }
-
-.no-slideshow {
-	margin-bottom: 78px;
-}
+.screenshot { text-align: center; }
 
 
 /* contact section styles */
