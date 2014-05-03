@@ -12,3 +12,4 @@ WARNING: This work is in constant development. I'm always working on ways to opt
 * fix contact form in IE
 * add more projects to the recent work section
 * re-enable contact me functionality
+* add GA Tracking
