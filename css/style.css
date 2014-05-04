@@ -432,7 +432,6 @@ h3 {
   font-size: 2rem;
   padding: 0;
   margin: 0;
-  padding-bottom: .5em;
   -webkit-transition: font-size 0.3s ease-out;
   transition: font-size 0.3s ease-out;
 }
@@ -2725,6 +2724,11 @@ i.icon-wrapper {
     min-height: 126px;
   }
 }
+@media screen and (min-width: 75.3125em) {
+  .project h3 {
+    min-height: inherit;
+  }
+}
 @media only screen and (min-width: 48em) {
   .project {
     float: left;
@@ -3081,12 +3085,7 @@ i.icon-wrapper {
 
 /* */
 .screenshot {
-  max-height: 420px;
   text-align: center;
-}
-
-.no-slideshow {
-  margin-bottom: 78px;
 }
 
 /* contact section styles */
