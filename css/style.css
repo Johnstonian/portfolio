@@ -2428,6 +2428,13 @@ i.icon-wrapper {
   display: none;
 }
 
+figcaption {
+  color: #6F737E;
+  font-size: 0.9em;
+  margin-top: 0.3em;
+  text-align: center;
+}
+
 /*------------------------------------*\
     $CLASSES
 \*------------------------------------*/
@@ -2497,6 +2504,15 @@ i.icon-wrapper {
   .copyright {
     float: left;
   }
+}
+
+.figure {
+  clear: both;
+  text-align: center;
+  margin: 2em 0;
+}
+.figure img {
+  margin: 0 auto;
 }
 
 /*------------------------------------*\
@@ -3272,7 +3288,7 @@ i.icon-wrapper {
   opacity: 1;
 }
 
-.logo-header {
+.logo-header, .logo-header-right {
   float: left;
   padding: 0;
   margin: 0;
@@ -3282,8 +3298,14 @@ i.icon-wrapper {
   margin-left: 1em;
   margin-top: 1em;
 }
-.logo-header a {
+.logo-header a, .logo-header-right a {
   display: block;
+}
+
+.logo-header-right {
+  float: right !important;
+  margin-right: 1em;
+  margin-left: 0;
 }
 
 /*------------------------------------*\
@@ -3359,6 +3381,12 @@ i.icon-wrapper {
     width: auto;
     margin-right: 1em;
   }
+}
+
+.main-nav-left {
+  float: left;
+  margin-left: 1em;
+  width: auto;
 }
 
 .nav > li > .nav-active {

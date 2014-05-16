@@ -84,7 +84,7 @@ $(function() { // document ready!
   });
 
   // handle switching of logo image on hover
-  $(".logo-header").hover(
+  $(".logo-header, .logo-header-right").hover(
     function() {
         $(this).find('img').attr("src", "images/logo_title.png");
     },
