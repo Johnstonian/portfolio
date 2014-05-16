@@ -187,11 +187,10 @@ $(function() { // document ready!
         btn.after("<span class='form-messaging'>Thank you for your message!</span>");
         formMessageShown = true;
       }
-      //$('.form-messaging').fadeIn().css('display', 'block');
+
       $('.form-messaging').css('display', 'block');
 
       $('#contactForm').find(':input:not(:disabled)').prop('disabled',true);
-      //$('#contactForm')[0].reset();
 
     });
 

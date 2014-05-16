@@ -815,13 +815,23 @@ i.icon-wrapper {
 		padding-bottom: 0;
 		margin-bottom: 0;
 		color: white;
-		padding-bottom: 2em;
+		padding-bottom: .5em;
+
+		@media only screen and (min-width: $brkpt-420) {
+			padding-bottom: 2em;
+		}
 	}
 }
 
 .contact-top {
 	background: url('../images/spikes.png') repeat-x $dark-orange top;
 	height: 245px;
+	display: none;
+
+	@media only screen and (min-width: $brkpt-420) {
+		display: block;
+	}
+	 
 }
 
 .form-messaging { 
@@ -845,9 +855,6 @@ i.icon-wrapper {
 
 /* testimonial seciton styles */
 .testimonials {
-	//background:url('../images/pilot_monster.png');
-	//background-repeat: repeat-x, no-repeat;
-	//background-position: top, 88% 94%;
 	background-color: #000;
 	color: white;
 
@@ -1073,7 +1080,10 @@ i.icon-wrapper {
  .nav-toggle { 
 	 	display: block; 
 
-	 	float: right;
+	 	float: left;
+	 	width: 100%;
+	 	text-align: center;
+	 	margin-top: .2em;
 	 	line-height: 50px;
 	 	text-transform: lowercase;
 	 	z-index: 100;
@@ -1086,6 +1096,13 @@ i.icon-wrapper {
 
 	 	&:hover, &:focus, &:link  {
 	 		background: $dark-orange;
+	 	}
+
+	 	@media only screen and (min-width: $brkpt-320) {
+	 		float: right;
+	 		text-align: left;
+	 		width: auto;
+	 		margin-top: 0;
 	 	}
 
 	 	@media only screen and (min-width: $brkpt-medium) {

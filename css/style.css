@@ -3118,12 +3118,23 @@ i.icon-wrapper {
   padding-bottom: 0;
   margin-bottom: 0;
   color: white;
-  padding-bottom: 2em;
+  padding-bottom: .5em;
+}
+@media only screen and (min-width: 26.25em) {
+  .contact .section-title {
+    padding-bottom: 2em;
+  }
 }
 
 .contact-top {
   background: url("../images/spikes.png") repeat-x #924224 top;
   height: 245px;
+  display: none;
+}
+@media only screen and (min-width: 26.25em) {
+  .contact-top {
+    display: block;
+  }
 }
 
 .form-messaging {
@@ -3425,7 +3436,10 @@ i.icon-wrapper {
 
 .nav-toggle {
   display: block;
-  float: right;
+  float: left;
+  width: 100%;
+  text-align: center;
+  margin-top: .2em;
   line-height: 50px;
   text-transform: lowercase;
   z-index: 100;
@@ -3436,6 +3450,14 @@ i.icon-wrapper {
 }
 .nav-toggle:hover, .nav-toggle:focus, .nav-toggle:link {
   background: #924224;
+}
+@media only screen and (min-width: 20em) {
+  .nav-toggle {
+    float: right;
+    text-align: left;
+    width: auto;
+    margin-top: 0;
+  }
 }
 @media only screen and (min-width: 40em) {
   .nav-toggle {
