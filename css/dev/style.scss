@@ -998,7 +998,15 @@ figcaption {
 	a { display: block; }
 }
 
-.logo-header-right { float: right !important; margin-right: 1em; margin-left: 0; }
+.logo-header-right { 
+	float: left;
+	margin-left: 1em;
+
+	@media only screen and (min-width: $brkpt-420) {
+		float: right !important; margin-right: 1em; margin-left: 0;
+	}
+	 
+}
 
 // import responsive-nav.css
 @import 'responsive-nav';
@@ -1019,8 +1027,13 @@ figcaption {
 
 .main-nav-left {
 	float: left;
-	margin-left: 1em;
-	width: auto;
+	width: 100%;
+
+	@media only screen and (min-width: $brkpt-420) {
+		margin-left: 1em;
+		width: auto;
+	}
+	 
 }
 
 .nav > li > .nav-active {
@@ -1140,6 +1153,3 @@ footer {
 	display: table;
 	width: 100%;
 }
-
-@import 'owl-carousel';
-@import 'owl-theme';

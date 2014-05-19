@@ -3,7 +3,7 @@
 \*------------------------------------*/
 /*! responsive-nav.js 1.0.25 by @viljamis */
 
-.nav-collapse ul {
+.nav-collapse ul, .main-nav-left ul {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -11,7 +11,7 @@
   list-style: none;
 }
 
-.nav-collapse li {
+.nav-collapse li, .main-nav-left li {
   width: 100%;
   display: block;
 }

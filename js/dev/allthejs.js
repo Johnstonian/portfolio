@@ -40,10 +40,12 @@ if(!Modernizr.svg) {
   });
 }
 
-// // setup responsive nav
-var nav = responsiveNav(".nav-collapse", {
-  insert: "before"
+// setup responsive nav
+if( $('.nav-collapse')[0] ) {
+  var nav = responsiveNav(".nav-collapse", {
+    insert: "before"
   });
+}
 
 $(function() { // document ready!
 
@@ -61,7 +63,7 @@ $(function() { // document ready!
   });
 
   // handle nav item clicks
-  $('.header  a').click( function(e) {
+  $('.header  a.waypoint').click( function(e) {
     e.preventDefault();
 
     var $this = this.hash;
