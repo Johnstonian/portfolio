@@ -10,4 +10,3 @@ WARNING: This work is in constant development. I'm always working on ways to opt
 * need to optimize js for resizing the intro section
 * convert jQuery pieces to vanilla js
 * re-enable contact me functionality
-* add GA Tracking
