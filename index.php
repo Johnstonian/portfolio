@@ -569,6 +569,9 @@
 			<a href="//github.com/Johnstonian" title="GitHub profile" target="github">
 				<i class="fa fa-2x fa-github right"></i>
 			</a>
+			<a href="//codepen.io/johnstonian/" title="CodePen profile" target="codepen">
+				<i class="fa fa-2x fa-codepen right"></i>
+			</a>
 			<a href="//twitter.com/johnstonian" title="twitter profile" target="twitter">
 				<i class="fa fa-2x fa-twitter right"></i>
 			</a>
