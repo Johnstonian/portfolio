@@ -7,4 +7,3 @@ WARNING: This work is in constant development. I'm always working on ways to opt
 * cut out parts of font awesome library that aren't needed
 * need to optimize js for resizing the intro section
 * convert jQuery pieces to vanilla js
-* add ARIA roles

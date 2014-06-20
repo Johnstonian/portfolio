@@ -30,7 +30,7 @@
 	<![endif]-->
 
 </head>
-<body role="main">
+<body>
 
 	<header role="banner" class="header">
 		<h1 class="hidden">Ryan Johnston - Web Developer</h1>
