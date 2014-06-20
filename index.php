@@ -30,7 +30,7 @@
 	<![endif]-->
 
 </head>
-<body>
+<body role="main">
 
 	<header role="banner" class="header">
 		<h1 class="hidden">Ryan Johnston - Web Developer</h1>
@@ -40,7 +40,7 @@
 
 			<nav class="nav-collapse main-nav" role="navigation">
 				<h2 class="hidden">Main Navigation</h2>
-				<ul class="nav">
+				<ul class="nav" role="menu">
 					<li class="nav-articles"><a class="waypoint" href="#article-section">Articles</a></li>
 					<li class="nav-about"><a class="waypoint" href="#about-section">About</a></li>
 					<li class="nav-work"><a class="waypoint" href="#project-section">Recent Work</a></li>
@@ -81,7 +81,7 @@
 			</div>
 
 		<div class="grid">
-			<div class="column-article">
+			<div class="column-article" role="article">
 
 				<h3><a href="//johnstonianera.com/responsive-two-column-layout/">Building a Responsive Two Column Layout</a></h3>
 				<div class="date-container">
@@ -92,7 +92,7 @@
 				<p class="more"><a href="//johnstonianera.com/responsive-two-column-layout/">Keep Reading <i class="fa fa-long-arrow-right"></i></a></p>
 			</div>
 
-			<div class="column-article">
+			<div class="column-article" role="article">
 
 				<h3><a href="//johnstonianera.com/media-query-management/">Media Query Management</a></h3>
 				<div class="date-container">
@@ -104,7 +104,7 @@
 				<p class="more"><a href="//johnstonianera.com/media-query-management/">Keep Reading <i class="fa  fa-long-arrow-right"></i></a></p>
 			</div>
 
-			<div class="column-article">
+			<div class="column-article" role="article">
 
 				<h3><a href="//johnstonianera.com/media-query-snippet-for-sublime-text/">Media Query Snippet for Sublime Text</a></h3>
 				<div class="date-container">
@@ -115,7 +115,7 @@
 				<p class="more"><a href="//johnstonianera.com/media-query-snippet-for-sublime-text/">Keep Reading <i class="fa  fa-long-arrow-right"></i></a></p>
 			</div>
 
-			<div class="column-article">
+			<div class="column-article" role="article">
 
 				<h3><a href="//johnstonianera.com/prepros/">Prepros: Preprocessing Made Easy</a></h3>
 				<div class="date-container">
@@ -476,7 +476,7 @@
 		<div class="contact-top"></div>
 		<div class="container">
 			<h2 class="section-title">Let's Chat...</h2>
-			<form name="contact-form" class="validate-form" id="contactForm" method="POST" action="#">
+			<form role="form" name="contact-form" class="validate-form" id="contactForm" method="POST" action="#">
 				<div id="errorContainer">
 				<p>Please correct the following error(s) before a message can be sent:</p>
 					<ul id="errors"></ul>
@@ -560,7 +560,7 @@
 	</div>
 	</section>
 
-	<footer class="footer">
+	<footer class="footer" role="contentinfo">
 		<div class="copyright">
 			<p class="footer-copy">&copy; 2014 Ryan Johnston. <a href="humans.txt">humans.txt</a></p>
 		</div>
