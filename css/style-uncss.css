@@ -1,53 +1,54 @@
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 100;
-  src: local('Roboto Thin'), local('Roboto-Thin'), url(http://themes.googleusercontent.com/static/fonts/roboto/v11/Jzo62I39jc0gQRrbndN6nfesZW2xOQ-xsNqO47m55DA.ttf) format('truetype');
-}
+@charset "UTF-8";
 
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Roboto Light'), local('Roboto-Light'), url(http://themes.googleusercontent.com/static/fonts/roboto/v11/Hgo13k-tfSpn0qi1SFdUfaCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
-}
+/* Author: Ryan Johnston
+/*------------------------------------*\
+    $TABLE OF CONTENTS https://github.com/csswizardry/CSS-Guidelines
+\*------------------------------------*/
 
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Roboto Regular'), local('Roboto-Regular'), url(http://themes.googleusercontent.com/static/fonts/roboto/v11/zN7GBFwfMP4uA6AR0HCoLQ.ttf) format('truetype');
-}
+/**
+ * VARIABLES............Define Sass Variables
+ * MIXINS...............Define Sass Mixins
+ * NORMALIZE............Normalize all elements consistently across browsers
+ * TYPE.................Type Classes
+ * FONT AWESOME.........Font Awesome Icon Fonts - http://fontawesome.io/
+ * GLOBAL STYLES........Global Element Styles
+ * CLASSES..............Generic Classes
+ * GRIDS................Grid Specific Styles
+ * LAYOUT...............Layout Specific Styles
+ * STRUCTURE............Site structure (header, nav, etc.)
+ */
 
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 500;
-  src: local('Roboto Medium'), local('Roboto-Medium'), url(http://themes.googleusercontent.com/static/fonts/roboto/v11/RxZJdnzeo3R5zSexge8UUaCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
-}
+/*------------------------------------*\
+    $VARIABLES
+\*------------------------------------*/
 
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Roboto Bold'), local('Roboto-Bold'), url(http://themes.googleusercontent.com/static/fonts/roboto/v11/d-6IYplOFocCacKzxwXSOKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
-}
+/* font weights */
 
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 900;
-  src: local('Roboto Black'), local('Roboto-Black'), url(http://themes.googleusercontent.com/static/fonts/roboto/v11/mnpfi9pxYH-Go5UiibESIqCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
-}
+/* Colors */
 
-@font-face {
-  font-family: 'Roboto Condensed';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Roboto Condensed Light'), local('RobotoCondensed-Light'), url(http://themes.googleusercontent.com/static/fonts/robotocondensed/v9/b9QBgL0iMZfDSpmcXcE8nL3QFSXBldIn45k5A7iXhnc.ttf) format('truetype');
-}
+/* Breakpoints */
+
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+
+/* Sets font-size to rem with a pixel fallback
+* https://github.com/csswizardry/CSS-Guidelines#sizing-uis
+*/
+
+/*------------------------------------*\
+    $NORMALIZE
+\*------------------------------------*/
 
 /*! normalize.css v2.1.3 | MIT License | git.io/normalize */
+
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
 
 figcaption,
 figure,
@@ -58,45 +59,169 @@ section {
   display: block;
 }
 
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
+ */
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
 html {
   font-family: sans-serif;
+  /* 1 */
   -ms-text-size-adjust: 100%;
+  /* 2 */
   -webkit-text-size-adjust: 100%;
+  /* 2 */
 }
+
+/**
+ * Remove default margin.
+ */
 
 body {
   margin: 0;
 }
 
+/* ==========================================================================
+   Links
+   ========================================================================== */
+
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+
 a {
   background: transparent;
 }
 
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+
 a:focus {
   outline: thin dotted;
 }
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
 
 a:active,
 a:hover {
   outline: 0;
 }
 
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
 
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+
 strong {
   font-weight: bold;
 }
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+
+/**
+ * Set consistent quote types.
+ */
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
 
 img {
   border: 0;
 }
 
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+
 figure {
   margin: 0;
 }
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+
+/**
+ * Define consistent border, margin, and padding.
+ */
 
 fieldset {
   border: none;
@@ -104,21 +229,81 @@ fieldset {
   padding: 0;
 }
 
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+
 input,
 textarea {
   font-family: inherit;
+  /* 1 */
   font-size: 100%;
+  /* 2 */
   margin: 0;
+  /* 3 */
 }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
 
 input {
   line-height: normal;
 }
 
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+
 input[type="submit"] {
   -webkit-appearance: button;
+  /* 2 */
   cursor: pointer;
+  /* 3 */
 }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
 
 button::-moz-focus-inner,
 input::-moz-focus-inner {
@@ -126,14 +311,37 @@ input::-moz-focus-inner {
   padding: 0;
 }
 
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+
 textarea {
   overflow: auto;
+  /* 1 */
   vertical-align: top;
+  /* 2 */
 }
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+
+/**
+ * Remove most spacing between table cells.
+ */
+
+/*------------------------------------*\
+    $TYPE
+\*------------------------------------*/
+
+/*h1*/
 
 .project-title {
   text-align: center;
 }
+
+/*h2*/
 
 .section-title {
   font-weight: 100;
@@ -145,6 +353,8 @@ textarea {
   color: #b2b2b2;
   margin-top: .9em;
 }
+
+/*h2*/
 
 .title {
   font-weight: 400;
@@ -247,11 +457,11 @@ p {
 }
 
 .start {
-  font-family: "Roboto Condensed",sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-weight: 300;
   font-size: 30px;
   font-size: 1.875rem;
-  text-shadow: 0px 2px 2px rgba(255,255,255,0.4);
+  text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.4);
   color: white;
   text-align: center;
   margin: 0;
@@ -353,7 +563,7 @@ p {
 @font-face {
   font-family: 'FontAwesome';
   src: url("../fonts/fontawesome-webfont.eot?v=4.1.0");
-  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.1.0") format("embedded-opentype"),url("../fonts/fontawesome-webfont.woff?v=4.1.0") format("woff"),url("../fonts/fontawesome-webfont.ttf?v=4.1.0") format("truetype"),url("../fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular") format("svg");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.1.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff?v=4.1.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.1.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -444,6 +654,14 @@ p {
   content: "\f1cb";
 }
 
+/*------------------------------------*\
+    $GLOBAL STYLES
+\*------------------------------------*/
+
+/* apply a natural box layout model to all elements
+* http:/paulirish.com/2012/box-sizing-border-box-ftw/
+*/
+
 *,
 *:before,
 *:after {
@@ -455,17 +673,17 @@ p {
 ::-moz-selection {
   background: #f08b65;
   color: white;
-  text-shadow: 0px 2px 2px rgba(0,0,0,0.5);
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 ::selection {
   background: #f08b65;
   color: white;
-  text-shadow: 0px 2px 2px rgba(0,0,0,0.5);
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 body {
-  font-family: "Roboto",sans-serif;
+  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -478,7 +696,9 @@ a {
 a.alternate {
   color: inherit;
 }
-
+a.dark-blue {
+  color: #012030;
+}
 a.light-link {
   color: #9bcde6;
 }
@@ -492,13 +712,17 @@ img {
   max-width: 100%;
 }
 
+progress {
+  margin-left: 1em;
+}
+
 form {
   max-width: 59em;
   margin: 0 auto;
 }
 
-fieldset>input,
-fieldset>textarea {
+fieldset > input,
+fieldset > textarea {
   border-radius: 5px;
   padding: 0 1em;
   margin-bottom: 1em;
@@ -511,7 +735,15 @@ label {
   display: none;
 }
 
+/* from CSS-Tricks
+ * http://css-tricks.com/snippets/css/style-placeholder-text/
+*/
+::-webkit-input-placeholder {
+  color: white;
+}
+
 ::-moz-placeholder {
+  /* Firefox 19+ */
   color: white;
 }
 
@@ -549,7 +781,7 @@ input[type='submit'] {
 }
 
 input[type='submit']:disabled {
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 textarea {
@@ -557,6 +789,17 @@ textarea {
   height: 200px;
   resize: vertical;
 }
+
+.invalid input:required:invalid, .invalid textarea:required:invalid {
+  background: #ed1b24;
+  border-color: 1px solid #be4c54;
+}
+
+.invalid input:required:valid, .invalid textarea:required:valid {
+  background: #ad715b;
+}
+
+/* globaly style for font awesome icons */
 
 i.icon-wrapper {
   position: absolute;
@@ -577,6 +820,10 @@ figcaption {
   text-align: center;
 }
 
+/*------------------------------------*\
+    $CLASSES
+\*------------------------------------*/
+
 .center {
   text-align: center;
 }
@@ -591,8 +838,16 @@ figcaption {
   font-weight: 500;
 }
 
+.dark-blue {
+  color: #012030;
+}
+
 .orange {
   color: #f08b65;
+}
+
+.dark-orange {
+  color: #924224;
 }
 
 .link-color {
@@ -624,6 +879,8 @@ figcaption {
   float: right;
 }
 
+/*span*/
+
 .required {
   color: #ed1b24;
 }
@@ -649,6 +906,10 @@ figcaption {
   margin: 0 auto;
 }
 
+/*------------------------------------*\
+    $GRIDS
+\*------------------------------------*/
+
 .grid {
   padding-bottom: 3em;
   position: relative;
@@ -659,6 +920,24 @@ figcaption {
   content: "";
   display: table;
 }
+
+/**
+* Article Columns
+* Example:
+
+	<div class="grid">
+		<div class="column-article">
+
+			<h3>Blog Post: The Long Title</h3>
+			<div class="date-container">
+				<p class="date">December 10, 2013</p>
+			</div>
+			<p>Bacon ipsum dolor sit amet biltong prosciutto tongue corned beef strip steak brisket pork belly landjaeger drumstick sausage pastrami. Tail landjaeger sausage frankfurter leberkas, kielbasa ball tip bacon. Tri-tip kielbasa jerky tongue, bresaola meatball short loin beef ground round pork loin meatloaf sausage. Andouille turkey jerky biltong, bacon tri-tip beef shankle sirloin fatback brisket strip steak leberkas pastrami.</p>
+
+			<p class="more"><a href="#">Keep Reading <i class="fa fa-long-arrow-right"></i></a></p>
+		</div>
+	</div>
+*/
 
 .column-article {
   float: left;
@@ -704,6 +983,24 @@ figcaption {
   }
 }
 
+/**
+* About Columns
+* Example:
+	<div class="grid">
+		<div class="column-about">
+			<p class="about-copy">I'm a front-end developer who loves the web. I'm passionate about semantic and standards based development. Efficient code, creative user experiences, robust typography, CSS3, and the semantic web are just a few of my interests. I'm excited about the future of the web and strive to make it a better experience every day.</p>
+
+			<p class="about-copy">Like many, I got started with web development in the world of Geocities and Angelfire. My latest work has expanded into the modern web landscape of robustly featured internet applications.</p>
+		</div>
+
+		<div class="column-about">
+			<p class="about-copy">In addition to my passion for the web, I also enjoy reading fiction, training for adventure runs, listening to music, playing soccer, and doing my best to keep the 80’s alive through my son and daughter by forcing pop culture references of the era upon them.</p>
+
+			<p class="about-copy">I currently work at COUNTRY Financial where I develop dynamic applications for the web using PHP, MySQL, JavaScript, CSS3, and HTML5.</p>
+		</div>
+	</div>
+*/
+
 @media only screen and (min-width: 40em) {
   .column-about {
     float: left;
@@ -720,6 +1017,10 @@ figcaption {
   }
 }
 
+/* skillset section columns */
+
+/*div*/
+
 .pill {
   background-color: #034060;
   border-radius: 5px;
@@ -728,6 +1029,7 @@ figcaption {
   padding: 10px 20px 10px 10px;
   display: inline-block;
   width: 100%;
+  /* handle pills based on breakpoints */
 }
 
 .pill:first-child {
@@ -778,6 +1080,22 @@ figcaption {
   }
 }
 
+/** Hobby Columns
+ * Example:
+	<div class="grid">
+
+		<div class="column-article">
+			<div class="hobby-icon">
+				<img src="hobby-icon" />
+			</div>
+			<div class="hobby-content">
+				<h4>Music</h4>
+				<p>Enjoy listening and playing music.<br /> I play guitar and bass, as well as the saxophone.</p>
+			</div>
+		</div>
+	</div>
+*/
+
 .column-hobby {
   margin-bottom: 3em;
 }
@@ -814,6 +1132,24 @@ figcaption {
     margin-bottom: 0;
   }
 }
+
+/**
+ * Recent Work Columns
+ * Example:
+	<div class="grid">
+
+		<div class="project">
+  		<h3>Business Retirement Solutions</h3>
+  		<p>url: <a href="//countryretirementplans.com" target="_blank">countryretirementplans.com</a></p>
+			<p>type: website, responsive</p>
+			<p>technologies: html, css, sass, php, javascript, wordpress, modernizr, jquery, polyfills</p>
+
+			<p>description: Lead developer on COUNTRY's first responsive web design project. I worked with designers and usability folks to develop a responsive website tailored to educating potential clients on the retirement services that COUNTRY Financial has to offer. This website was built with WordPress and responsive design methodologies.</p>
+
+			<p>see link for a detailed use case of the project</p>
+		</div>
+	</div>
+*/
 
 .project {
   padding-bottom: 3.75em;
@@ -852,6 +1188,21 @@ figcaption {
     margin-right: 0;
   }
 }
+
+/**
+ * Testimonial Columns
+ * Example:
+	<div class="grid">
+
+		<div class="quote">
+			<div class="left-quote"><img src="images/quote.png" align="left" width="22" height="22" /></div>
+			<div class="endorsement">
+				<p>Ryan is fantastic web developer. I have enjoyed working with him. He always meets impossible deadlines. He is my go to guy for mobile development questions. Glad to have him as a colleague.</p>
+				<p class="reference">Matt Christensen <span class="orange">| Web/Facebook Developer</span></p>
+			</div>
+		</div>
+	</div>
+*/
 
 .quote {
   position: relative;
@@ -894,12 +1245,31 @@ figcaption {
   }
 }
 
+/*------------------------------------*\
+    $LAYOUT
+\*------------------------------------*/
+
+/* used for each section of portfolio, 
+ * used as semantic separation of content
+ */
+
 .section {
   padding: 4.375em 0;
   margin: 0 auto;
   width: 100%;
   position: relative;
 }
+
+/* used for a section's title bottom border
+ * accompanied by a font awesome icon 
+ * Example:
+ <h2 class="section-title">
+		Articles
+		<div class="section-border">
+			<i class="icon-wrapper  fa  fa-pencil"></i>
+		</div>
+	</h2>
+ */
 
 .section-border {
   border-bottom: 1px solid #b2b2b2;
@@ -921,6 +1291,10 @@ figcaption {
   }
 }
 
+/* general container for each section which allows for 
+ * centering of content in browser 
+ */
+
 .container {
   max-width: 75em;
   margin: 0 auto;
@@ -934,13 +1308,21 @@ figcaption {
   }
 }
 
+/* intro seciton styles */
+
 .intro {
   background: #000000;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #000), color-stop(100%, #034060));
-  background: -webkit-linear-gradient(top, #000 0%, #034060 100%);
-  background: -webkit-gradient(linear, left top, left bottom, from(#000), to(#034060));
-  background: linear-gradient(to bottom, #000 0%, #034060 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, black), color-stop(100%, #034060));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, black 0%, #034060 100%);
+  /* IE10+ */
+  background: -webkit-gradient(linear, left top, left bottom, from(black), to(#034060));
+  /* IE10+ */
+  background: linear-gradient(to bottom, black 0%, #034060 100%);
+  /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#034060',GradientType=0 );
+  /* IE6-9 */
   padding: 1em;
   margin: 0;
 }
@@ -955,6 +1337,7 @@ figcaption {
 .logo-holder {
   position: relative;
   z-index: 2;
+  /*padding: 1em 1em;*/
   text-align: center;
   width: 100%;
   min-height: 260px;
@@ -974,6 +1357,7 @@ figcaption {
 .ship-and-lasers {
   background: url("../images/ship_with_lasers.png") no-repeat bottom center transparent;
   min-height: 160px;
+  /*height: 30px;*/
 }
 
 .start {
@@ -984,6 +1368,10 @@ figcaption {
   display: block;
   cursor: pointer;
 }
+
+/* */
+
+/* article section styles */
 
 .articles {
   background-color: white;
@@ -1042,6 +1430,29 @@ figcaption {
   z-index: 2;
 }
 
+/* */
+
+/* skillset section styles */
+
+/**
+ * Skillset Pills
+ * - each skill is wrapped in a 'pill' div
+ * - inside each pill div is a skill wrapper to hold the font aweseom icon
+ *   and the specific skill copy
+ *
+ * Example: 
+
+	<div class="pill">
+		<div class="skill-wrapper">
+		<div class="check-holder">
+			<i class="check  orange  fa  fa-check"></i>
+		</div>
+		<p>html</p>
+		</div>
+	</div>
+
+ */
+
 .skill-wrapper {
   display: table-cell;
   vertical-align: middle;
@@ -1080,6 +1491,10 @@ figcaption {
 .check {
   color: #f08b65;
 }
+
+/* */
+
+/* hobby styles */
 
 .hobbies {
   background: url("../images/hobbies-background.png") repeat-x top #f08b65;
@@ -1151,9 +1566,17 @@ figcaption {
   background: transparent;
 }
 
+.music-note {
+  background: url("../images/music-note.svg") no-repeat transparent;
+}
+
+/* */
+
 .screenshot {
   text-align: center;
 }
+
+/* contact section styles */
 
 .contact {
   background: #924224;
@@ -1208,6 +1631,29 @@ figcaption {
   }
 }
 
+.form-messaging {
+  display: none;
+  background-color: #aaaa55;
+  color: white;
+  padding: .8em;
+  margin-top: .8em;
+}
+@media only screen and (min-width: 33.125em) {
+  .form-messaging {
+    margin-top: 2px;
+    float: right;
+    width: 68%;
+  }
+}
+
+.error-message {
+  background-color: #ed1b24;
+}
+
+/* */
+
+/* testimonial seciton styles */
+
 .testimonials {
   background-color: #000;
   color: white;
@@ -1252,7 +1698,7 @@ figcaption {
 }
 
 .testimonials-top {
-  background: url("../images/bottom_red_to_black.png") repeat-x #000 top;
+  background: url("../images/bottom_red_to_black.png") repeat-x black top;
   height: 100px;
 }
 
@@ -1295,6 +1741,12 @@ figcaption {
   }
 }
 
+/* */
+
+/*------------------------------------*\
+    $STRUCTURE
+\*------------------------------------*/
+
 .header {
   display: block;
   margin-left: -9999px;
@@ -1305,8 +1757,8 @@ figcaption {
   width: 100%;
   z-index: 100;
   background-color: #1c1c1c;
-  -webkit-box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   -webkit-transition: opacity 0.3s ease-in;
   transition: opacity 0.3s ease-in;
 }
@@ -1327,8 +1779,12 @@ figcaption {
   text-decoration: none;
 }
 
-.logo-header,
-.logo-header-right {
+.show-header {
+  margin-left: 0;
+  opacity: 1;
+}
+
+.logo-header, .logo-header-right {
   float: left;
   padding: 0;
   margin: 0;
@@ -1338,8 +1794,7 @@ figcaption {
   margin-left: 1em;
   margin-top: 1em;
 }
-
-.logo-header a {
+.logo-header a, .logo-header-right a {
   display: block;
 }
 
@@ -1355,6 +1810,10 @@ figcaption {
     margin-left: 0;
   }
 }
+
+/*------------------------------------*\
+    $RESPONSIVE NAV
+\*------------------------------------*/
 
 /*! responsive-nav.js 1.0.25 by @viljamis */
 
@@ -1373,7 +1832,47 @@ figcaption {
   display: block;
 }
 
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.nav-collapse.opened {
+  max-height: 9999px;
+}
+
+.nav-collapse.disable-pointer-events {
+  pointer-events: none !important;
+}
+
+.nav-toggle {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  float: right;
+}
+
 @media screen and (min-width: 40em) {
+  .js .nav-collapse {
+    position: relative;
+  }
+
+  .js .nav-collapse.closed {
+    max-height: none;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
   .nav-collapse li {
     width: auto;
   }
@@ -1405,70 +1904,74 @@ figcaption {
   }
 }
 
-.nav>li {
+.nav > li > .nav-active {
+  background-color: #924224 !important;
+}
+
+.nav > li {
   font-size: 1em;
   line-height: 50px;
   text-transform: lowercase;
 }
 
-.nav>li a:hover,
-.nav>li:focus,
-.nav>li:link {
+.nav > li a:hover,
+.nav > li:focus,
+.nav > li:link {
   color: inherit;
   background-color: #924224 !important;
   -webkit-transition: all 0.4s linear;
   transition: all 0.4s linear;
 }
 
-.nav>li:nth-child(1) {
-  background: rgba(146,66,36,0.1);
+.nav > li:nth-child(1) {
+  background: rgba(146, 66, 36, 0.1);
 }
 
-.nav>li:nth-child(2) {
-  background: rgba(146,66,36,0.2);
+.nav > li:nth-child(2) {
+  background: rgba(146, 66, 36, 0.2);
 }
 
-.nav>li:nth-child(3) {
-  background: rgba(146,66,36,0.3);
+.nav > li:nth-child(3) {
+  background: rgba(146, 66, 36, 0.3);
 }
 
-.nav>li:nth-child(4) {
-  background: rgba(146,66,36,0.4);
+.nav > li:nth-child(4) {
+  background: rgba(146, 66, 36, 0.4);
 }
 
-.nav>li:nth-child(5) {
-  background: rgba(146,66,36,0.5);
+.nav > li:nth-child(5) {
+  background: rgba(146, 66, 36, 0.5);
 }
 
 @media only screen and (min-width: 40em) {
-  .nav>li {
+  .nav > li {
     margin-right: .2em;
     font-size: 0.875em;
     font-weight: inherit;
     line-height: inherit;
   }
 
-  .nav>li:nth-child(5) {
+  .nav > li:nth-child(5) {
     margin-right: 0;
   }
 }
 
 @media only screen and (min-width: 48em) {
-  .nav>li {
+  .nav > li {
     font-size: 1em;
   }
 }
 
-.nav>li,
-.nav>li>a {
+.nav > li,
+.nav > li > a {
   display: block;
   zoom: 1;
   color: white;
 }
 
 @media only screen and (min-width: 40em) {
-  .nav>li,
-  .nav>li>a {
+  .nav > li,
+  .nav > li > a {
     padding: 0;
     background: none !important;
     display: inline-block;
@@ -1477,13 +1980,44 @@ figcaption {
   }
 }
 
-.nav>li>a {
+.nav > li > a {
   padding: 0 1em;
 }
 
 @media only screen and (min-width: 40em) {
-  .nav>li>a {
+  .nav > li > a {
     padding: 0 .5em;
+  }
+}
+
+.nav-toggle {
+  display: block;
+  float: left;
+  width: 100%;
+  text-align: center;
+  margin-top: .2em;
+  line-height: 50px;
+  text-transform: lowercase;
+  z-index: 100;
+  padding: 0 1em;
+  color: white;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+.nav-toggle:hover, .nav-toggle:focus, .nav-toggle:link {
+  background: #924224;
+}
+@media only screen and (min-width: 20em) {
+  .nav-toggle {
+    float: right;
+    text-align: left;
+    width: auto;
+    margin-top: 0;
+  }
+}
+@media only screen and (min-width: 40em) {
+  .nav-toggle {
+    display: none;
   }
 }
 

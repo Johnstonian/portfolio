@@ -60,6 +60,14 @@ module.exports = function(grunt) {
       }
     },
 
+    // minify css
+    cssmin: {
+      css:{
+        src: 'css/style-uncss.css',
+        dest: 'css/style-uncss.min.css'
+      }
+    },
+
     watch: {
       options: {
         livereload: true,
