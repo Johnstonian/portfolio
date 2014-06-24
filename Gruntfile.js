@@ -51,6 +51,15 @@ module.exports = function(grunt) {
       }
     },
 
+    // Remove unused CSS across multiple files
+    uncss: {
+      dist: {
+        files: {
+          'css/style.css': ['index.html', 'project-brs.html']
+        }
+      }
+    },
+
     watch: {
       options: {
         livereload: true,
