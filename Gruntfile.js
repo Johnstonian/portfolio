@@ -35,7 +35,7 @@ module.exports = function(grunt) {
     sass: {
       dist: {
         options: {
-          style: 'compressed'
+          style: 'expanded'
         },
         files: {
           'css/style.css': 'css/dev/style.scss'
@@ -55,7 +55,7 @@ module.exports = function(grunt) {
     uncss: {
       dist: {
         files: {
-          'css/style.css': ['index.html', 'project-brs.html']
+          'css/style-uncss.css': ['index.html', 'project-brs.html']
         }
       }
     },
