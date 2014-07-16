@@ -1,4 +1,7 @@
-<?php header('X-UA-Compatible: IE=edge,chrome=1'); ?>
+<?php 
+	header('X-UA-Compatible: IE=edge,chrome=1');
+	header('Cache-Control: max-age=432000');
+?>
 <!doctype html>
 <html>
 <head>
@@ -83,6 +86,17 @@
 		<div class="grid">
 			<div class="column-article" role="article">
 
+				<h3><a href="//johnstonianera.com/removing-unnecessary-css-with-grunt-and-uncss/">Removing Unnecessary CSS with Grunt and UnCSS</a></h3>
+				<div class="date-container">
+					<p class="date">July 15, 2014</p>
+				</div>
+				<p>While working on my <a title="Ryan Johnston - Web Developer" href="http://johnstonianera.com/portfolio" target="_blank">portfolio</a> I made myself a mental note to go back through the CSS and remove un-used CSS blocks. Since I was using <a title="Font Awesome" href="http://fontawesome.io" target="_blank">Font Awesome</a> (which is a really great icon font project), I knew I needed to manually remove a ton of styles that weren&#8217;t being used in the design. Things like the <a title="Font Awesome Examples" href="http://fontawesome.io/whats-new/examples/#spinning" target="_blank">CSS animation section</a> and all the icons I was not using from the library. As the project kept growing, I started to dread the day I would need to sift through the code and manually delete styles. It was turning into a daunting task.</p>
+
+				<p class="more"><a href="//johnstonianera.com/removing-unnecessary-css-with-grunt-and-uncss/">Keep Reading <i class="fa fa-long-arrow-right"></i></a></p>
+			</div>
+
+			<div class="column-article" role="article">
+
 				<h3><a href="//johnstonianera.com/responsive-two-column-layout/">Building a Responsive Two Column Layout</a></h3>
 				<div class="date-container">
 					<p class="date">December 5, 2013</p>
@@ -113,17 +127,6 @@
 				<p>Declaring CSS Media Query rules has become standard practice during my recent responsive design projects. But declaring those rules has stunted my coding flow because I can never remember the correct syntax for a media query.</p>
 
 				<p class="more"><a href="//johnstonianera.com/media-query-snippet-for-sublime-text/">Keep Reading <i class="fa  fa-long-arrow-right"></i></a></p>
-			</div>
-
-			<div class="column-article" role="article">
-
-				<h3><a href="//johnstonianera.com/prepros/">Prepros: Preprocessing Made Easy</a></h3>
-				<div class="date-container">
-					<p class="date">August 14, 2013</p>
-				</div>
-				<p>Prepros makes it super simple to setup your project with the preprocessing juice it needs. It can do all the heavy lifting for you to preprocess javascript, css, and even images. It compiles LESS, Sass, Stylus, Jade, Slim, Coffeescript, LiveScript, Haml and Markdown. It also handles JS Concatenation. And it does this on the fly while developing in real time.</p>
-
-				<p class="more"><a href="//johnstonianera.com/prepros/">Keep Reading <i class="fa  fa-long-arrow-right"></i></a></p>
 			</div>
 
 		</div>
