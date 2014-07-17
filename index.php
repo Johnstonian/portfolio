@@ -1,6 +1,5 @@
 <?php 
 	header('X-UA-Compatible: IE=edge,chrome=1');
-	header('Cache-Control: max-age=432000');
 ?>
 <!doctype html>
 <html>
