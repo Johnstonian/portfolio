@@ -1,0 +1,412 @@
+header,
+nav,
+section{
+  display: block;
+}
+
+
+
+html {
+  font-family: sans-serif;
+  
+  -ms-text-size-adjust: 100%;
+  
+  -webkit-text-size-adjust: 100%;
+  
+}
+
+
+body {
+  margin: 0;
+}
+
+
+
+a {
+  background: transparent;
+}
+
+
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+
+
+img {
+  border: 0;
+}
+
+p {
+  font-weight: 300;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 24px;
+}
+@media screen and (min-width: 48em) {
+  p {
+    font-size: 18px;
+    font-size: 1.125rem;
+  }
+}
+
+.start {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 300;
+  font-size: 30px;
+  font-size: 1.875rem;
+  text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.4);
+  color: white;
+  text-align: center;
+  margin: 0;
+}
+
+
+
+
+
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+::-moz-selection {
+  background: #f08b65;
+  color: white;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+::selection {
+  background: #f08b65;
+  color: white;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #5b9bbc;
+  text-decoration: none;
+}
+a.alternate {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+label {
+  display: none;
+}
+
+
+::-webkit-input-placeholder {
+  color: white;
+}
+
+::-moz-placeholder {
+  
+  color: white;
+}
+
+:-ms-input-placeholder {
+  color: white;
+}
+
+#errorContainer {
+  display: none;
+} .section {
+  clear: both;
+}
+
+.hidden {
+  display: none;
+}
+
+
+.required {
+  color: #ed1b24;
+}
+
+
+
+.section {
+  padding: 4.375em 0;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+}
+
+
+.intro {
+  background: #000000;
+  
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, black), color-stop(100%, #034060));
+  
+  background: -webkit-linear-gradient(top, black 0%, #034060 100%);
+  
+  background: -webkit-gradient(linear, left top, left bottom, from(black), to(#034060));
+  
+  background: linear-gradient(to bottom, black 0%, #034060 100%);
+  
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#034060',GradientType=0 );
+  
+  padding: 1em;
+  margin: 0;
+}
+
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.logo-holder {
+  position: relative;
+  z-index: 2;
+  
+  text-align: center;
+  width: 100%;
+  min-height: 260px;
+}
+@media only screen and (min-width: 33.125em) {
+  .logo-holder {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.logo {
+  padding-bottom: 22px;
+}
+
+.ship-and-lasers {
+  background: url("../images/ship_with_lasers.png") no-repeat bottom center transparent;
+  min-height: 160px;
+  
+}
+
+.start {
+  padding-top: 35px;
+}
+
+.startBtn {
+  display: block;
+  cursor: pointer;
+}
+
+
+
+.header {
+  display: block;
+  margin-left: -9999px;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  min-height: 50px;
+  width: 100%;
+  z-index: 100;
+  background-color: #1c1c1c;
+  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  -webkit-transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
+}
+@media only screen and (min-width: 40em) {
+  .header {
+    height: 50px;
+  }
+}
+.header a {
+  color: white;
+} .header a:link {
+  text-decoration: none;
+}
+
+.logo-header{
+  float: left;
+  padding: 0;
+  margin: 0;
+  font-weight: 300;
+  color: white;
+  max-width: 200px;
+  margin-left: 1em;
+  margin-top: 1em;
+}
+.logo-header a{
+  display: block;
+}
+
+
+
+.nav-collapse ul{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+  list-style: none;
+}
+
+.nav-collapse li{
+  width: 100%;
+  display: block;
+}
+
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.nav-toggle {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  float: right;
+}
+
+@media screen and (min-width: 40em) {
+  .js .nav-collapse {
+    position: relative;
+  }
+
+  .js .nav-collapse.closed {
+    max-height: none;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-collapse li {
+    width: auto;
+  }
+}
+.main-nav {
+  display: inline-block;
+  display: none;
+  width: 100%;
+}
+@media only screen and (min-width: 40em) {
+  .main-nav {
+    float: right;
+    width: auto;
+    margin-right: 1em;
+  }
+}
+
+.nav > li {
+  font-size: 1em;
+  line-height: 50px;
+  text-transform: lowercase;
+}
+.nav > li:nth-child(1) {
+  background: rgba(146, 66, 36, 0.1);
+}
+.nav > li:nth-child(2) {
+  background: rgba(146, 66, 36, 0.2);
+}
+.nav > li:nth-child(3) {
+  background: rgba(146, 66, 36, 0.3);
+}
+.nav > li:nth-child(4) {
+  background: rgba(146, 66, 36, 0.4);
+}
+.nav > li:nth-child(5) {
+  background: rgba(146, 66, 36, 0.5);
+}
+@media only screen and (min-width: 40em) {
+  .nav > li {
+    margin-right: .2em;
+    font-size: 0.875em;
+    font-weight: inherit;
+    line-height: inherit;
+  }
+  .nav > li:nth-child(5) {
+    margin-right: 0;
+  }
+}
+@media only screen and (min-width: 48em) {
+  .nav > li {
+    font-size: 1em;
+  }
+}
+
+.nav > li,
+.nav > li > a {
+  display: block;
+  zoom: 1;
+  color: white;
+}
+@media only screen and (min-width: 40em) {
+  .nav > li,
+  .nav > li > a {
+    padding: 0;
+    background: none !important;
+    display: inline-block;
+    *display: inline;
+    line-height: 50px;
+  }
+}
+
+.nav > li > a {
+  padding: 0 1em;
+}
+@media only screen and (min-width: 40em) {
+  .nav > li > a {
+    padding: 0 .5em;
+  }
+}
+
+.nav-toggle {
+  display: block;
+  float: left;
+  width: 100%;
+  text-align: center;
+  margin-top: .2em;
+  line-height: 50px;
+  text-transform: lowercase;
+  z-index: 100;
+  padding: 0 1em;
+  color: white;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+} .nav-toggle:link {
+  background: #924224;
+}
+@media only screen and (min-width: 20em) {
+  .nav-toggle {
+    float: right;
+    text-align: left;
+    width: auto;
+    margin-top: 0;
+  }
+}
+@media only screen and (min-width: 40em) {
+  .nav-toggle {
+    display: none;
+  }
+}

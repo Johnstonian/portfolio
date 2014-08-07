@@ -1,0 +1,26 @@
+@import 'variables';
+@import 'mixins';
+
+header,
+nav,
+section{
+  display: block;
+}
+
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  background: transparent;
+}
+
+img {
+  border: 0;
+}

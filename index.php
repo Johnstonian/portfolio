@@ -20,10 +20,11 @@
 
   <link type="text/plain" rel="author" href="humans.txt" />
 
+  <link rel="stylesheet" type="text/css" href="css/style.min.css">
+
   <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300' rel='stylesheet' type='text/css'>
 
-  <link rel="stylesheet" type="text/css" href="css/style.min.css">
 
   <!--[if lt IE 9]>
   	<link rel="stylesheet" type="text/css" href="css/ie-styles.css">

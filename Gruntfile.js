@@ -38,7 +38,8 @@ module.exports = function(grunt) {
           style: 'expanded'
         },
         files: {
-          'css/style.css': 'css/dev/style.scss'
+          'css/style.css': 'css/dev/style.scss',
+          'css/critical.css' : 'css/dev/critical.scss'
         }
       } 
     },
@@ -46,7 +47,8 @@ module.exports = function(grunt) {
     autoprefixer: {
       dist: {
         files: {
-          'css/style.css': 'css/style.css'
+          'css/style.css' : 'css/style.css',
+          'css/critical.css' : 'css/critical.css'
         }
       }
     },
@@ -58,6 +60,16 @@ module.exports = function(grunt) {
           'css/style-uncss.css': ['index.html', 'project-brs.html']
         }
       }
+    },
+
+    penthouse : {
+      extract : {
+        outfile : 'tmp/out.css',
+        css : './css/style.css', 
+        url : 'http://localhost:8000',
+        width: 639,
+        height: 1136
+      },
     },
 
     // minify css
