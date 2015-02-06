@@ -83,6 +83,19 @@
 			</div>
 
 		<div class="grid">
+
+			<div class="column-article" role="article">
+
+				<h3><a href="//johnstonianera.com/install-composer-with-puppet-and-vagrant/">Install Composer with Puppet and Vagrant</a></h3>
+				<div class="date-container">
+					<p class="date">February 6, 2015</p>
+				</div>
+				<p>I started a personal project to update my WordPress theme so that it would match the design on my portfolio site. In the process; I decided it would be a good time to use <a href="//vagrantup.com" target="vagrant">Vagrant</a>, and in particular, a project called <a href="//github.com/chad-thompson/vagrantpress" target="vagrantpress">VagrantPress</a> to quickly setup a WordPress development environment. The advantage I wanted to capitalize on was the convenience of throwing away the environment once the project was finished. I didn’t want to leave any remnants of PHP or custom path variables on my laptop after the project was done. It would also be easy to develop on multiple machines since the vagrant instance would be the same across all devices.</p>
+
+				<p class="more"><a href="//johnstonianera.com/install-composer-with-puppet-and-vagrant/">Keep Reading <i class="fa fa-long-arrow-right"></i></a></p>
+			</div>
+
+
 			<div class="column-article" role="article">
 
 				<h3><a href="//johnstonianera.com/building-responsive-layouts-redux/">Building Responsive Layouts: Redux</a></h3>
@@ -115,18 +128,6 @@
 				<p>This tutorial will explain how to create a two column layout with one fixed column and one fluid column. The example is basic, but it can be expanded to have multiple columns, even fluid nested columns. We will start with a mobile first view that consists of the columns stacked on top of each other. We will later add media queries to make the columns sit side by side as screen size allows.</p>
 
 				<p class="more"><a href="//johnstonianera.com/responsive-two-column-layout/">Keep Reading <i class="fa fa-long-arrow-right"></i></a></p>
-			</div>
-
-			<div class="column-article" role="article">
-
-				<h3><a href="//johnstonianera.com/media-query-management/">Media Query Management</a></h3>
-				<div class="date-container">
-					<p class="date">November 27, 2013</p>
-				</div>
-				
-				<p>Responsive web design is arguably the de facto standard in web design today. One of the major principles of RWD is implementing media queries into designs to make them more flexible and more adaptive to the media that renders them. There are many wonderful examples on the web that showcase the power of media queries and how they can facilitate more adaptive designs. The examples are often only a few lines of code. This is great for learning, but those examples do not scale well in a real world project. It’s not always obvious how to organize and maintain your style sheet that includes lots of media quries. Especially if you are relatively new to the field.</p>
-
-				<p class="more"><a href="//johnstonianera.com/media-query-management/">Keep Reading <i class="fa  fa-long-arrow-right"></i></a></p>
 			</div>
 
 		</div>
