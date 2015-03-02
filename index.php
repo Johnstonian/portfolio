@@ -566,7 +566,7 @@
 
 	<footer class="footer" role="contentinfo">
 		<div class="copyright">
-			<p class="footer-copy">&copy; 2014 Ryan Johnston. <a href="humans.txt">humans.txt</a></p>
+			<p class="footer-copy">&copy; <?php echo date("Y"); ?> Ryan Johnston. <a href="humans.txt">humans.txt</a></p>
 		</div>
 		
 		<div class="social-links">
