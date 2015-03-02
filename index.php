@@ -394,9 +394,13 @@
 
 				<div class="project" id="brs-project">
 					
-					<div class="screenshot"><img src="images/screenshots/brs/brs-small.jpg" alt="Business Retirement Solutions Website Screenshot" /></div>
+					<div class="screenshot">
+						<a href="project-brs.html">
+							<img src="images/screenshots/brs/brs-small.jpg" alt="Business Retirement Solutions Website Screenshot" />
+						</a>
+					</div>
 
-					<h3>Business Retirement Solutions</h3>
+					<h3><a href="project-brs.html">Business Retirement Solutions</a></h3>
 		  		
 		  		<p class="url">url: <a href="//countryretirementplans.com" target="_blank"><strong>countryretirementplans.com</strong></a></p>
 					<p><strong>type:</strong> website, responsive</p>
@@ -449,8 +453,13 @@
 
 				<div class="project">
 
-					<div class="screenshot"><img src="images/screenshots/spintowin/spintowin-small.jpg" alt="Spin to Win Screenshot" /></div>
-					<h3>Spin to Win</h3>
+					<div class="screenshot">
+						<a href="//johnstonianera.com/projects/spin-to-win/">
+							<img src="images/screenshots/spintowin/spintowin-small.jpg" alt="Spin to Win Screenshot" />
+						</a>
+					</div>
+
+					<h3><a href="//johnstonianera.com/projects/spin-to-win/">Spin to Win</a></h3>
 					
 					<p class="url">url: <a href="http://johnstonianera.com/projects/spin-to-win">spin-to-win</a></p>
 					<p><strong>type:</strong> interactive prize game</p>
