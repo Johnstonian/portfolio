@@ -392,15 +392,34 @@
 
 			<div class="grid">
 
+				<div class="project" id="cf-redesign-project">
+				
+					<div class="screenshot">
+						<a href="project-cf-redesign.php">
+							<img src="images/screenshots/cf-redesign/cf-redesign-small.jpg" alt="COUNTRY Financial Redesign Screenshot" />
+						</a>
+					</div>
+
+					<h3><a href="project-cf-redesign.php">COUNTRY Financial Redesign</a></h3>
+		  		
+		  		<p class="url">url: <a href="//countryfinancial.com" target="_blank"><strong>countryfinancial.com</strong></a></p>
+					<p><strong>type:</strong> website, responsive, styleguide</p>
+					<p class="technologies"><strong>technologies:</strong> <span class="link-color">html</span>, <span class="link-color">css</span>, <span class="link-color">java</span>, <span class="link-color">sass</span>, <span class="link-color">php</span>, <span class="link-color">javascript</span></p>
+
+					<p><strong>description:</strong> Need custom verbiage about the project here.</p>
+
+					<p class="more"><a href="project-cf-redesign.php">View Project <i class="fa fa-long-arrow-right"></i></a></p>
+				</div>
+
 				<div class="project" id="brs-project">
 					
 					<div class="screenshot">
-						<a href="project-brs.html">
+						<a href="project-brs.php">
 							<img src="images/screenshots/brs/brs-small.jpg" alt="Business Retirement Solutions Website Screenshot" />
 						</a>
 					</div>
 
-					<h3><a href="project-brs.html">Business Retirement Solutions</a></h3>
+					<h3><a href="project-brs.php">Business Retirement Solutions</a></h3>
 		  		
 		  		<p class="url">url: <a href="//countryretirementplans.com" target="_blank"><strong>countryretirementplans.com</strong></a></p>
 					<p><strong>type:</strong> website, responsive</p>
@@ -408,7 +427,7 @@
 
 					<p><strong>description:</strong> Lead developer on COUNTRY's first responsive web design project. I worked with designers and usability folks to develop a responsive website tailored to educating potential clients on the retirement services that COUNTRY Financial has to offer. This website was built with WordPress and responsive design methodologies.</p>
 
-					<p class="more"><a href="project-brs.html">View Project <i class="fa fa-long-arrow-right"></i></a></p>
+					<p class="more"><a href="project-brs.php">View Project <i class="fa fa-long-arrow-right"></i></a></p>
 				</div>
 
 				<div class="project">

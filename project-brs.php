@@ -1,8 +1,10 @@
+<?php 
+	header('X-UA-Compatible: IE=edge,chrome=1');
+?>
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
   <title>Ryan Johnston - Web Developer</title>
 
@@ -111,7 +113,7 @@
 
 	<footer class="footer">
 		<div class="copyright">
-			<p class="footer-copy">&copy; 2014 Ryan Johnston. <a href="humans.txt">humans.txt</a></p>
+			<p class="footer-copy">&copy; <?php echo date("Y"); ?> Ryan Johnston. <a href="humans.txt">humans.txt</a></p>
 		</div>
 		
 		<div class="social-links">

@@ -106,6 +106,15 @@ module.exports = function(grunt) {
       }
     },
 
+    php: {
+      test: {
+        options: {
+          keepalive: true,
+          open: true
+        }
+      }
+    },
+
   });
 
   // 3. Where we tell Grunt which plugins we want to use
