@@ -439,12 +439,11 @@ figcaption {
 	h3 {
 		@media screen and (min-width: $brkpt-large) {
 		    @include font-size(26);
-		    min-height: 82px;
+		    margin-bottom: 1em;
 		}
 
 		@media screen and (min-width: $brkpt-820) {
 		    @include font-size(40);
-		    min-height: 126px;
 		}
 
 		@media screen and (min-width: $brkpt-1205) {
@@ -769,7 +768,7 @@ figcaption {
 
 .hobby-content {
 
-	a { color: inherit; font-weight: bold; text-decoration: underline; }
+	a { color: white; font-weight: normal; text-decoration: underline; }
 
 	@media only screen and (min-width: $brkpt-small) {
 		float: left;

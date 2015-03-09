@@ -1,6 +1,6 @@
 module.exports = function(grunt) {
 
-  // 1. All configuration goes here 
+  // configuration goes here 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
@@ -61,10 +61,17 @@ module.exports = function(grunt) {
     },
 
     // minify css
+    // cssmin: {
+    //   css:{
+    //     src: 'css/style-uncss.css',
+    //     dest: 'css/style-uncss.min.css'
+    //   }
+    // },
+
     cssmin: {
       css:{
-        src: 'css/style-uncss.css',
-        dest: 'css/style-uncss.min.css'
+        src: 'css/style.css',
+        dest: 'css/style.min.css'
       }
     },
 
@@ -82,7 +89,7 @@ module.exports = function(grunt) {
       },
       css: {
         files: ['css/dev/*.scss'],
-        tasks: ['sass', 'autoprefixer'],
+        tasks: ['sass', 'autoprefixer', 'cssmin'],
         options: {
           spawn: false,
 
@@ -107,23 +114,23 @@ module.exports = function(grunt) {
     },
 
     php: {
-      test: {
+      dist: {
         options: {
-          keepalive: true,
-          open: true
+          keepalive: true,  
+          open: true  
         }
-      }
+      },
+      watch: { }
     },
 
   });
 
-  // 3. Where we tell Grunt which plugins we want to use
-  // use matchdep for this
+  // use matchdep to pull in plugins from package.jason
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
-  // 4. Where we tell Grunt what to do when we type "grunt" and "grunt dev" into the terminal.
+  // tell Grunt what to do when we type "grunt" and "grunt dev" into the terminal.
   grunt.registerTask('default', ['concat', 'uglify', 'sass', 'imagemin']);
 
-  grunt.registerTask('dev', ['connect', 'watch']);
+  grunt.registerTask('dev', ['php:watch', 'watch']);
 
 };
