@@ -8,7 +8,7 @@
 
 			<nav class="main-nav-left" role="navigation">
 				<ul class="nav">
-					<li><a href="/#brs-project"><i class="fa fa-long-arrow-left"></i> Back</a></li>
+					<li><a href="index.php#brs-project"><i class="fa fa-long-arrow-left"></i> Back</a></li>
 				</ul>
 				
 			</nav>

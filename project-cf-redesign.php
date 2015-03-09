@@ -8,7 +8,7 @@
 
 			<nav class="main-nav-left" role="navigation">
 				<ul class="nav">
-					<li><a href="/#cf-redesign-project"><i class="fa fa-long-arrow-left"></i> Back</a></li>
+					<li><a href="index.php#cf-redesign-project"><i class="fa fa-long-arrow-left"></i> Back</a></li>
 				</ul>
 				
 			</nav>
