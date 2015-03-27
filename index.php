@@ -72,6 +72,21 @@
 
 				<p class="more"><a href="//johnstonianera.com/building-responsive-layouts-redux/">Keep Reading <i class="fa fa-long-arrow-right"></i></a></p>
 			</div>
+
+			<div class="column-article" role="article">
+
+				<h3><a href="//johnstonianera.com/use-jquery-to-mimic-nth-child-behavior-in-ie8/">Use jQuery to Mimic nth-child Behavior in IE8</a></h3>
+				<div class="date-container">
+					<p class="date">July 23, 2014</p>
+				</div>
+				<p>Nth-child pseudo-selectors are a cool way to supercharge your CSS. They do a great job of styling a group of elements that need slight changes based on their order. A popular example of this is a grid system, or any similar list of items.</p>
+
+				<p>This works great in modern browsers, but if you are developing sites that need to be compatible with IE8 and below, you’ll find that :nth-child <a href="http://caniuse.com/#search=nth-child" target="can-i-use">does not work</a>.</p>
+
+				<p>You can use an alternate method to :nth-child by explicitly chaining elements together with the ‘+’ selector. This will select adjacent siblings. However, this method does not scale well and will likely break if your list is dynamic. Below is an example:</p>
+
+				<p class="more"><a href="//johnstonianera.com/use-jquery-to-mimic-nth-child-behavior-in-ie8/">Keep Reading <i class="fa fa-long-arrow-right"></i></a></p>
+			</div>
 			
 
 			<div class="column-article" role="article">
@@ -83,17 +98,6 @@
 				<p>While working on my <a title="Ryan Johnston - Web Developer" href="http://johnstonianera.com/portfolio" target="_blank">portfolio</a> I made myself a mental note to go back through the CSS and remove un-used CSS blocks. Since I was using <a title="Font Awesome" href="http://fontawesome.io" target="_blank">Font Awesome</a> (which is a really great icon font project), I knew I needed to manually remove a ton of styles that weren&#8217;t being used in the design. Things like the <a title="Font Awesome Examples" href="http://fontawesome.io/whats-new/examples/#spinning" target="_blank">CSS animation section</a> and all the icons I was not using from the library. As the project kept growing, I started to dread the day I would need to sift through the code and manually delete styles. It was turning into a daunting task.</p>
 
 				<p class="more"><a href="//johnstonianera.com/removing-unnecessary-css-with-grunt-and-uncss/">Keep Reading <i class="fa fa-long-arrow-right"></i></a></p>
-			</div>
-
-			<div class="column-article" role="article">
-
-				<h3><a href="//johnstonianera.com/responsive-two-column-layout/">Building a Responsive Two Column Layout</a></h3>
-				<div class="date-container">
-					<p class="date">December 5, 2013</p>
-				</div>
-				<p>This tutorial will explain how to create a two column layout with one fixed column and one fluid column. The example is basic, but it can be expanded to have multiple columns, even fluid nested columns. We will start with a mobile first view that consists of the columns stacked on top of each other. We will later add media queries to make the columns sit side by side as screen size allows.</p>
-
-				<p class="more"><a href="//johnstonianera.com/responsive-two-column-layout/">Keep Reading <i class="fa fa-long-arrow-right"></i></a></p>
 			</div>
 
 		</div>
