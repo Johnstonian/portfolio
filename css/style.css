@@ -182,7 +182,6 @@ dfn {
  */
 hr {
   -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -364,8 +363,6 @@ html input[disabled] {
  */
 input[type="checkbox"],
 input[type="radio"] {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -458,6 +455,9 @@ h3 {
   padding: 0;
   margin: 0;
   -webkit-transition: font-size 0.3s ease-out;
+  -moz-transition: font-size 0.3s ease-out;
+  -ms-transition: font-size 0.3s ease-out;
+  -o-transition: font-size 0.3s ease-out;
   transition: font-size 0.3s ease-out;
 }
 h3 a {
@@ -728,7 +728,19 @@ p {
 
 .fa-spin {
   -webkit-animation: spin 2s infinite linear;
+  -moz-animation: spin 2s infinite linear;
+  -o-animation: spin 2s infinite linear;
   animation: spin 2s infinite linear;
+}
+
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+
+  100% {
+    -moz-transform: rotate(359deg);
+  }
 }
 @-webkit-keyframes spin {
   0% {
@@ -739,51 +751,68 @@ p {
     -webkit-transform: rotate(359deg);
   }
 }
+@-o-keyframes spin {
+  0% {
+    -o-transform: rotate(0deg);
+  }
+
+  100% {
+    -o-transform: rotate(359deg);
+  }
+}
 @keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   100% {
     -webkit-transform: rotate(359deg);
-    -ms-transform: rotate(359deg);
     transform: rotate(359deg);
   }
 }
 .fa-rotate-90 {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
   -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
 .fa-rotate-180 {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
   -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
 .fa-rotate-270 {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
   transform: rotate(270deg);
 }
 
 .fa-flip-horizontal {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1);
   -webkit-transform: scale(-1, 1);
+  -moz-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
   transform: scale(-1, 1);
 }
 
 .fa-flip-vertical {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);
   -webkit-transform: scale(1, -1);
+  -moz-transform: scale(1, -1);
   -ms-transform: scale(1, -1);
+  -o-transform: scale(1, -1);
   transform: scale(1, -1);
 }
 
@@ -2578,8 +2607,6 @@ p {
 * http:/paulirish.com/2012/box-sizing-border-box-ftw/
 */
 html {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -2587,12 +2614,6 @@ html {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-}
-
-::-moz-selection {
-  background: #f08b65;
-  color: white;
-  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 ::selection {
@@ -2654,6 +2675,11 @@ label {
  * http://css-tricks.com/snippets/css/style-placeholder-text/
 */
 ::-webkit-input-placeholder {
+  color: white;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
   color: white;
 }
 
@@ -3181,12 +3207,16 @@ figcaption {
 /* intro seciton styles */
 .intro {
   background: #000000;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, black 0%, #034060 100%);
   /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, black), color-stop(100%, #034060));
   /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(top, black 0%, #034060 100%);
-  /* IE10+ */
-  background: -webkit-gradient(linear, left top, left bottom, from(black), to(#034060));
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, black 0%, #034060 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, black 0%, #034060 100%);
   /* IE10+ */
   background: linear-gradient(to bottom, black 0%, #034060 100%);
   /* W3C */
@@ -3568,7 +3598,6 @@ figcaption {
   display: inline-block;
   color: inherit;
   margin-left: 10px;
-  -webkit-transition: color 0.4s linear;
   transition: color 0.4s linear;
 }
 .social-links a:first-child {
@@ -3598,9 +3627,7 @@ figcaption {
   width: 100%;
   z-index: 100;
   background-color: #1c1c1c;
-  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  -webkit-transition: opacity 0.3s ease-in;
   transition: opacity 0.3s ease-in;
 }
 @media only screen and (min-width: 40em) {
@@ -3755,7 +3782,6 @@ footer {
 .nav > li a:hover, .nav > li:focus, .nav > li:link {
   color: inherit;
   background-color: #924224 !important;
-  -webkit-transition: all 0.4s linear;
   transition: all 0.4s linear;
 }
 .nav > li:nth-child(1) {
@@ -3827,7 +3853,6 @@ footer {
   z-index: 100;
   padding: 0 1em;
   color: white;
-  -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
 .nav-toggle:hover, .nav-toggle:focus, .nav-toggle:link {
