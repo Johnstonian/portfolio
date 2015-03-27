@@ -1,0 +1,103 @@
+/*------------------------------------*\
+    $ABOUT SECTION
+\*------------------------------------*/
+
+.about {
+	background: url("../images/mountains.png") no-repeat center bottom $about-blue;
+	color: white;
+
+	.section-title {
+		color: white;
+	}
+
+	i.icon-wrapper {
+		background-color: $about-blue;
+		color: white;
+	}
+
+	.container {
+		position: relative;
+		z-index: 2;
+		background: url("../images/pilot_landing.png") no-repeat 90% 99.7%;
+		padding-bottom: 15em;
+		margin-bottom: -56px;
+	}
+
+	.section-border{
+		border-color: white;
+	}
+}
+
+	.ground-blue {
+		height: 90px;
+		background-color: #195777;
+		position: absolute;
+		z-index: 1;
+		bottom: 0;
+		width: 100%;
+	}
+
+	.skillset {
+		background: url('../images/skillset-background.png') repeat-x bottom $skillset-blue;
+	}
+
+	.freelance {
+		background-color: $dark-blue;
+		border-radius: 5px;
+		max-width: 600px;
+		margin: 0 auto;
+		padding: 1em;
+		z-index: 2;
+	}
+
+/* skillset section styles */
+/**
+ * Skillset Pills
+ * - each skill is wrapped in a 'pill' div
+ * - inside each pill div is a skill wrapper to hold the font aweseom icon
+ *   and the specific skill copy
+ *
+ * Example: 
+
+	<div class="pill">
+		<div class="skill-wrapper">
+		<div class="check-holder">
+			<i class="check  orange  fa  fa-check"></i>
+		</div>
+		<p>html</p>
+		</div>
+	</div>
+
+ */
+
+.skill-wrapper {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.bolt-holder, .check-holder {
+	width: 30px;
+	height: 30px;
+	display: table;
+	margin-right: 20px;
+	float: left;
+}
+
+.bolt-holder {
+	background-color: $about-blue; 
+	border-radius: 75%;
+}
+
+.check-holder { 
+	background-color: $dark-blue;
+	border-radius: 5px;
+}
+
+.bolt, .check {
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.bolt { color: white; }
+.check { color: $orange; }

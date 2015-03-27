@@ -1,0 +1,56 @@
+/*------------------------------------*\
+    $SECTION LAYOUT
+\*------------------------------------*/
+
+/* used for each section of portfolio, 
+ * used as semantic separation of content
+ */
+.section { 
+	padding: 4.375em 0; 
+	margin: 0 auto; 
+	width: 100%; 
+	@extend %clear;
+	position: relative;
+}
+
+/* used for a section's title bottom border
+ * accompanied by a font awesome icon 
+ * Example:
+ <h2 class="section-title">
+		Articles
+		<div class="section-border">
+			<i class="icon-wrapper  fa  fa-pencil"></i>
+		</div>
+	</h2>
+ */
+.section-border {
+	border-bottom: 1px solid $gray;
+	position: relative;
+	color: $gray;
+
+	margin: 1.5em 0 5em 0;
+
+	@media screen and (min-width: 20em) {
+	    margin: 1.5em 10% 5em 10%;
+	}
+	
+	@media screen and (min-width: 31.25em) {
+	    max-width: 30rem;
+	    margin: 1.5em auto 5em auto;
+	}
+}
+
+/* general container for each section which allows for 
+ * centering of content in browser 
+ */
+.container {
+	max-width: 75em;
+	margin: 0 auto;
+	padding: 0 1em;
+	@media only screen and (min-width: 77.5em) {
+	    padding-left: 0;
+	    padding-right: 0;
+	}
+	 
+	 
+}

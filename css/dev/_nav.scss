@@ -1,0 +1,141 @@
+/*------------------------------------*\
+    $NAVIGATION
+\*------------------------------------*/
+
+// import responsive-nav.css
+@import 'libs/responsive-nav';
+
+.main-nav { 
+
+	display: inline-block;
+	display: none;
+	width: 100%;
+
+	@media only screen and (min-width: $brkpt-medium) {
+		float: right;
+		width: auto;
+		margin-right: 1em;
+	}
+ 
+}
+
+.main-nav-left {
+	float: left;
+	width: 100%;
+
+	@media only screen and (min-width: $brkpt-420) {
+		margin-left: 1em;
+		width: auto;
+	}
+	 
+}
+
+.nav > li > .nav-active {
+ 	background-color: $dark-orange !important;
+ }
+
+	.nav > li { 
+		
+		font-size: 1em;
+		line-height: 50px;
+
+		a:hover, &:focus, &:link  {
+			color: inherit;
+			background-color: $dark-orange !important;
+			transition: all 0.4s linear;
+		}
+
+		&:nth-child(1) {
+			background: $nav-one;
+		}
+		&:nth-child(2) {
+			background: $nav-two;
+		}
+		&:nth-child(3) {
+			background: $nav-three;
+		}
+		&:nth-child(4) {
+			background: $nav-four;
+		}
+		&:nth-child(5) {
+			background: $nav-five;
+		}
+
+		text-transform: lowercase;
+
+		@media only screen and (min-width: $brkpt-medium) {
+		  margin-right: .2em;
+			font-size: 0.875em;
+			font-weight: inherit;
+
+			line-height: inherit;
+
+			&:nth-child(5) {
+				margin-right: 0;
+			}
+		}
+		 
+
+		@media only screen and (min-width: $brkpt-large) {
+		    font-size: 1em;
+		}
+		 
+	}
+	.nav > li,
+		.nav > li > a {
+
+			display: block;
+			zoom:1;
+
+			color: white;
+
+			@media only screen and (min-width: $brkpt-medium) {
+				padding: 0;
+				background: none !important;
+				display: inline-block;
+				*display: inline; 
+
+				line-height: 50px;
+			}
+		}
+
+	.nav > li > a {
+		padding: 0 1em;
+		@media only screen and (min-width: $brkpt-medium) {
+				padding: 0 .5em;
+			}
+	}
+
+ .nav-toggle { 
+	 	display: block; 
+
+	 	float: left;
+	 	width: 100%;
+	 	text-align: center;
+	 	margin-top: .2em;
+	 	line-height: 50px;
+	 	text-transform: lowercase;
+	 	z-index: 100;
+
+	 	padding: 0 1em;
+
+	 	color: white;
+
+	 	transition: all 0.3s ease-in;
+
+	 	&:hover, &:focus, &:link  {
+	 		background: $dark-orange;
+	 	}
+
+	 	@media only screen and (min-width: $brkpt-320) {
+	 		float: right;
+	 		text-align: left;
+	 		width: auto;
+	 		margin-top: 0;
+	 	}
+
+	 	@media only screen and (min-width: $brkpt-medium) {
+	 	    display: none;
+	 	}
+	 
+ }

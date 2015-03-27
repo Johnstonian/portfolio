@@ -1,0 +1,84 @@
+/*------------------------------------*\
+    $ABOUT GRID
+\*------------------------------------*/
+
+/**
+* About Columns
+* Example:
+	<div class="grid">
+		<div class="column-about">
+			<p class="about-copy">I'm a front-end developer who loves the web. I'm passionate about semantic and standards based development. Efficient code, creative user experiences, robust typography, CSS3, and the semantic web are just a few of my interests. I'm excited about the future of the web and strive to make it a better experience every day.</p>
+
+			<p class="about-copy">Like many, I got started with web development in the world of Geocities and Angelfire. My latest work has expanded into the modern web landscape of robustly featured internet applications.</p>
+		</div>
+
+		<div class="column-about">
+			<p class="about-copy">In addition to my passion for the web, I also enjoy reading fiction, training for adventure runs, listening to music, playing soccer, and doing my best to keep the 80’s alive through my son and daughter by forcing pop culture references of the era upon them.</p>
+
+			<p class="about-copy">I currently work at COUNTRY Financial where I develop dynamic applications for the web using PHP, MySQL, JavaScript, CSS3, and HTML5.</p>
+		</div>
+	</div>
+*/
+.column-about {
+
+	@media only screen and (min-width: $brkpt-medium) {
+		float:left;
+	    &:nth-child(n) {
+	    	width: 45%;
+	    	margin-right: 5%;
+	    }
+	    &:nth-child(2n) {
+	    	margin-right: 0;
+	    	float: right;
+	    }
+	}
+	 
+}
+
+/* skillset section columns */
+/*div*/.pill {
+	background-color: $about-blue;
+	border-radius: 5px;
+	color: white;
+	margin-bottom: 0.04166666666667%;
+	padding: 10px 20px 10px 10px;
+	display: inline-block;
+	width: 100%;
+
+	&:first-child { background-color: $dark-blue; }
+
+	/* handle pills based on breakpoints */
+	@media only screen and (min-width: $brkpt-420) {
+		width: 49.1379310344828%;
+		&:nth-child(n) {
+			margin-right: 0.08620689655172%;
+		}
+		&:nth-child(2n) {
+			margin-right: 0;
+		}
+	}
+
+	@media only screen and (min-width: $brkpt-580) {
+		width: 32.7651515151515%;
+	
+		&:nth-child(n), &:nth-child(2n) {
+			margin-right: 0.04166666666667%;
+		}
+		&:nth-child(3n), &:nth-child(20) {
+			margin-right: 0;
+		}
+	}
+
+
+	@media only screen and (min-width: $brkpt-880) {
+		width: 21.3333333333333%;
+
+		&:nth-child(3n) {
+			margin-right: 0.04166666666667%;
+		}
+
+    &:nth-child(4n) {
+			margin-right: 0;
+		}
+	}	 
+}

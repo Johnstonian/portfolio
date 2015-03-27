@@ -1,0 +1,60 @@
+/*------------------------------------*\
+    $ARTICLE GRID
+\*------------------------------------*/
+
+/**
+* Article Columns
+* Example:
+
+	<div class="grid">
+		<div class="column-article">
+
+			<h3>Blog Post: The Long Title</h3>
+			<div class="date-container">
+				<p class="date">December 10, 2013</p>
+			</div>
+			<p>Bacon ipsum dolor sit amet biltong prosciutto tongue corned beef strip steak brisket pork belly landjaeger drumstick sausage pastrami. Tail landjaeger sausage frankfurter leberkas, kielbasa ball tip bacon. Tri-tip kielbasa jerky tongue, bresaola meatball short loin beef ground round pork loin meatloaf sausage. Andouille turkey jerky biltong, bacon tri-tip beef shankle sirloin fatback brisket strip steak leberkas pastrami.</p>
+
+			<p class="more"><a href="#">Keep Reading <i class="fa fa-long-arrow-right"></i></a></p>
+		</div>
+	</div>
+*/
+.column-article { 
+	
+	float: left;
+	margin-bottom: 2em;
+
+	@media screen and (min-width: $brkpt-medium) {
+	    &:nth-child(n) {
+		    width: 47.777777777778%;
+		    margin-right: 4.444444444444%;
+	  	}
+	    &:nth-child(2n+1) {
+	    	clear: left;
+	    }
+	    &:nth-child(2n) {
+	    	margin-right: 0;
+	    }
+	}
+	 
+	@media screen and (min-width: $brkpt-xtra-large) {
+	    &:nth-child(n) {
+		    width: 30%; 
+				margin-right: 5%;
+			}
+			&:nth-child(2n+1) {
+	    	clear: none;
+	    }
+
+	    &:nth-child(3n+1) {
+	    	clear:left;
+	    }
+	    &:nth-child(3n) {
+	    	margin-right: 0;
+	    }
+	    &:nth-child(4n) { 
+	    	width: 100%; 
+	    	margin-right: 0;
+	    }
+	}
+}

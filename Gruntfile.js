@@ -88,7 +88,7 @@ module.exports = function(grunt) {
         },
       },
       css: {
-        files: ['css/dev/*.scss'],
+        files: ['css/dev/**/*.scss'],
         tasks: ['sass', 'autoprefixer', 'cssmin'],
         options: {
           spawn: false,
@@ -116,7 +116,8 @@ module.exports = function(grunt) {
     php: {
       dist: {
         options: {
-          keepalive: true,  
+          keepalive: true,
+          silent: true, 
           open: true  
         }
       },

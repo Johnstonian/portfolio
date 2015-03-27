@@ -1,0 +1,20 @@
+/*------------------------------------*\
+    $GRIDS
+\*------------------------------------*/
+
+.grid {  
+	padding-bottom: 3em; 
+	position: relative;
+
+	&:before, &:after {
+		@extend %clear;
+		content: "";
+		display: table;
+	}
+}
+
+@import 'grids/article-grid';
+@import 'grids/about-grid';
+@import 'grids/hobby-grid';
+@import 'grids/recent-work-grid';
+@import 'grids/testimonial-grid';

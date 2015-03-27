@@ -1,19 +1,34 @@
 @charset "UTF-8";
 /* Author: Ryan Johnston
 /*------------------------------------*\
-    $TABLE OF CONTENTS https://github.com/csswizardry/CSS-Guidelines
+    $TABLE OF CONTENTS
 \*------------------------------------*/
 /**
- * VARIABLES............Define Sass Variables
- * MIXINS...............Define Sass Mixins
- * NORMALIZE............Normalize all elements consistently across browsers
- * TYPE.................Type Classes
- * FONT AWESOME.........Font Awesome Icon Fonts - http://fontawesome.io/
- * GLOBAL STYLES........Global Element Styles
- * CLASSES..............Generic Classes
- * GRIDS................Grid Specific Styles
- * LAYOUT...............Layout Specific Styles
- * STRUCTURE............Site structure (header, nav, etc.)
+ * VARIABLES...............Define Sass Variables
+ * MIXINS..................Define Sass Mixins
+ * NORMALIZE...............Normalize all elements consistently across browsers
+ * TYPE....................Type Classes
+ * FONT AWESOME............Font Awesome Icon Fonts - http://fontawesome.io/
+ * GLOBAL STYLES...........Global Element Styles
+ * CLASSES.................Generic Classes
+ * GRIDS...................Grid Specific Styles
+ *** ARTICLE................Article Grid Styles
+ *** ABOUT..................About Grid Styles
+ *** HOBBY SECTION.........Hobby Grid Styles
+ *** RECENT WORK SECTION...Recent Work Grid Styles
+ *** TESTIMONIAL SECTION...Testimonial Grid Styles
+ * LAYOUT..................Layout Specific Styles
+ *** SECTION LAYOUT........Section Styles
+ *** INTRO SECTION.........Intro Section Styles
+ *** ARTICLE SECTION.......Article Section Styles
+ *** ABOUT SECTION.........About Section Styles
+ *** HOBBY SECTION.........Hobby Column Styles
+ *** RECENT WORK SECTION...Recent Work Section Styles
+ *** CONTACT SECTION.......Contact Form Section Styles
+ *** TESTIMONIAL SECTION...Testimonial Section Styles
+ *** SOCIAL SECTION........Social Section Styles
+ * STRUCTURE...............Site structure (header, footer, etc.)
+ * NAVIGATION..............Site navigation styles
  */
 /*------------------------------------*\
     $VARIABLES
@@ -2810,6 +2825,9 @@ figcaption {
   display: table;
 }
 
+/*------------------------------------*\
+    $ARTICLE GRID
+\*------------------------------------*/
 /**
 * Article Columns
 * Example:
@@ -2863,6 +2881,9 @@ figcaption {
   }
 }
 
+/*------------------------------------*\
+    $ABOUT GRID
+\*------------------------------------*/
 /**
 * About Columns
 * Example:
@@ -2943,6 +2964,9 @@ figcaption {
   }
 }
 
+/*------------------------------------*\
+    $HOBBY GRID
+\*------------------------------------*/
 /** Hobby Columns
  * Example:
 	<div class="grid">
@@ -2989,6 +3013,9 @@ figcaption {
   }
 }
 
+/*------------------------------------*\
+    $RECENT WORK GRID
+\*------------------------------------*/
 /**
  * Recent Work Columns
  * Example:
@@ -3038,6 +3065,9 @@ figcaption {
   }
 }
 
+/*------------------------------------*\
+    $TESTIMONIAL GRID
+\*------------------------------------*/
 /**
  * Testimonial Columns
  * Example:
@@ -3088,6 +3118,9 @@ figcaption {
 
 /*------------------------------------*\
     $LAYOUT
+\*------------------------------------*/
+/*------------------------------------*\
+    $SECTION LAYOUT
 \*------------------------------------*/
 /* used for each section of portfolio, 
  * used as semantic separation of content
@@ -3142,6 +3175,9 @@ figcaption {
   }
 }
 
+/*------------------------------------*\
+    $INTRO SECTION
+\*------------------------------------*/
 /* intro seciton styles */
 .intro {
   background: #000000;
@@ -3202,6 +3238,9 @@ figcaption {
 }
 
 /* */
+/*------------------------------------*\
+    $ARTICLE SECTION
+\*------------------------------------*/
 /* article section styles */
 .articles {
   background-color: white;
@@ -3212,6 +3251,9 @@ figcaption {
   padding-top: 1em;
 }
 
+/*------------------------------------*\
+    $ABOUT SECTION
+\*------------------------------------*/
 .about {
   background: url("../images/mountains.png") no-repeat center bottom #034060;
   color: white;
@@ -3256,7 +3298,6 @@ figcaption {
   z-index: 2;
 }
 
-/* */
 /* skillset section styles */
 /**
  * Skillset Pills
@@ -3313,8 +3354,9 @@ figcaption {
   color: #f08b65;
 }
 
-/* */
-/* hobby styles */
+/*------------------------------------*\
+    $HOBBY SECTION
+\*------------------------------------*/
 .hobbies {
   background: url("../images/hobbies-background.png") repeat-x top #f08b65;
   color: #924224;
@@ -3381,12 +3423,16 @@ figcaption {
   background: url("../images/music-note.svg") no-repeat transparent;
 }
 
-/* */
+/*------------------------------------*\
+    $RECENT WORK GRID
+\*------------------------------------*/
 .screenshot {
   text-align: center;
 }
 
-/* contact section styles */
+/*------------------------------------*\
+    $CONTACT SECTION
+\*------------------------------------*/
 .contact {
   background: #924224;
   padding: 0;
@@ -3455,7 +3501,9 @@ figcaption {
 }
 
 /* */
-/* testimonial seciton styles */
+/*------------------------------------*\
+    $TESTIMONIAL SECTION
+\*------------------------------------*/
 .testimonials {
   background-color: #000;
   color: white;
@@ -3508,6 +3556,9 @@ figcaption {
   margin-left: 32px;
 }
 
+/*------------------------------------*\
+    $SOCIAL LAYOUT
+\*------------------------------------*/
 .social-links {
   float: none;
   text-align: center;
@@ -3534,7 +3585,6 @@ figcaption {
   }
 }
 
-/* */
 /*------------------------------------*\
     $STRUCTURE
 \*------------------------------------*/
@@ -3596,6 +3646,17 @@ figcaption {
   }
 }
 
+footer {
+  min-height: 40px;
+  background-color: #1c1c1c;
+  color: #757575;
+  display: table;
+  width: 100%;
+}
+
+/*------------------------------------*\
+    $NAVIGATION
+\*------------------------------------*/
 /*------------------------------------*\
     $RESPONSIVE NAV
 \*------------------------------------*/
@@ -3784,12 +3845,4 @@ figcaption {
   .nav-toggle {
     display: none;
   }
-}
-
-footer {
-  min-height: 40px;
-  background-color: #1c1c1c;
-  color: #757575;
-  display: table;
-  width: 100%;
 }

@@ -1,0 +1,65 @@
+/*------------------------------------*\
+    $STRUCTURE
+\*------------------------------------*/
+
+.header {
+	display:block;
+	margin-left: -9999px;
+	opacity: 0;
+	position: fixed;
+	top:0;
+	min-height: 50px;
+	width: 100%;
+	z-index: 100;
+
+	background-color: rgba(28, 28, 28, 1);
+	box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+	transition: opacity 0.3s ease-in;
+
+	@media only screen and (min-width: $brkpt-medium) {
+		height: 50px;
+	}
+
+	a {
+		color: white;
+
+		&:hover, &:focus, &:link { text-decoration: none; }
+	}
+}
+
+.show-header {
+	margin-left: 0;
+	opacity: 1;
+}
+
+.logo-header, .logo-header-right {
+	float: left; 
+	padding: 0;
+	margin: 0;
+	font-weight: 300;
+	color: white;
+	max-width: 200px;
+	margin-left: 1em;
+	margin-top: 1em;
+
+	a { display: block; }
+}
+
+.logo-header-right { 
+	float: left;
+	margin-left: 1em;
+
+	@media only screen and (min-width: $brkpt-420) {
+		float: right !important; margin-right: 1em; margin-left: 0;
+	}
+	 
+}
+
+footer {
+	min-height: 40px;
+	background-color: $dark-gray;
+	color: $light-gray;
+	display: table;
+	width: 100%;
+}

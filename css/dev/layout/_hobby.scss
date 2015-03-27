@@ -1,0 +1,64 @@
+/*------------------------------------*\
+    $HOBBY SECTION
+\*------------------------------------*/
+
+.hobbies { 
+
+	background: url('../images/hobbies-background.png') repeat-x top $orange;
+
+	color: $dark-orange;
+
+	h2 { line-height: 1; padding-bottom: 2em; }
+
+	p { margin: 0; }
+}
+
+.hobby-icon {
+	margin: 0 auto;
+
+	width: 100px;
+	height: 100px;
+
+
+	@media only screen and (min-width: $brkpt-small) {
+		float: left;
+	}
+
+	@media only screen and (min-width: $brkpt-large) {
+		float: none;
+	}
+
+	@media only screen and (min-width: $brkpt-xtra-large) {
+		float: left;
+	}
+	 
+}
+
+.hobby-content {
+
+	a { color: white; font-weight: normal; text-decoration: underline; }
+
+	@media only screen and (min-width: $brkpt-small) {
+		float: left;
+		width: 79%;
+	}
+
+	@media only screen and (min-width: $brkpt-large) {
+		text-align: center;
+		width: auto;
+	}
+
+	@media only screen and (min-width: $brkpt-xtra-large) {
+		text-align: left;
+		width: auto;
+		float: none;
+	}
+}
+
+.hobby-logo {
+	background: transparent;
+}
+
+.music-note {
+	background: url('../images/music-note.svg') no-repeat transparent;
+}

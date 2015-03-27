@@ -1,0 +1,47 @@
+/*------------------------------------*\
+    $CLASSES
+\*------------------------------------*/
+
+ .center { text-align: center; }
+ .clear, %clear { clear: both; }
+ .left { float: left; }
+ .medium { font-weight: $medium; }
+ .dark-blue { color: $dark-blue; }
+ .orange { color: $orange; }
+ .dark-orange { color: $dark-orange; }
+ .link-color { color: $link-color; }
+ .white { color: white; }
+ .hidden { display: none; }
+ .view-all-circle { 
+	margin: 0 auto;
+	width: 75px;
+	height: 75px;
+	background-color: $link-color;
+	border-radius: 40px;
+	display: table;
+}
+.fullname { margin-right: 1.3333333333333%; }
+.email { float: right; }
+
+/*span*/.required {
+	color: $form-error;
+}
+
+.copyright { 
+
+	float: none;
+	text-align: center; 
+
+	@media only screen and (min-width: $brkpt-medium) {
+	    float: left;
+	}
+	 
+}
+
+.figure {
+	clear: both;
+	text-align: center;
+	margin: 2em 0;
+
+	img { margin: 0 auto; }
+}
