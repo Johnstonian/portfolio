@@ -1,0 +1,26 @@
+{"articles" : [
+	{
+		"title": "Install Composer with Puppet and Vagrant",
+		"content": "<p>I started a personal project to update my WordPress theme so that it would match the design on my portfolio site. In the process; I decided it would be a good time to use <a href='//vagrantup.com' target='vagrant'>Vagrant</a>, and in particular, a project called <a href='//github.com/chad-thompson/vagrantpress' target='vagrantpress'>VagrantPress</a> to quickly setup a WordPress development environment. The advantage I wanted to capitalize on was the convenience of throwing away the environment once the project was finished. I didn't want to leave any remnants of PHP or custom path variables on my laptop after the project was done. It would also be easy to develop on multiple machines since the vagrant instance would be the same across all devices.</p>",
+		"url": "//johnstonianera.com/install-composer-with-puppet-and-vagrant/",
+		"publishDate": "February 6, 2015"
+	},
+	{
+		"title": "Building Responsive Layouts: Redux",
+		"content": "<p>A few people responded that they experienced issues with the header and footer not&nbsp;rendering correctly above and below the content area. I looked into it and discovered that that the solution I crafted had a document flow problem; which caused some unforeseen problems in the responsive layout. By using absolute positioning on the fixed column, the element was effectively taken out of the document flow. That means that the HTML document is unaware of the height, width, and any content in that section. Which is why the footer will overlap with the column that is absolute positioned (if that column is taller than the fluid column).</p>",
+		"url": "//johnstonianera.com/building-responsive-layouts-redux/",
+		"publishDate": "August 7, 2014"
+	},
+	{
+		"title": "Use jQuery to Mimic nth-child Behavior in IE8",
+		"content": "<p>Nth-child pseudo-selectors are a cool way to supercharge your CSS. They do a great job of styling a group of elements that need slight changes based on their order. A popular example of this is a grid system, or any similar list of items.</p><p>This works great in modern browsers, but if you are developing sites that need to be compatible with IE8 and below, you'll find that :nth-child <a href='http://caniuse.com/#search=nth-child' target='can-i-use'>does not work</a>.</p><p>You can use an alternate method to :nth-child by explicitly chaining elements together with the '+' selector. This will select adjacent siblings. However, this method does not scale well and will likely break if your list is dynamic. Below is an example:</p>",
+		"url": "//johnstonianera.com/use-jquery-to-mimic-nth-child-behavior-in-ie8/",
+		"publishDate": "July 23, 2014"
+	},
+	{
+		"title": "Removing Unnecessary CSS with Grunt and UnCSS",
+		"content": "<p>While working on my <a title='Ryan Johnston - Web Developer' href='http://johnstonianera.com/portfolio' target='_blank'>portfolio</a> I made myself a mental note to go back through the CSS and remove un-used CSS blocks. Since I was using <a title='Font Awesome' href='http://fontawesome.io' target='font-awesome'>Font Awesome</a> (which is a really great icon font project), I knew I needed to manually remove a ton of styles that weren't being used in the design. Things like the <a title='Font Awesome Examples' href='http://fontawesome.io/examples/' target='font-awesome-examples'>CSS animation section</a> and all the icons I was not using from the library. As the project kept growing, I started to dread the day I would need to sift through the code and manually delete styles. It was turning into a daunting task.</p>",
+		"url": "//johnstonianera.com/removing-unnecessary-css-with-grunt-and-uncss/",
+		"publishDate": "July 15, 2014"
+	}
+]}

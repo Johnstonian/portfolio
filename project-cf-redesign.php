@@ -1,4 +1,4 @@
-<?php require_once ('includes/header.php'); ?>
+<?php require_once ('partials/header-partial.php'); ?>
 
 	<header role="banner" class="header">
 
@@ -41,4 +41,4 @@
 	</section>
 	
 
-<?php require_once('includes/footer.php'); ?>
+<?php require_once('partials/footer-partial.php'); ?>

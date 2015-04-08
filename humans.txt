@@ -8,7 +8,6 @@
 	URL: southernreflectionsstudio.com/portfolio/
 
 /* SITE */
-	Last Update: 5/22/2014
 	Langauge: English
 	Doctype: HTML5
 	Software: Submime Text 2, Photoshop, grunt

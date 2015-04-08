@@ -1,0 +1,50 @@
+	{{#projects}}
+	<div class="project" {{#idSlug}} id="{{idSlug}} {{/idSlug}}">
+				
+		<div class="screenshot">
+			{{#projectLink}}
+			<a href="{{projectLink}}">
+				<img src="{{screenshot}}" alt="{{altText}}" />
+			</a>
+			{{/projectLink}}
+			{{^projectLink}}
+			<img src="{{screenshot}}" alt="{{altText}}" />
+			{{/projectLink}}
+		</div>
+
+		<h3>
+		{{#projectLink}}
+			<a href="{{projectLink}}">{{title}}</a>
+		{{/projectLink}}
+		{{^projectLink}}
+			{{title}}
+		{{/projectLink}}
+		</h3>
+		
+		{{#urls}}
+		<p class="url">url:
+	{{#url}}
+			<a href="{{link}}" target="{{target}}"><strong>{{title}}</strong></a><span>,</span>
+	{{/url}}
+		</p>
+		{{/urls}}
+
+		{{#type}}<p><strong>type:</strong> {{type}}</p>{{/type}}
+
+		{{#stack}}
+		<p class="technologies"><strong>stack:</strong>
+		 {{#items}}
+				{{#.}}
+					<span class="link-color">{{.}}</span> 
+				{{/.}}
+			{{/items}}
+		</p>
+		{{/stack}}
+
+		<p><strong>description:</strong> {{description}}</p>
+
+		{{#projectLink}}
+		<p class="more"><a href="{{projectLink}}">View Project <i class="fa fa-long-arrow-right"></i></a></p>
+		{{/projectLink}}
+	</div>
+	{{/projects}}

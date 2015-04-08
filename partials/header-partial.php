@@ -1,5 +1,12 @@
 <?php 
 	header('X-UA-Compatible: IE=edge,chrome=1');
+
+  // autoload mustache templating system and declare template directory
+  require_once 'vendor/autoload.php';
+
+  $mustache = new Mustache_Engine(array(
+     'loader' => new Mustache_Loader_FilesystemLoader('templates')
+  ));
 ?>
 <!doctype html>
 <html>
